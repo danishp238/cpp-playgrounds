@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <article class="mt-16 px-4 sm:px-10 lg:px-20 max-w-5xl mx-auto text-white/90">
+        <h2>🛒👩&zwj;🍳 <strong>&ldquo;Recipe Rush: Online Grocery Ordering Game&rdquo;</strong></h2>
+        <hr />
+        <h3>🎯 <strong>Game Objective</strong></h3>
+        <p>You play as a home chef who must:</p>
+        <ul>
+            <li>
+                <p>Select a recipe,</p>
+            </li>
+            <li>
+                <p>Order the correct grocery items from an online grocery store,</p>
+            </li>
+            <li>
+                <p>Stay within your budget,</p>
+            </li>
+            <li>
+                <p>And complete the recipe before time runs out!</p>
+            </li>
+        </ul>
+        <p>It's a fun <strong>text-based simulation game</strong> teaching decision-making, budgeting, and basic
+            input/output in C++ &mdash; great for beginners.</p>
+        <hr />
+        <h3>🧱 <strong>Features</strong></h3>
+        <ul>
+            <li>
+                <p>Multiple recipes (e.g., Spaghetti, Chicken Curry, Vegetable Salad)</p>
+            </li>
+            <li>
+                <p>Each recipe has a list of ingredients.</p>
+            </li>
+            <li>
+                <p>You&rsquo;re given a budget and time.</p>
+            </li>
+            <li>
+                <p>You can browse a grocery store catalog.</p>
+            </li>
+            <li>
+                <p>Buy items wisely. Buying wrong items or overspending results in failure.</p>
+            </li>
+            <li>
+                <p>Win if you collect all items for the recipe on time and under budget!</p>
+            </li>
+        </ul>
+        <hr />
+        <h3>🧮 <strong>C++ Concepts Used</strong></h3>
+        <ul>
+            <li>
+                <p>Structs</p>
+            </li>
+            <li>
+                <p>Vectors</p>
+            </li>
+            <li>
+                <p>Loops</p>
+            </li>
+            <li>
+                <p>Conditionals</p>
+            </li>
+            <li>
+                <p>Functions</p>
+            </li>
+            <li>
+                <p>Basic randomization</p>
+            </li>
+            <li>
+                <p>Simple gameplay mechanics</p>
+            </li>
+        </ul>
+        <hr />
+        <h2>🧾 <strong>Sample Code: <code>recipe_rush.cpp</code></strong></h2>
+        <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+struct Item {
+    string name;
+    double price;
+};
+
+struct Recipe {
+    string name;
+    vector&lt;string&gt; ingredients;
+    double maxBudget;
+};
+
+// Store items
+vector&lt;Item&gt; store = {
+    {"Tomato", 1.5}, {"Onion", 1.0}, {"Chicken", 5.0}, {"Salt", 0.5},
+    {"Pepper", 0.7}, {"Spaghetti", 2.5}, {"Garlic", 1.2}, {"Oil", 2.0},
+    {"Rice", 3.0}, {"Carrot", 1.3}, {"Lettuce", 2.2}, {"Milk", 1.8}
+};
+
+// Available recipes
+vector&lt;Recipe&gt; recipes = {
+    {"Spaghetti", {"Spaghetti", "Tomato", "Onion", "Garlic", "Salt"}, 10.0},
+    {"Chicken Curry", {"Chicken", "Onion", "Garlic", "Salt", "Pepper", "Oil"}, 12.0},
+    {"Veggie Salad", {"Lettuce", "Tomato", "Carrot", "Salt", "Oil"}, 8.0}
+};
+
+void displayStore() {
+    cout &lt;&lt; "\n🛒 Grocery Store Catalog:\n";
+    cout &lt;&lt; setw(15) &lt;&lt; left &lt;&lt; "Item" &lt;&lt; "Price\n";
+    cout &lt;&lt; "-------------------------\n";
+    for (size_t i = 0; i &lt; store.size(); ++i) {
+        cout &lt;&lt; i + 1 &lt;&lt; ". " &lt;&lt; setw(12) &lt;&lt; left &lt;&lt; store[i].name 
+             &lt;&lt; "$" &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; store[i].price &lt;&lt; endl;
+    }
+}
+
+void displayRecipe(const Recipe&amp; recipe) {
+    cout &lt;&lt; "\n📜 Recipe Selected: " &lt;&lt; recipe.name &lt;&lt; endl;
+    cout &lt;&lt; "Ingredients needed:\n";
+    for (const string&amp; ing : recipe.ingredients)
+        cout &lt;&lt; "- " &lt;&lt; ing &lt;&lt; endl;
+    cout &lt;&lt; "💵 Budget: $" &lt;&lt; recipe.maxBudget &lt;&lt; endl;
+}
+
+bool allIngredientsCollected(const vector&lt;string&gt;&amp; needed, const vector&lt;string&gt;&amp; bought) {
+    for (const string&amp; item : needed) {
+        if (find(bought.begin(), bought.end(), item) == bought.end())
+            return false;
+    }
+    return true;
+}
+
+int main() {
+    cout &lt;&lt; "🎮 Welcome to 'Recipe Rush: Online Grocery Game'!\n";
+
+    // Step 1: Choose Recipe
+    cout &lt;&lt; "\nChoose a recipe:\n";
+    for (size_t i = 0; i &lt; recipes.size(); ++i) {
+        cout &lt;&lt; i + 1 &lt;&lt; ". " &lt;&lt; recipes[i].name &lt;&lt; endl;
+    }
+    int choice;
+    cin &gt;&gt; choice;
+    if (choice &lt; 1 || choice &gt; recipes.size()) {
+        cout &lt;&lt; "❌ Invalid choice. Exiting...\n";
+        return 0;
+    }
+
+    Recipe selected = recipes[choice - 1];
+    vector&lt;string&gt; cart;
+    double total = 0.0;
+
+    displayRecipe(selected);
+
+    int turns = 7; // limited shopping attempts
+    while (turns-- &gt; 0 &amp;&amp; !allIngredientsCollected(selected.ingredients, cart)) {
+        displayStore();
+        cout &lt;&lt; "\n🧺 Your current cart: ";
+        for (const string&amp; item : cart) cout &lt;&lt; item &lt;&lt; ", ";
+        cout &lt;&lt; "\n💸 Total spent: $" &lt;&lt; total &lt;&lt; " | 🕒 Turns left: " &lt;&lt; turns + 1 &lt;&lt; endl;
+
+        cout &lt;&lt; "\nEnter item number to add to cart (0 to skip): ";
+        int itemChoice;
+        cin &gt;&gt; itemChoice;
+
+        if (itemChoice == 0) continue;
+        if (itemChoice &lt; 1 || itemChoice &gt; store.size()) {
+            cout &lt;&lt; "❌ Invalid item!\n";
+            continue;
+        }
+
+        Item selectedItem = store[itemChoice - 1];
+
+        // Check budget
+        if (total + selectedItem.price &gt; selected.maxBudget) {
+            cout &lt;&lt; "⚠️ You can't afford this item. Try something cheaper.\n";
+            continue;
+        }
+
+        // Add item
+        cart.push_back(selectedItem.name);
+        total += selectedItem.price;
+        cout &lt;&lt; "✅ " &lt;&lt; selectedItem.name &lt;&lt; " added to cart!\n";
+    }
+
+    // Game result
+    if (allIngredientsCollected(selected.ingredients, cart)) {
+        cout &lt;&lt; "\n🎉 Congratulations! You successfully ordered all items for " &lt;&lt; selected.name &lt;&lt; " within budget.\n";
+    } else {
+        cout &lt;&lt; "\n❌ You failed to collect all ingredients. Better luck next time!\n";
+    }
+
+    return 0;
+}
+</code></pre>
+        <hr />
+        <h2>🧠 <strong>How the Game Works</strong></h2>
+        <h3>👨&zwj;🍳 1. Recipe Selection</h3>
+        <p>The player chooses from 3 recipes, each with specific ingredients and a budget.</p>
+        <h3>🛍️ 2. Grocery Store Catalog</h3>
+        <p>A list of available groceries with prices is shown. Items are selected via number input.</p>
+        <h3>🧮 3. Budget Tracking</h3>
+        <p>The player has to shop carefully. Exceeding the budget prevents item purchase.</p>
+        <h3>⏲️ 4. Time Pressure (Turns)</h3>
+        <p>The player has limited turns to complete shopping (simulating delivery cut-off).</p>
+        <h3>🏆 5. Win/Lose</h3>
+        <p>If all recipe ingredients are collected within budget and turns, the player wins!</p>
+        <hr />
+        <h2>🔧 <strong>Extensions You Can Add</strong></h2>
+        <ul>
+            <li>
+                <p>🧠 AI Suggestions: Suggest best combo under budget.</p>
+            </li>
+            <li>
+                <p>⏳ Timer-Based: Add countdown timer using <code>&lt;chrono&gt;</code>.</p>
+            </li>
+            <li>
+                <p>🛒 Save orders to a file (for stats/history).</p>
+            </li>
+            <li>
+                <p>🎨 SFML GUI: Build graphical UI for store/recipe/cart.</p>
+            </li>
+        </ul>
+        <hr />
+        <h2>✅ Requirements to Compile</h2>
+        <p>Any standard C++ compiler (g++ recommended):</p>
+        <pre><code class="language-bash">g++ recipe_rush.cpp -o recipe_rush
+./recipe_rush
+</code></pre>
+    </article>
+
+
+</body>
+
+</html>

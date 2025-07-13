@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <p data-start="0" data-end="162">Let&rsquo;s add a <strong data-start="19" data-end="53">Graphical User
+                Interface (GUI)</strong> to your <strong data-start="62" data-end="109">&ldquo;Recipe Rush: Online
+                Grocery Ordering Game&rdquo;</strong> using <strong data-start="116" data-end="161">SFML (Simple and
+                Fast Multimedia Library)</strong>.</p>
+        <hr data-start="164" data-end="167" />
+        <h2 data-start="169" data-end="196">🎮 Final Result Preview:</h2>
+        <p data-start="197" data-end="233">With SFML, your game will look like:</p>
+        <ul data-start="234" data-end="460">
+            <li data-start="234" data-end="270">
+                <p data-start="236" data-end="270">A window showing recipe selection.</p>
+            </li>
+            <li data-start="271" data-end="328">
+                <p data-start="273" data-end="328">Grocery items displayed with names &amp; prices as buttons.</p>
+            </li>
+            <li data-start="329" data-end="378">
+                <p data-start="331" data-end="378">A side panel with your current cart and budget.</p>
+            </li>
+            <li data-start="379" data-end="412">
+                <p data-start="381" data-end="412">Clickable buttons to add items.</p>
+            </li>
+            <li data-start="413" data-end="460">
+                <p data-start="415" data-end="460">Messages like &ldquo;✅ Added!&rdquo; or &ldquo;⚠️ Over budget!&rdquo;
+                </p>
+            </li>
+        </ul>
+        <hr data-start="462" data-end="465" />
+        <h2 data-start="467" data-end="486">🧰 Tools &amp; Setup</h2>
+        <h3 data-start="488" data-end="504">🔧 You need:</h3>
+        <ul data-start="505" data-end="607">
+            <li data-start="505" data-end="533">
+                <p data-start="507" data-end="533">C++ Compiler (e.g., <code data-start="527" data-end="532">g++</code>)
+                </p>
+            </li>
+            <li data-start="534" data-end="607">
+                <p data-start="536" data-end="607">SFML installed (<a class="cursor-pointer" target="_new"
+                        rel="noopener" data-start="552" data-end="606">SFML Download</a>)</p>
+            </li>
+        </ul>
+        <h3 data-start="609" data-end="644">📦 If you use MinGW on Windows:</h3>
+        <ol data-start="645" data-end="775">
+            <li data-start="645" data-end="682">
+                <p data-start="648" data-end="682">Download <strong data-start="657" data-end="682">SFML for MinGW
+                        64-bit</strong></p>
+            </li>
+            <li data-start="683" data-end="758">
+                <p data-start="686" data-end="758">Set up include/lib paths in your compiler (like Code::Blocks or VS
+                    Code)</p>
+            </li>
+            <li data-start="759" data-end="775">
+                <p data-start="762" data-end="775">Compile with:</p>
+            </li>
+        </ol>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                bash</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-bash">g++ main.cpp -o recipe_gui -lsfml-graphics -lsfml-window -lsfml-system </code>
+            </div>
+        </div>
+        <hr data-start="860" data-end="863" />
+        <h2 data-start="865" data-end="918">🧾 GUI Version: <code data-start="884" data-end="900">recipe_gui.cpp</code>
+            (Simplified Core)</h2>
+        <p data-start="920" data-end="985">Here's the <strong data-start="931" data-end="973">simplified version with
+                GUI using SFML</strong>. It covers:</p>
+        <ul data-start="986" data-end="1065">
+            <li data-start="986" data-end="1002">
+                <p data-start="988" data-end="1002">Recipe display</p>
+            </li>
+            <li data-start="1003" data-end="1039">
+                <p data-start="1005" data-end="1039">Grocery item selection via buttons</p>
+            </li>
+            <li data-start="1040" data-end="1065">
+                <p data-start="1042" data-end="1065">Cart and budget display</p>
+            </li>
+        </ul>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;SFML/Graphics.hpp&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;vector&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;string&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;sstream&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;iostream&gt;</span> <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> sf; <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std; <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Item</span> { string name; <span class="hljs-type">float</span> price; }; vector&lt;Item&gt; store = { {<span class="hljs-string">"Tomato"</span>, <span class="hljs-number">1.5</span>}, {<span class="hljs-string">"Onion"</span>, <span class="hljs-number">1.0</span>}, {<span class="hljs-string">"Chicken"</span>, <span class="hljs-number">5.0</span>}, {<span class="hljs-string">"Garlic"</span>, <span class="hljs-number">1.2</span>}, {<span class="hljs-string">"Oil"</span>, <span class="hljs-number">2.0</span>}, {<span class="hljs-string">"Spaghetti"</span>, <span class="hljs-number">2.5</span>} }; vector&lt;string&gt; recipeIngredients = {<span class="hljs-string">"Spaghetti"</span>, <span class="hljs-string">"Tomato"</span>, <span class="hljs-string">"Onion"</span>, <span class="hljs-string">"Garlic"</span>, <span class="hljs-string">"Oil"</span>}; <span class="hljs-type">float</span> budget = <span class="hljs-number">10.0</span>; vector&lt;string&gt; cart; <span class="hljs-type">float</span> total = <span class="hljs-number">0.0</span>; <span class="hljs-function"><span class="hljs-type">bool</span></span> <span class="hljs-title">allIngredientsCollected</span><span class="hljs-params">()</span> { <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span>&amp; ing : recipeIngredients) { <span class="hljs-keyword">if</span> (<span class="hljs-built_in">find</span>(cart.<span class="hljs-built_in">begin</span>(), cart.<span class="hljs-built_in">end</span>(), ing) == cart.<span class="hljs-built_in">end</span>()) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; } <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; } <span class="hljs-function">string <span class="hljs-title">floatToStr</span></span><span class="hljs-params">(<span class="hljs-type">float</span></span> val) { stringstream ss; ss &lt;&lt; <span class="hljs-string">"$"</span> &lt;&lt; fixed &lt;&lt; <span class="hljs-built_in">setprecision</span>(<span class="hljs-number">2</span>) &lt;&lt; val; <span class="hljs-keyword">return</span> ss.<span class="hljs-built_in">str</span>(); } <span class="hljs-function"><span class="hljs-type">int</span></span> <span class="hljs-title">main</span><span class="hljs-params">()</span> { <span class="hljs-function">RenderWindow <span class="hljs-title">window</span></span><span class="hljs-params">(VideoMode(<span class="hljs-number">800</span></span>, <span class="hljs-number">600</span>), <span class="hljs-string">"Recipe Rush - GUI"</span>); Font font; font.<span class="hljs-built_in">loadFromFile</span>(<span class="hljs-string">"arial.ttf"</span>); <span class="hljs-comment">// Make sure arial.ttf is in the same directory</span> <span class="hljs-function">Text <span class="hljs-title">title</span></span><span class="hljs-params">(<span class="hljs-string">"Recipe: Spaghetti"</span></span>, font, <span class="hljs-number">24</span>); title.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>); <span class="hljs-function">Text <span class="hljs-title">budgetText</span></span><span class="hljs-params">(<span class="hljs-string">"Budget: "</span></span> + floatToStr(budget), font, <span class="hljs-number">20</span>); budgetText.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">20</span>, <span class="hljs-number">60</span>); vector&lt;RectangleShape&gt; buttons; vector&lt;Text&gt; labels; <span class="hljs-keyword">for</span> (<span class="hljs-type">size_t</span> i = <span class="hljs-number">0</span>; i &lt; store.<span class="hljs-built_in">size</span>(); i++) { <span class="hljs-function">RectangleShape <span class="hljs-title">btn</span></span><span class="hljs-params">(Vector2f(<span class="hljs-number">200</span></span>, <span class="hljs-number">40</span>)); btn.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">50</span>, <span class="hljs-number">120</span> + i * <span class="hljs-number">50</span>); btn.<span class="hljs-built_in">setFillColor</span>(<span class="hljs-built_in">Color</span>(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">255</span>)); buttons.<span class="hljs-built_in">push_back</span>(btn); <span class="hljs-function">Text <span class="hljs-title">label</span></span><span class="hljs-params">(store[i].name + <span class="hljs-string">" - "</span></span> + floatToStr(store[i].price), font, <span class="hljs-number">18</span>); label.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">60</span>, <span class="hljs-number">125</span> + i * <span class="hljs-number">50</span>); labels.<span class="hljs-built_in">push_back</span>(label); } <span class="hljs-function">Text <span class="hljs-title">cartText</span></span><span class="hljs-params">(<span class="hljs-string">""</span></span>, font, <span class="hljs-number">18</span>); cartText.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">300</span>, <span class="hljs-number">120</span>); <span class="hljs-function">Text <span class="hljs-title">resultText</span></span><span class="hljs-params">(<span class="hljs-string">""</span></span>, font, <span class="hljs-number">20</span>); resultText.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">300</span>, <span class="hljs-number">400</span>); <span class="hljs-keyword">while</span> (window.<span class="hljs-built_in">isOpen</span>()) { Event event; <span class="hljs-keyword">while</span> (window.<span class="hljs-built_in">pollEvent</span>(event)) { <span class="hljs-keyword">if</span> (event.type == Event::Closed) window.<span class="hljs-built_in">close</span>(); <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (event.type == Event::MouseButtonPressed) { <span class="hljs-keyword">for</span> (<span class="hljs-type">size_t</span> i = <span class="hljs-number">0</span>; i &lt; buttons.<span class="hljs-built_in">size</span>(); ++i) { <span class="hljs-keyword">if</span> (buttons[i].<span class="hljs-built_in">getGlobalBounds</span>().<span class="hljs-built_in">contains</span>(event.mouseButton.x, event.mouseButton.y)) { <span class="hljs-comment">// Add item</span> Item it = store[i]; <span class="hljs-keyword">if</span> (total + it.price &lt;= budget &amp;&amp; <span class="hljs-built_in">find</span>(cart.<span class="hljs-built_in">begin</span>(), cart.<span class="hljs-built_in">end</span>(), it.name) == cart.<span class="hljs-built_in">end</span>()) { cart.<span class="hljs-built_in">push_back</span>(it.name); total += it.price; resultText.<span class="hljs-built_in">setString</span>(<span class="hljs-string">"✅ Added "</span> + it.name); } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (total + it.price &gt; budget) { resultText.<span class="hljs-built_in">setString</span>(<span class="hljs-string">"❌ Over budget!"</span>); } <span class="hljs-keyword">else</span> { resultText.<span class="hljs-built_in">setString</span>(<span class="hljs-string">"⚠️ Already in cart."</span>); } } } } } <span class="hljs-comment">// Update cart display</span> stringstream ss; ss &lt;&lt; <span class="hljs-string">"🧺 Cart:\n"</span>; <span class="hljs-keyword">for</span> (string&amp; s : cart) ss &lt;&lt; <span class="hljs-string">"- "</span> &lt;&lt; s &lt;&lt; <span class="hljs-string">"\n"</span>; ss &lt;&lt; <span class="hljs-string">"\nSpent: "</span> &lt;&lt; <span class="hljs-built_in">floatToStr</span>(total); cartText.<span class="hljs-built_in">setString</span>(ss.<span class="hljs-built_in">str</span>()); <span class="hljs-keyword">if</span> (<span class="hljs-built_in">allIngredientsCollected</span>()) { resultText.<span class="hljs-built_in">setString</span>(<span class="hljs-string">"🎉 All ingredients collected!"</span>); } window.<span class="hljs-built_in">clear</span>(Color::White); window.<span class="hljs-built_in">draw</span>(title); window.<span class="hljs-built_in">draw</span>(budgetText); <span class="hljs-keyword">for</span> (<span class="hljs-type">size_t</span> i = <span class="hljs-number">0</span>; i &lt; buttons.<span class="hljs-built_in">size</span>(); ++i) { window.<span class="hljs-built_in">draw</span>(buttons[i]); window.<span class="hljs-built_in">draw</span>(labels[i]); } window.<span class="hljs-built_in">draw</span>(cartText); window.<span class="hljs-built_in">draw</span>(resultText); window.<span class="hljs-built_in">display</span>(); } <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; } </code>
+            </div>
+        </div>
+        <hr data-start="4625" data-end="4628" />
+        <h2 data-start="4630" data-end="4651">📁 Required Assets</h2>
+        <ul data-start="4652" data-end="4733">
+            <li data-start="4652" data-end="4733">
+                <p data-start="4654" data-end="4733">Place a font file (like <code data-start="4678"
+                        data-end="4689">arial.ttf</code>) in your project folder for text rendering.</p>
+            </li>
+        </ul>
+        <hr data-start="4735" data-end="4738" />
+        <h2 data-start="4740" data-end="4759">✅ What&rsquo;s Working</h2>
+        <ul data-start="4760" data-end="4953">
+            <li data-start="4760" data-end="4814">
+                <p data-start="4762" data-end="4814">Simple GUI with recipe name, budget, and store items</p>
+            </li>
+            <li data-start="4815" data-end="4860">
+                <p data-start="4817" data-end="4860">Clicking on grocery items adds them to cart</p>
+            </li>
+            <li data-start="4861" data-end="4901">
+                <p data-start="4863" data-end="4901">Prevents over-budget or duplicate buys</p>
+            </li>
+            <li data-start="4902" data-end="4953">
+                <p data-start="4904" data-end="4953">Shows win message when all ingredients are bought</p>
+            </li>
+        </ul>
+        <hr data-start="4955" data-end="4958" />
+        <h2 data-start="4960" data-end="4990">🧱 Enhancements to Add Next</h2>
+        <ul data-start="4991" data-end="5235">
+            <li data-start="4991" data-end="5023">
+                <p data-start="4993" data-end="5023">Add <strong data-start="4997" data-end="5013">images/icons</strong>
+                    for items</p>
+            </li>
+            <li data-start="5024" data-end="5057">
+                <p data-start="5026" data-end="5057">Add <strong data-start="5030" data-end="5057">recipe selection
+                        screen</strong></p>
+            </li>
+            <li data-start="5058" data-end="5109">
+                <p data-start="5060" data-end="5109">Replace hardcoded data with JSON or external file</p>
+            </li>
+            <li data-start="5110" data-end="5158">
+                <p data-start="5112" data-end="5158">Sound effects on success/failure (<code data-start="5146"
+                        data-end="5157">sf::Sound</code>)</p>
+            </li>
+            <li data-start="5159" data-end="5193">
+                <p data-start="5161" data-end="5193">Add <strong data-start="5165" data-end="5174">timer</strong> or
+                    countdown clock</p>
+            </li>
+            <li data-start="5194" data-end="5235">
+                <p data-start="5196" data-end="5235">Multiple levels / increasing difficulty</p>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>
