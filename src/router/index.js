@@ -10,7 +10,7 @@ NProgress.configure({ showSpinner: false })
 
 
 const router = createRouter({
-  history: createWebHistory('/cpp-playgrounds/'),
+  history: createWebHistory('/'),
   scrollBehavior(to, from, savedPosition) {
     // Always scroll to top on route change
     return { top: 0 }
