@@ -12,7 +12,7 @@ export default defineConfig({
     vueDevTools(),
     tailwindcss(),
   ],
-  base: '/cpp-playgrounds/',
+  base: '/',
 
   resolve: {
     alias: {
