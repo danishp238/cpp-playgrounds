@@ -63,8 +63,6 @@ const moreBlogs = computed(() =>
     <h1 class="text-center text-xl sm:text-3xl mt-8 px-4">{{ blog.title }}</h1>
 
     <div class="mt-10 w-1/2 mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-center text-md sm:text-3xl mt-8">Live Demo</h2>
-
       <img :src="blog.image" alt="blog-img" class="mt-4 w-full h-auto rounded-lg shadow-lg"
         style="max-height: 400px;" />
     </div>

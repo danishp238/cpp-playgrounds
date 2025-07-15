@@ -2,6 +2,8 @@ import GroceryGame from '/src/assets/blogs/grocery-game.html?raw'
 import GroceryGameAddition from '/src/assets/blogs/grocery-game-addition.html?raw'
 import GroceryGameGui from '/src/assets/blogs/grocery-game-gui.html?raw'
 import HighwayDriver from "/src/assets/blogs/highway-driver.html?raw"
+import HighwayDriverAddition from "/src/assets/blogs/highway-driver-addition.html?raw"
+import HighwayDriverGui from "/src/assets/blogs/highway-driver-gui.html?raw"
 import CarparkingGame from "/src/assets/blogs/car-parking-game.html?raw"
 
 
@@ -39,7 +41,30 @@ const projects = [
     description: 'Highway Driver, you control a car speeding down a highway while avoiding incoming traffic. The longer you survive, the higher your score.',
     image: new URL('/images/highway-driver.jpeg', import.meta.url).href,
     date: 'Posted on June 16, 2025 – 3:30 PM',
-    content: HighwayDriver
+    content: HighwayDriver,
+    customReadMore: [
+      {
+        title: "Speed, Skill & Code: The Making of a Highway Driver Game",
+        excerpt: `Ever wondered how the simple thrill of dodging traffic in a game mirrors real-life driving? In this deep dive, we explore Highway Driver—a deceptively simple game that captures the chaos, strategy, and reflexes of the open road. From real-world driving psychology to game design secrets, we’ll break down:
+        ✅ How highway survival games train your brain (faster reactions, better focus)
+        ✅ Clever game mechanics inspired by actual driving challenges (lane-switching, speed fatigue, tunnel vision)
+      ✅ Behind-the-scenes coding & design choices (why obstacles spawn just right)
+      ✅ Fun upgrades to turn a basic prototype into a full-fledged game (weather, AI traffic, boss chases!)
+
+      Whether you're a gamer, developer, or just love the open road, this post shifts gears between entertainment, education, and pure coding adrenaline. Ready to hit the highway? Let’s go! 🚗💨`,
+        slug: 'highway-driver-making',
+        content: HighwayDriverAddition,
+        image: new URL('/images/highway-driver-addition.jpeg', import.meta.url).href
+      },
+
+      {
+        title: "Adding graphics to your game",
+        excerpt: "Your Highway Driver game already has a basic graphical UI using SFML rectangles and text, but now let’s talk about enhancing the GUI (Graphical User Interface) with visual polish, usability, and menus — just like a complete arcade-style game.",
+        slug: "highway-driver-gui",
+        image: new URL('/images/highway-driver-gui.jpeg', import.meta.url).href,
+        content: HighwayDriverGui
+      }
+    ]
   },
   {
     id: 3,

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h2 data-start="270" data-end="304">🧱 What GUI Means for Your Game</h2>
+        <p data-start="306" data-end="328">A better <strong data-start="315" data-end="322">GUI</strong> adds:</p>
+        <div class="_tableContainer_80l1q_1">
+            <div class="_tableWrapper_80l1q_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="330" data-end="769">
+                    <thead data-start="330" data-end="351">
+                        <tr data-start="330" data-end="351">
+                            <th data-start="330" data-end="340" data-col-size="sm">Feature</th>
+                            <th data-start="340" data-end="351" data-col-size="sm">Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="373" data-end="769">
+                        <tr data-start="373" data-end="423">
+                            <td data-start="373" data-end="388" data-col-size="sm">🧭 Main Menu</td>
+                            <td data-start="388" data-end="423" data-col-size="sm">Start Game, Quit, maybe Options</td>
+                        </tr>
+                        <tr data-start="424" data-end="475">
+                            <td data-start="424" data-end="440" data-col-size="sm">🛑 Pause Menu</td>
+                            <td data-start="440" data-end="475" data-col-size="sm">Press <code data-start="448"
+                                    data-end="453">Esc</code> to pause and resume</td>
+                        </tr>
+                        <tr data-start="476" data-end="527">
+                            <td data-start="476" data-end="498" data-col-size="sm">💥 Game Over Screen</td>
+                            <td data-start="498" data-end="527" data-col-size="sm">Show score, retry or exit</td>
+                        </tr>
+                        <tr data-start="528" data-end="576">
+                            <td data-start="528" data-end="537" data-col-size="sm">🎯 HUD</td>
+                            <td data-start="537" data-end="576" data-col-size="sm">Score, level, lives shown on screen
+                            </td>
+                        </tr>
+                        <tr data-start="577" data-end="636">
+                            <td data-start="577" data-end="605" data-col-size="sm">🎨 Custom Fonts / Buttons</td>
+                            <td data-start="605" data-end="636" data-col-size="sm">Make the game look polished</td>
+                        </tr>
+                        <tr data-start="637" data-end="704">
+                            <td data-start="637" data-end="668" data-col-size="sm">🖼️ Textures and Backgrounds</td>
+                            <td data-start="668" data-end="704" data-col-size="sm">Replace basic shapes with images</td>
+                        </tr>
+                        <tr data-start="705" data-end="769">
+                            <td data-start="705" data-end="730" data-col-size="sm">🕹️ Mouse Interactions</td>
+                            <td data-start="730" data-end="769" data-col-size="sm">Clickable buttons (via SFML events)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="sticky end-(--thread-content-margin) h-0 self-end select-none">&nbsp;</div>
+            </div>
+        </div>
+        <hr data-start="771" data-end="774" />
+        <h2 data-start="776" data-end="808">✅ Example GUI Elements to Add</h2>
+        <h3 data-start="810" data-end="840">1. 🎮 <strong data-start="820" data-end="840">Main Menu Screen</strong></h3>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-comment">// Before game starts:</span> <span class="hljs-keyword">enum</span> <span class="hljs-title class_">GameState</span> { MENU, PLAYING, GAME_OVER }; GameState gameState = MENU; <span class="hljs-comment">// Draw menu buttons:</span> <span class="hljs-function">Text <span class="hljs-title">title</span></span><span class="hljs-params">(<span class="hljs-string">"HIGHWAY DRIVER"</span></span>, font, <span class="hljs-number">40</span>); title.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">50</span>, <span class="hljs-number">100</span>); <span class="hljs-function">Text <span class="hljs-title">startBtn</span></span><span class="hljs-params">(<span class="hljs-string">"Start Game"</span></span>, font, <span class="hljs-number">30</span>); startBtn.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">100</span>, <span class="hljs-number">250</span>); <span class="hljs-function">Text <span class="hljs-title">quitBtn</span></span><span class="hljs-params">(<span class="hljs-string">"Quit"</span></span>, font, <span class="hljs-number">30</span>); quitBtn.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">100</span>, <span class="hljs-number">300</span>); <span class="hljs-comment">// Inside window loop:</span> <span class="hljs-keyword">if</span> (gameState == MENU) { window.<span class="hljs-built_in">draw</span>(title); window.<span class="hljs-built_in">draw</span>(startBtn); window.<span class="hljs-built_in">draw</span>(quitBtn); } </code>
+            </div>
+        </div>
+        <p data-start="1305" data-end="1335">Then check mouse clicks using:</p>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-keyword">if</span> (event.type == Event::MouseButtonPressed) { <span class="hljs-function">Vector2f <span class="hljs-title">mousePos</span></span><span class="hljs-params">(event.mouseButton.x, event.mouseButton.y)</span>; <span class="hljs-keyword">if</span> (startBtn.<span class="hljs-built_in">getGlobalBounds</span>().<span class="hljs-built_in">contains</span>(mousePos)) gameState = PLAYING; <span class="hljs-keyword">if</span> (quitBtn.<span class="hljs-built_in">getGlobalBounds</span>().<span class="hljs-built_in">contains</span>(mousePos)) window.<span class="hljs-built_in">close</span>(); } </code>
+            </div>
+        </div>
+        <hr data-start="1624" data-end="1627" />
+        <h3 data-start="1629" data-end="1666">2. 🛑 <strong data-start="1639" data-end="1666">Pause Menu with Esc
+                Key</strong></h3>
+        <p data-start="1668" data-end="1678">Add logic:</p>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-type">bool</span> paused = <span class="hljs-literal">false</span>; <span class="hljs-keyword">if</span> (event.type == Event::KeyPressed &amp;&amp; event.key.code == Keyboard::Escape) { paused = !paused; } <span class="hljs-keyword">if</span> (paused) { <span class="hljs-function">Text <span class="hljs-title">pauseText</span></span><span class="hljs-params">(<span class="hljs-string">"PAUSED"</span></span>, font, <span class="hljs-number">40</span>); pauseText.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">130</span>, <span class="hljs-number">250</span>); window.<span class="hljs-built_in">draw</span>(pauseText); <span class="hljs-keyword">continue</span>; <span class="hljs-comment">// Skip game update</span> } </code>
+            </div>
+        </div>
+        <hr data-start="1970" data-end="1973" />
+        <h3 data-start="1975" data-end="2005">3. 💥 <strong data-start="1985" data-end="2005">Game Over Screen</strong>
+        </h3>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-keyword">if</span> (gameOver) { <span class="hljs-function">Text <span class="hljs-title">over</span></span><span class="hljs-params">(<span class="hljs-string">"Game Over!"</span></span>, font, <span class="hljs-number">40</span>); over.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">100</span>, <span class="hljs-number">250</span>); <span class="hljs-function">Text <span class="hljs-title">retry</span></span><span class="hljs-params">(<span class="hljs-string">"Press R to Retry"</span></span>, font, <span class="hljs-number">24</span>); retry.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">110</span>, <span class="hljs-number">320</span>); window.<span class="hljs-built_in">draw</span>(over); window.<span class="hljs-built_in">draw</span>(retry); <span class="hljs-keyword">if</span> (Keyboard::<span class="hljs-built_in">isKeyPressed</span>(Keyboard::R)) { <span class="hljs-comment">// Reset game variables:</span> enemies.<span class="hljs-built_in">clear</span>(); score = <span class="hljs-number">0</span>; moves = <span class="hljs-number">0</span>; gameOver = <span class="hljs-literal">false</span>; enemySpeed = <span class="hljs-number">4.0f</span>; level = <span class="hljs-number">1</span>; spawnInterval = <span class="hljs-number">1.0f</span>; clock.<span class="hljs-built_in">restart</span>(); } } </code>
+            </div>
+        </div>
+        <hr data-start="2513" data-end="2516" />
+        <h3 data-start="2518" data-end="2572">4. 🎨 <strong data-start="2528" data-end="2572">Optional: Use Textures
+                Instead of Shapes</strong></h3>
+        <p data-start="2574" data-end="2616">Replace car rectangles with actual images:</p>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp">Texture carTexture; carTexture.<span class="hljs-built_in">loadFromFile</span>(<span class="hljs-string">"car.png"</span>); <span class="hljs-function">Sprite <span class="hljs-title">playerSprite</span></span><span class="hljs-params">(carTexture)</span>; playerSprite.<span class="hljs-built_in">setPosition</span>(carX, carY); window.<span class="hljs-built_in">draw</span>(playerSprite); </code>
+            </div>
+        </div>
+        <hr data-start="2784" data-end="2787" />
+        <h2 data-start="2789" data-end="2823">🛠 Future GUI Tools to Consider</h2>
+        <p data-start="2825" data-end="2866">If you outgrow SFML&rsquo;s basic GUI features:</p>
+        <div class="_tableContainer_80l1q_1">
+            <div class="_tableWrapper_80l1q_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="2868" data-end="3167">
+                    <thead data-start="2868" data-end="2893">
+                        <tr data-start="2868" data-end="2893">
+                            <th data-start="2868" data-end="2878" data-col-size="sm">Library</th>
+                            <th data-start="2878" data-end="2893" data-col-size="md">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="2920" data-end="3167">
+                        <tr data-start="2920" data-end="2988">
+                            <td data-start="2920" data-end="2931" data-col-size="sm"><strong data-start="2922"
+                                    data-end="2930">TGUI</strong></td>
+                            <td data-start="2931" data-end="2988" data-col-size="md">Add real GUI widgets to SFML
+                                (buttons, sliders, etc.)</td>
+                        </tr>
+                        <tr data-start="2989" data-end="3042">
+                            <td data-start="2989" data-end="3006" data-col-size="sm"><strong data-start="2991"
+                                    data-end="3005">ImGui-SFML</strong></td>
+                            <td data-start="3006" data-end="3042" data-col-size="md">Great for debug GUIs or overlays
+                            </td>
+                        </tr>
+                        <tr data-start="3043" data-end="3102">
+                            <td data-start="3043" data-end="3052" data-col-size="sm"><strong data-start="3045"
+                                    data-end="3051">Qt</strong></td>
+                            <td data-start="3052" data-end="3102" data-col-size="md">Full-scale GUI applications, not
+                                game-oriented</td>
+                        </tr>
+                        <tr data-start="3103" data-end="3167">
+                            <td data-start="3103" data-end="3120" data-col-size="sm"><strong data-start="3105"
+                                    data-end="3119">Dear ImGui</strong></td>
+                            <td data-start="3120" data-end="3167" data-col-size="md">Lightweight for in-game controls or
+                                editors</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="sticky end-(--thread-content-margin) h-0 self-end select-none">&nbsp;</div>
+            </div>
+        </div>
+        <hr data-start="3169" data-end="3172" />
+        <h2 data-start="3174" data-end="3207">🔁 Summary of GUI Enhancements</h2>
+        <div class="_tableContainer_80l1q_1">
+            <div class="_tableWrapper_80l1q_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="3209" data-end="3522">
+                    <thead data-start="3209" data-end="3238">
+                        <tr data-start="3209" data-end="3238">
+                            <th data-start="3209" data-end="3219" data-col-size="sm">Element</th>
+                            <th data-start="3219" data-end="3238" data-col-size="sm">Example Feature</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="3268" data-end="3522">
+                        <tr data-start="3268" data-end="3297">
+                            <td data-start="3268" data-end="3283" data-col-size="sm">🎮 Main Menu</td>
+                            <td data-start="3283" data-end="3297" data-col-size="sm">Start/Quit</td>
+                        </tr>
+                        <tr data-start="3298" data-end="3324">
+                            <td data-start="3298" data-end="3309" data-col-size="sm">🛑 Pause</td>
+                            <td data-start="3309" data-end="3324" data-col-size="sm">Press <code data-start="3317"
+                                    data-end="3322">Esc</code></td>
+                        </tr>
+                        <tr data-start="3325" data-end="3361">
+                            <td data-start="3325" data-end="3340" data-col-size="sm">💥 Game Over</td>
+                            <td data-start="3340" data-end="3361" data-col-size="sm">Show score, retry</td>
+                        </tr>
+                        <tr data-start="3362" data-end="3393">
+                            <td data-start="3362" data-end="3371" data-col-size="sm">🧾 HUD</td>
+                            <td data-start="3371" data-end="3393" data-col-size="sm">Score, Level, Fuel</td>
+                        </tr>
+                        <tr data-start="3394" data-end="3435">
+                            <td data-start="3394" data-end="3411" data-col-size="sm">🖼️ Background</td>
+                            <td data-start="3411" data-end="3435" data-col-size="sm">Scrolling road image</td>
+                        </tr>
+                        <tr data-start="3436" data-end="3475">
+                            <td data-start="3436" data-end="3449" data-col-size="sm">🎨 Sprites</td>
+                            <td data-start="3449" data-end="3475" data-col-size="sm">Player car, enemy cars</td>
+                        </tr>
+                        <tr data-start="3476" data-end="3522">
+                            <td data-start="3476" data-end="3490" data-col-size="sm">🔊 Settings</td>
+                            <td data-start="3490" data-end="3522" data-col-size="sm">Volume control, toggle music</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>

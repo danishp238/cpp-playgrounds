@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h2 data-start="66" data-end="95">🌍 Real-Life Inspiration</h2>
+        <h3 data-start="96" data-end="136">🚗 Highway Driving in the Real World</h3>
+        <ul data-start="138" data-end="638">
+            <li data-start="138" data-end="260">
+                <p data-start="140" data-end="260"><strong data-start="140" data-end="162">Obstacle Awareness</strong>:
+                    Just like in real life, drivers must avoid sudden obstacles&mdash;potholes, debris, or other
+                    vehicles.</p>
+            </li>
+            <li data-start="261" data-end="368">
+                <p data-start="263" data-end="368"><strong data-start="263" data-end="281">Lane Switching</strong>: A
+                    common challenge in real driving, especially at high speeds, is safe lane changing.</p>
+            </li>
+            <li data-start="369" data-end="495">
+                <p data-start="371" data-end="495"><strong data-start="371" data-end="401">Increasing Speed with
+                        Time</strong>: On long trips, drivers may unconsciously speed up over time, leading to fatigue
+                    or mistakes.</p>
+            </li>
+            <li data-start="496" data-end="638">
+                <p data-start="498" data-end="638"><strong data-start="498" data-end="515">Tunnel Vision</strong>: The
+                    longer you're on the road, the narrower your focus can become&mdash;a great metaphor for increasing
+                    difficulty in the game.</p>
+            </li>
+        </ul>
+        <hr data-start="640" data-end="643" />
+        <h2 data-start="645" data-end="681">🎉 Fun Facts About Cars &amp; Driving</h2>
+        <ol data-start="683" data-end="1245">
+            <li data-start="683" data-end="776">
+                <p data-start="686" data-end="776">🚦 <strong data-start="689" data-end="716">The first traffic
+                        light</strong> was installed in London in 1868 and exploded a month later!</p>
+            </li>
+            <li data-start="777" data-end="883">
+                <p data-start="780" data-end="883">🛣️ <strong data-start="784" data-end="806">Germany&rsquo;s
+                        Autobahn</strong> has stretches with <strong data-start="826" data-end="844">no speed
+                        limit</strong>, inspiring many endless driving games.</p>
+            </li>
+            <li data-start="884" data-end="1011">
+                <p data-start="887" data-end="1011">⛽ <strong data-start="889" data-end="907">Cruise control</strong>
+                    was invented by a blind man named Ralph Teetor who noticed his driver sped up and slowed down too
+                    much.</p>
+            </li>
+            <li data-start="1012" data-end="1131">
+                <p data-start="1015" data-end="1131">🧠 Reaction time at 100 km/h is just <strong data-start="1052"
+                        data-end="1067">1.5 seconds</strong>, but that&rsquo;s 42 meters traveled before you even touch
+                    the brake!</p>
+            </li>
+            <li data-start="1132" data-end="1245">
+                <p data-start="1135" data-end="1245">🎮 <strong data-start="1138" data-end="1152">Mario Kart</strong>
+                    inspired real driver studies&mdash;players often react faster than non-gamers in simulation tests.
+                </p>
+            </li>
+        </ol>
+        <hr data-start="1247" data-end="1250" />
+        <h2 data-start="1252" data-end="1299">🧠 Problem-Solving Approaches in Game Design</h2>
+        <div class="_tableContainer_80l1q_1">
+            <div class="_tableWrapper_80l1q_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="1301" data-end="1888">
+                    <thead data-start="1301" data-end="1350">
+                        <tr data-start="1301" data-end="1350">
+                            <th data-start="1301" data-end="1313" data-col-size="sm">Challenge</th>
+                            <th data-start="1313" data-end="1333" data-col-size="sm">Real-Life Analogy</th>
+                            <th data-start="1333" data-end="1350" data-col-size="md">Game Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="1401" data-end="1888">
+                        <tr data-start="1401" data-end="1509">
+                            <td data-start="1401" data-end="1426" data-col-size="sm">Keeping player engaged</td>
+                            <td data-start="1426" data-end="1458" data-col-size="sm">Road becomes boring over time</td>
+                            <td data-start="1458" data-end="1509" data-col-size="md">Increasing level speed &amp;
+                                frequency of obstacles</td>
+                        </tr>
+                        <tr data-start="1510" data-end="1616">
+                            <td data-start="1510" data-end="1533" data-col-size="sm">Balancing difficulty</td>
+                            <td data-start="1533" data-end="1570" data-col-size="sm">Speeding makes real driving harder
+                            </td>
+                            <td data-start="1570" data-end="1616" data-col-size="md">Enemy spawn rate + movement speed
+                                increase</td>
+                        </tr>
+                        <tr data-start="1617" data-end="1709">
+                            <td data-start="1617" data-end="1633" data-col-size="sm">Feedback loop</td>
+                            <td data-start="1633" data-end="1665" data-col-size="sm">Drivers use mirrors and sound</td>
+                            <td data-start="1665" data-end="1709" data-col-size="md">Sound on crash, visual feedback on
+                                score</td>
+                        </tr>
+                        <tr data-start="1710" data-end="1798">
+                            <td data-start="1710" data-end="1735" data-col-size="sm">Avoiding unfair deaths</td>
+                            <td data-start="1735" data-end="1759" data-col-size="sm">Road has safety zones</td>
+                            <td data-start="1759" data-end="1798" data-col-size="md">Spawning enemies with spacing logic
+                            </td>
+                        </tr>
+                        <tr data-start="1799" data-end="1888">
+                            <td data-start="1799" data-end="1815" data-col-size="sm">Replayability</td>
+                            <td data-start="1815" data-end="1850" data-col-size="sm">Driving isn't the same each time
+                            </td>
+                            <td data-start="1850" data-end="1888" data-col-size="md">Random lanes + high score tracking
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="sticky end-(--thread-content-margin) h-0 self-end select-none">&nbsp;</div>
+            </div>
+        </div>
+        <hr data-start="1890" data-end="1893" />
+        <h2 data-start="1895" data-end="1938">🛠️ Further Enhancements &amp; Game Features</h2>
+        <p data-start="1940" data-end="2023">Here are <strong data-start="1949" data-end="1969">10+
+                improvements</strong> to evolve <em data-start="1980" data-end="1996">Highway Driver</em> into a
+            full-featured game:</p>
+        <h3 data-start="2025" data-end="2043">🎨 Visual &amp; UX</h3>
+        <ul data-start="2044" data-end="2349">
+            <li data-start="2044" data-end="2121">
+                <p data-start="2046" data-end="2121">✅ <strong data-start="2048" data-end="2059">Sprites</strong>:
+                    Replace rectangles with car textures (<code data-start="2099" data-end="2108">car.png</code>, <code
+                        data-start="2110" data-end="2120">road.png</code>)</p>
+            </li>
+            <li data-start="2122" data-end="2199">
+                <p data-start="2124" data-end="2199">🌌 <strong data-start="2127" data-end="2146">Day/Night
+                        Cycle</strong>: Gradually darken screen and add headlights at night</p>
+            </li>
+            <li data-start="2200" data-end="2284">
+                <p data-start="2202" data-end="2284">🌧️ <strong data-start="2206" data-end="2223">Weather
+                        Modes</strong>: Rain reduces visibility or slippery roads (faster movement)</p>
+            </li>
+            <li data-start="2285" data-end="2349">
+                <p data-start="2287" data-end="2349">🛣️ <strong data-start="2291" data-end="2310">Different
+                        Roads</strong>: City, desert, highway, mountain paths</p>
+            </li>
+        </ul>
+        <h3 data-start="2351" data-end="2363">🎵 Audio</h3>
+        <ul data-start="2364" data-end="2455">
+            <li data-start="2364" data-end="2413">
+                <p data-start="2366" data-end="2413">✅ <strong data-start="2368" data-end="2388">Background
+                        music</strong>: Change tracks per level</p>
+            </li>
+            <li data-start="2414" data-end="2455">
+                <p data-start="2416" data-end="2455">💥 <strong data-start="2419" data-end="2455">Sound for crash,
+                        boost, level up</strong></p>
+            </li>
+        </ul>
+        <h3 data-start="2457" data-end="2473">🚘 Mechanics</h3>
+        <ul data-start="2474" data-end="2670">
+            <li data-start="2474" data-end="2543">
+                <p data-start="2476" data-end="2543">⛽ <strong data-start="2478" data-end="2493">Fuel System</strong>:
+                    Pick up gas to keep going (runs out = game over)</p>
+            </li>
+            <li data-start="2544" data-end="2602">
+                <p data-start="2546" data-end="2602">🪙 <strong data-start="2549" data-end="2568">Coin
+                        Collection</strong>: Add collectible items for points</p>
+            </li>
+            <li data-start="2603" data-end="2670">
+                <p data-start="2605" data-end="2670">💨 <strong data-start="2608" data-end="2623">Turbo Boost</strong>:
+                    Press spacebar to go super fast for 3 seconds</p>
+            </li>
+        </ul>
+        <h3 data-start="2672" data-end="2690">📈 Progression</h3>
+        <ul data-start="2691" data-end="2936">
+            <li data-start="2691" data-end="2759">
+                <p data-start="2693" data-end="2759">🧠 <strong data-start="2696" data-end="2710">AI Traffic</strong>:
+                    Smarter NPC cars that switch lanes or slow down</p>
+            </li>
+            <li data-start="2760" data-end="2819">
+                <p data-start="2762" data-end="2819">🧩 <strong data-start="2765" data-end="2777">Boss Car</strong>: A
+                    police car chases you every few levels</p>
+            </li>
+            <li data-start="2820" data-end="2875">
+                <p data-start="2822" data-end="2875">💾 <strong data-start="2825" data-end="2846">High Score
+                        Saving</strong>: Save top 5 scores to a file</p>
+            </li>
+            <li data-start="2876" data-end="2936">
+                <p data-start="2878" data-end="2936">🧱 <strong data-start="2881" data-end="2899">Obstacle
+                        Types</strong>: Barricades, traffic cones, potholes</p>
+            </li>
+        </ul>
+        <h3 data-start="2938" data-end="2954">🎮 Interface</h3>
+        <ul data-start="2955" data-end="3066">
+            <li data-start="2955" data-end="2991">
+                <p data-start="2957" data-end="2991">🔄 <strong data-start="2960" data-end="2986">Restart / Pause /
+                        Quit</strong> menu</p>
+            </li>
+            <li data-start="2992" data-end="3066">
+                <p data-start="2994" data-end="3066">🎯 <strong data-start="2997" data-end="3015">Mission
+                        System</strong>: &ldquo;Survive for 30s&rdquo;, &ldquo;Dodge 10 cars in a row&rdquo;, etc.</p>
+            </li>
+        </ul>
+        <hr data-start="3068" data-end="3071" />
+        <h2 data-start="3073" data-end="3094">🏆 Game Mode Ideas</h2>
+        <div class="_tableContainer_80l1q_1">
+            <div class="_tableWrapper_80l1q_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="3096" data-end="3396">
+                    <thead data-start="3096" data-end="3118">
+                        <tr data-start="3096" data-end="3118">
+                            <th data-start="3096" data-end="3103" data-col-size="sm">Mode</th>
+                            <th data-start="3103" data-end="3118" data-col-size="sm">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="3142" data-end="3396">
+                        <tr data-start="3142" data-end="3205">
+                            <td data-start="3142" data-end="3166" data-col-size="sm">🛣️ <strong data-start="3148"
+                                    data-end="3165">Endless Drive</strong></td>
+                            <td data-start="3166" data-end="3205" data-col-size="sm">Classic mode, gets faster with time
+                            </td>
+                        </tr>
+                        <tr data-start="3206" data-end="3267">
+                            <td data-start="3206" data-end="3231" data-col-size="sm">🧱 <strong data-start="3211"
+                                    data-end="3230">Obstacle Course</strong></td>
+                            <td data-start="3231" data-end="3267" data-col-size="sm">Random cones and potholes appear
+                            </td>
+                        </tr>
+                        <tr data-start="3268" data-end="3330">
+                            <td data-start="3268" data-end="3288" data-col-size="sm">🏁 <strong data-start="3273"
+                                    data-end="3287">Time Trial</strong></td>
+                            <td data-start="3288" data-end="3330" data-col-size="sm">Reach checkpoints before time runs
+                                out</td>
+                        </tr>
+                        <tr data-start="3331" data-end="3396">
+                            <td data-start="3331" data-end="3353" data-col-size="sm">🚨 <strong data-start="3336"
+                                    data-end="3352">Police Chase</strong></td>
+                            <td data-start="3353" data-end="3396" data-col-size="sm">Outrun chasing cars with tricky
+                                traffic</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="sticky end-(--thread-content-margin) h-0 self-end select-none">&nbsp;</div>
+            </div>
+        </div>
+        <hr data-start="3398" data-end="3401" />
+        <h2 data-start="3403" data-end="3442">🚀 Real-World Skills Learnt via Game</h2>
+        <div class="_tableContainer_80l1q_1">
+            <div class="_tableWrapper_80l1q_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="3444" data-end="3715">
+                    <thead data-start="3444" data-end="3470">
+                        <tr data-start="3444" data-end="3470">
+                            <th data-start="3444" data-end="3452" data-col-size="sm">Skill</th>
+                            <th data-start="3452" data-end="3470" data-col-size="sm">Gained Through</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="3498" data-end="3715">
+                        <tr data-start="3498" data-end="3534">
+                            <td data-start="3498" data-end="3514" data-col-size="sm">Reaction time</td>
+                            <td data-start="3514" data-end="3534" data-col-size="sm">Dodge enemy cars</td>
+                        </tr>
+                        <tr data-start="3535" data-end="3576">
+                            <td data-start="3535" data-end="3554" data-col-size="sm">Focus &amp; patience</td>
+                            <td data-start="3554" data-end="3576" data-col-size="sm">Long survival runs</td>
+                        </tr>
+                        <tr data-start="3577" data-end="3620">
+                            <td data-start="3577" data-end="3597" data-col-size="sm">Spatial awareness</td>
+                            <td data-start="3597" data-end="3620" data-col-size="sm">Avoiding collisions</td>
+                        </tr>
+                        <tr data-start="3621" data-end="3664">
+                            <td data-start="3621" data-end="3638" data-col-size="sm">Coding + logic</td>
+                            <td data-start="3638" data-end="3664" data-col-size="sm">C++ + SFML programming</td>
+                        </tr>
+                        <tr data-start="3665" data-end="3715">
+                            <td data-start="3665" data-end="3679" data-col-size="sm">Game design</td>
+                            <td data-start="3679" data-end="3715" data-col-size="sm">Balancing speed, difficulty, fun
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="sticky end-(--thread-content-margin) h-0 self-end select-none">&nbsp;</div>
+            </div>
+        </div>
+        <hr data-start="3717" data-end="3720" />
+        <h2 data-start="3722" data-end="3734">✨ Summary</h2>
+        <p data-start="3736" data-end="3804"><strong data-start="3736" data-end="3754">Highway Driver</strong> may look
+            simple, but it's a powerful template to:</p>
+        <ul data-start="3806" data-end="3991">
+            <li data-start="3806" data-end="3852">
+                <p data-start="3808" data-end="3852">Practice real-world reflexes &amp; traffic logic</p>
+            </li>
+            <li data-start="3853" data-end="3891">
+                <p data-start="3855" data-end="3891">Learn <strong data-start="3861" data-end="3891">progressive game
+                        mechanics</strong></p>
+            </li>
+            <li data-start="3892" data-end="3941">
+                <p data-start="3894" data-end="3941">Implement <strong data-start="3904" data-end="3941">real-time
+                        strategy under pressure</strong></p>
+            </li>
+            <li data-start="3942" data-end="3991">
+                <p data-start="3944" data-end="3991">Introduce <strong data-start="3954" data-end="3991">problem-solving
+                        &amp; software design</strong></p>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>
