@@ -5,6 +5,8 @@ import HighwayDriver from "/src/assets/blogs/highway-driver.html?raw"
 import HighwayDriverAddition from "/src/assets/blogs/highway-driver-addition.html?raw"
 import HighwayDriverGui from "/src/assets/blogs/highway-driver-gui.html?raw"
 import CarparkingGame from "/src/assets/blogs/car-parking-game.html?raw"
+import FarmFrenzy from "/src/assets/blogs/farm-frenzy.html?raw"
+import FarmFrenzyGui from "/src/assets/blogs/farm-frenzy-gui.html?raw"
 
 
 const projects = [
@@ -74,6 +76,31 @@ const projects = [
     image: new URL('/images/car-parking.jpeg', import.meta.url).href,
     date: 'Posted on June 17, 2025 – 8:00 AM',
     content: CarparkingGame
+  },
+  {
+    id: 4,
+    title: 'Farm Frenzy: Harvest Grow',
+    slug: 'farm-frenzy',
+    description: `👨‍🌾 You're a farmer who must:
+    🌱 Plant crops
+  🐄 Feed animals
+  🧺 Harvest and sell products
+  🌾 Expand your farm
+  💡 All while managing time, money, and resources wisely.`,
+    image: new URL('/images/farm-frenzy.jpeg', import.meta.url).href,
+    date: 'Posted on June 17, 2025 – 8:00 AM',
+    content: FarmFrenzy,
+    customReadMore: [
+      {
+        title:"Building Farm Frenzy: A GUI-Based Farm Game in C++ with SFML",
+        slug:"farm-frenzy-with-gui",
+        excerpt: `What if you could bring the joy of farming to your screen using just C++ and a bit of graphics? Welcome to
+        Farm Frenzy, a simple but engaging GUI-based farm simulation game developed in C++ using
+            the SFML (Simple and Fast Multimedia Library)`,
+        image: new URL('/images/farm-frenzy-gui.jpeg', import.meta.url).href,
+        content: FarmFrenzyGui
+      }
+    ]
   },
   // {
   //   id: 4,
