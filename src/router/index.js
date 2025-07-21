@@ -56,5 +56,14 @@ router.afterEach(() => {
   NProgress.done()
 })
 
+router.afterEach((to) => {
+  gtag('event', 'page_view', {
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: to.fullPath,
+  });
+});
+
+
 
 export default router
