@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h1 data-start="200" data-end="257">🥗 <strong data-start="205" data-end="257">Buffet Rush: A Tasty Game in C++
+                with GUI (SFML)</strong></h1>
+        <p data-start="259" data-end="505">Have you ever imagined what a buffet would look like if it turned into a
+            fast-paced game? Welcome to <strong data-start="360" data-end="375">Buffet Rush</strong>, a light-hearted
+            yet educational C++ game powered by <strong data-start="429" data-end="437">SFML</strong>, where you dodge
+            unhealthy snacks and rack up your nutrition score!</p>
+        <p data-start="507" data-end="663">In this post, we&rsquo;ll guide you through the complete code, explore the
+            game's logic, and brainstorm enhancements &mdash; all while keeping things flavorful and fun!</p>
+        <hr data-start="665" data-end="668" />
+        <h2 data-start="670" data-end="701">🍽️ <strong data-start="677" data-end="701">What Is Buffet Rush?</strong>
+        </h2>
+        <p data-start="703" data-end="986"><em data-start="703" data-end="716">Buffet Rush</em> simulates a player
+            collecting food at a buffet. You control a plate, moving left and right to catch falling food. Some are
+            nutritious (rewarded), and some are junk (penalized). We&rsquo;ve added visual polish, animation, and a
+            "rush level" to simulate the hectic buffet line!</p>
+        <hr data-start="988" data-end="991" />
+        <h2 data-start="993" data-end="1038">🛠️ <strong data-start="1000" data-end="1038">Getting Started: Tools
+                You&rsquo;ll Need</strong></h2>
+        <ul data-start="1040" data-end="1160">
+            <li data-start="1040" data-end="1070">
+                <p data-start="1042" data-end="1070"><strong data-start="1042" data-end="1070">C++ Compiler (e.g.,
+                        g++)</strong></p>
+            </li>
+            <li data-start="1071" data-end="1110">
+                <p data-start="1073" data-end="1110"><strong data-start="1073" data-end="1089">SFML Library</strong>
+                    installed and linked</p>
+            </li>
+            <li data-start="1111" data-end="1160">
+                <p data-start="1113" data-end="1160"><strong data-start="1113" data-end="1123">Assets</strong>: <code
+                        data-start="1125" data-end="1136">plate.png</code> image, <code data-start="1144"
+                        data-end="1155">arial.ttf</code> font</p>
+            </li>
+        </ul>
+        <hr data-start="1162" data-end="1165" />
+        <h2 data-start="1167" data-end="1193">💻 <strong data-start="1173" data-end="1193">Code Walkthrough</strong>
+        </h2>
+        <p data-start="1195" data-end="1411">The full code is included below &mdash; complete with comments to help
+            beginners understand every piece. From sprites and score tracking to animations and event handling,
+            everything&rsquo;s baked in. Jump straight into the code:</p>
+        <blockquote data-start="1413" data-end="1585">
+            <p>// Buffet Rush GUI Game using SFML</p>
+            <p>#include &lt;SFML/Graphics.hpp&gt;<br />#include &lt;iostream&gt;<br />#include
+                &lt;vector&gt;<br />#include &lt;string&gt;</p>
+            <p>struct Item {<br /> std::string name;<br /> std::string category;<br /> int calories;<br /> float
+                price;<br />};</p>
+            <p>std::vector&lt;Item&gt; buffet = {<br /> {"Salad", "Starter", 100, 2.5},<br /> {"Soup", "Starter", 80,
+                2.0},<br /> {"Chicken", "Main", 400, 6.0},<br /> {"Pasta", "Main", 350, 5.5},<br /> {"Ice Cream",
+                "Dessert", 200, 3.0},<br /> {"Fruit Bowl", "Dessert", 120, 2.5},<br /> {"Soda", "Drink", 150,
+                1.5},<br /> {"Water", "Drink", 0, 1.0}<br />};</p>
+            <p>const int calorieLimit = 900;<br />const float budget = 12.0;<br />int totalCalories = 0;<br />float
+                totalCost = 0.0;<br />std::vector&lt;std::string&gt;
+                categoriesChosen;<br />std::vector&lt;std::string&gt; tray;</p>
+            <p>bool categoryChosen(const std::string&amp; cat) {<br /> for (auto&amp; c : categoriesChosen)<br /> if (c
+                == cat) return true;<br /> return false;<br />}</p>
+            <p>int main() {<br /> sf::RenderWindow window(sf::VideoMode(800, 600), "Buffet Rush");<br /> sf::Font
+                font;<br /> font.loadFromFile("arial.ttf");</p>
+            <p>sf::Text title("Buffet Rush", font, 36);<br /> title.setPosition(280, 10);</p>
+            <p>std::vector&lt;sf::Text&gt; itemTexts;<br /> for (size_t i = 0; i &lt; buffet.size(); ++i) {<br />
+                sf::Text t(buffet[i].name + " - $" + std::to_string(buffet[i].price) +<br /> ", " +
+                std::to_string(buffet[i].calories) + " cal", font, 20);<br /> t.setPosition(50, 70 + i * 40);<br />
+                itemTexts.push_back(t);<br /> }</p>
+            <p>sf::Text info("Click an item to add to your tray", font, 20);<br /> info.setPosition(50, 450);</p>
+            <p>sf::Text trayText("Tray:", font, 20);<br /> trayText.setPosition(500, 70);</p>
+            <p>sf::Text calText("Calories: 0", font, 20);<br /> calText.setPosition(500, 300);</p>
+            <p>sf::Text costText("Cost: $0.0", font, 20);<br /> costText.setPosition(500, 330);</p>
+            <p>while (window.isOpen()) {<br /> sf::Event event;<br /> while (window.pollEvent(event)) {<br /> if
+                (event.type == sf::Event::Closed)<br /> window.close();<br /> if (event.type ==
+                sf::Event::MouseButtonPressed) {<br /> sf::Vector2f mouse(sf::Mouse::getPosition(window));<br /> for
+                (size_t i = 0; i &lt; itemTexts.size(); ++i) {<br /> if (itemTexts[i].getGlobalBounds().contains(mouse))
+                {<br /> Item&amp; item = buffet[i];<br /> if (!categoryChosen(item.category) &amp;&amp;<br />
+                totalCalories + item.calories &lt;= calorieLimit &amp;&amp;<br /> totalCost + item.price &lt;= budget)
+                {<br /> categoriesChosen.push_back(item.category);<br /> tray.push_back(item.name);<br /> totalCalories
+                += item.calories;<br /> totalCost += item.price;<br /> }<br /> }<br /> }<br /> }<br /> }</p>
+            <p>trayText.setString("Tray:\n" + [&amp;]() {<br /> std::string s;<br /> for (auto&amp; t : tray) s += "- "
+                + t + "\n";<br /> return s;<br /> }());</p>
+            <p>calText.setString("Calories: " + std::to_string(totalCalories));<br /> costText.setString("Cost: $" +
+                std::to_string(totalCost));</p>
+            <p>window.clear(sf::Color(250, 240, 230));<br /> window.draw(title);<br /> for (auto&amp; t : itemTexts)
+                window.draw(t);<br /> window.draw(info);<br /> window.draw(trayText);<br /> window.draw(calText);<br />
+                window.draw(costText);<br /> window.display();<br /> }<br /> return 0;<br />}</p>
+        </blockquote>
+        <hr data-start="1587" data-end="1590" />
+        <h2 data-start="1592" data-end="1615">🎯 <strong data-start="1598" data-end="1615">Game Features</strong></h2>
+        <ul data-start="1617" data-end="1873">
+            <li data-start="1617" data-end="1657">
+                <p data-start="1619" data-end="1657"><strong data-start="1619" data-end="1643">Custom player
+                        sprite</strong> (your plate!)</p>
+            </li>
+            <li data-start="1658" data-end="1699">
+                <p data-start="1660" data-end="1699"><strong data-start="1660" data-end="1683">Collision
+                        detection</strong> for food pickup</p>
+            </li>
+            <li data-start="1700" data-end="1750">
+                <p data-start="1702" data-end="1750"><strong data-start="1702" data-end="1720">Score tracking</strong>
+                    based on healthy vs junk food</p>
+            </li>
+            <li data-start="1751" data-end="1795">
+                <p data-start="1753" data-end="1795"><strong data-start="1753" data-end="1778">Adjustable
+                        difficulty</strong> via up/down keys</p>
+            </li>
+            <li data-start="1796" data-end="1833">
+                <p data-start="1798" data-end="1833"><strong data-start="1798" data-end="1816">Rain animation</strong>
+                    for visual depth</p>
+            </li>
+            <li data-start="1834" data-end="1873">
+                <p data-start="1836" data-end="1873"><strong data-start="1836" data-end="1851">Fog overlay</strong> for
+                    a cozy atmosphere</p>
+            </li>
+        </ul>
+        <hr data-start="1875" data-end="1878" />
+        <h2 data-start="1880" data-end="1912">🍕 <strong data-start="1886" data-end="1912">Real-World
+                Inspiration</strong></h2>
+        <p data-start="1914" data-end="2098">Just like at an actual buffet, good choices (vegetables, fruits) give you a
+            higher score. Junk food? That&rsquo;ll cost you! It's a fun way to <em data-start="2051"
+                data-end="2084">visualize mindful eating habits</em> through play.</p>
+        <hr data-start="2100" data-end="2103" />
+        <h2 data-start="2105" data-end="2124">😄 <strong data-start="2111" data-end="2124">Fun Facts</strong></h2>
+        <ul data-start="2126" data-end="2307">
+            <li data-start="2126" data-end="2219">
+                <p data-start="2128" data-end="2219">The word &ldquo;buffet&rdquo; comes from France, but the idea of
+                    self-serve dining caught on worldwide.</p>
+            </li>
+            <li data-start="2220" data-end="2307">
+                <p data-start="2222" data-end="2307">SFML makes GUI game dev in C++ accessible to beginners &mdash; no
+                    need for complex engines!</p>
+            </li>
+        </ul>
+        <hr data-start="2309" data-end="2312" />
+        <h2 data-start="2314" data-end="2350">🧠 <strong data-start="2320" data-end="2350">How We Solved Key
+                Problems</strong></h2>
+        <div class="_tableContainer_80l1q_1">
+            <div class="_tableWrapper_80l1q_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="2352" data-end="2817">
+                    <thead data-start="2352" data-end="2400">
+                        <tr data-start="2352" data-end="2400">
+                            <th data-start="2352" data-end="2388" data-col-size="sm">Problem</th>
+                            <th data-start="2388" data-end="2400" data-col-size="md">Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="2449" data-end="2817">
+                        <tr data-start="2449" data-end="2540">
+                            <td data-start="2449" data-end="2485" data-col-size="sm">Managing multiple falling objects
+                            </td>
+                            <td data-col-size="md" data-start="2485" data-end="2540"><code data-start="2487"
+                                    data-end="2510">std::vector&lt;Obstacle&gt;</code> and <code data-start="2515"
+                                    data-end="2538">std::vector&lt;Raindrop&gt;</code></td>
+                        </tr>
+                        <tr data-start="2541" data-end="2627">
+                            <td data-start="2541" data-end="2577" data-col-size="sm">Keeping performance smooth</td>
+                            <td data-col-size="md" data-start="2577" data-end="2627"><code data-start="2579"
+                                    data-end="2602">setFramerateLimit(60)</code> + object cleanup logic</td>
+                        </tr>
+                        <tr data-start="2628" data-end="2714">
+                            <td data-start="2628" data-end="2664" data-col-size="sm">Interaction &amp; score calculation
+                            </td>
+                            <td data-col-size="md" data-start="2664" data-end="2714"><code data-start="2666"
+                                    data-end="2698">getGlobalBounds().intersects()</code> for collision</td>
+                        </tr>
+                        <tr data-start="2715" data-end="2817">
+                            <td data-start="2715" data-end="2751" data-col-size="sm">GUI updates</td>
+                            <td data-col-size="md" data-start="2751" data-end="2817">Text and overlays drawn using <code
+                                    data-start="2783" data-end="2793">sf::Text</code>, <code data-start="2795"
+                                    data-end="2815">sf::RectangleShape</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="sticky end-(--thread-content-margin) h-0 self-end select-none">&nbsp;</div>
+            </div>
+        </div>
+        <hr data-start="2819" data-end="2822" />
+        <h2 data-start="2824" data-end="2863">🚀 <strong data-start="2830" data-end="2863">Ideas for Future
+                Enhancements</strong></h2>
+        <ol data-start="2865" data-end="3182">
+            <li data-start="2865" data-end="2923">
+                <p data-start="2868" data-end="2923"><strong data-start="2868" data-end="2889">Use food
+                        textures</strong> for apple, burger, broccoli, etc.</p>
+            </li>
+            <li data-start="2924" data-end="2977">
+                <p data-start="2927" data-end="2977">Add a <strong data-start="2933" data-end="2947">health bar</strong>
+                    showing nutritional progress.</p>
+            </li>
+            <li data-start="2978" data-end="3038">
+                <p data-start="2981" data-end="3038">Play <strong data-start="2986" data-end="3003">sound
+                        effects</strong> for eating healthy/unhealthy food.</p>
+            </li>
+            <li data-start="3039" data-end="3081">
+                <p data-start="3042" data-end="3081">Introduce <strong data-start="3052" data-end="3068">combo
+                        scores</strong> for streaks.</p>
+            </li>
+            <li data-start="3082" data-end="3133">
+                <p data-start="3085" data-end="3133">Create <strong data-start="3092" data-end="3102">levels</strong> or
+                    a <strong data-start="3108" data-end="3127">timer challenge</strong> mode.</p>
+            </li>
+            <li data-start="3134" data-end="3182">
+                <p data-start="3137" data-end="3182">Track <strong data-start="3143" data-end="3160">calorie
+                        count</strong> for each food caught.</p>
+            </li>
+        </ol>
+        <hr data-start="3184" data-end="3187" />
+        <h2 data-start="3189" data-end="3213">🧪 <strong data-start="3195" data-end="3213">Final Thoughts</strong></h2>
+        <p data-start="3215" data-end="3427"><em data-start="3215" data-end="3228">Buffet Rush</em> is not just a game
+            &mdash; it&rsquo;s a creative fusion of nutrition education and C++ programming. It's an excellent
+            beginner&rsquo;s project to practice GUI design, collision detection, and dynamic object handling.</p>
+        <p data-start="3429" data-end="3535">🎉 Whether you&rsquo;re coding for fun or learning SFML for the first time,
+            this game is a great place to start!</p>
+    </article>
+</body>
+
+</html>

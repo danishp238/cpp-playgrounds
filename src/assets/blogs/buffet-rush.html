@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h2 data-start="93" data-end="158">🥗🎮 <strong data-start="101" data-end="158">Buffet Rush &ndash; A C++ Game
+                Based on a Buffet Experience</strong></h2>
+        <hr data-start="160" data-end="163" />
+        <h3 data-start="165" data-end="188">🎯 <strong data-start="172" data-end="188">Game Concept</strong></h3>
+        <p data-start="190" data-end="565"><strong data-start="190" data-end="207">"Buffet Rush"</strong> is a fun,
+            text-based or SFML-powered graphical C++ game where the player acts as a customer in a buffet. The goal is
+            to build the perfect meal tray under time and nutritional constraints&mdash;while also managing cost,
+            calories, and customer satisfaction. The game introduces logic building, simple AI, and real-life problem
+            solving in a kitchen-inspired setting.</p>
+        <hr data-start="567" data-end="570" />
+        <h3 data-start="572" data-end="601">🧱 <strong data-start="579" data-end="601">Core Game Features</strong></h3>
+        <ul data-start="603" data-end="853">
+            <li data-start="603" data-end="640">
+                <p data-start="605" data-end="640">Choose items from a buffet counter.</p>
+            </li>
+            <li data-start="641" data-end="746">
+                <p data-start="643" data-end="657">Each item has:</p>
+                <ul data-start="660" data-end="746">
+                    <li data-start="660" data-end="670">
+                        <p data-start="662" data-end="670">Calories</p>
+                    </li>
+                    <li data-start="673" data-end="679">
+                        <p data-start="675" data-end="679">Cost</p>
+                    </li>
+                    <li data-start="682" data-end="724">
+                        <p data-start="684" data-end="724">Category (Starter, Main, Dessert, Drink)</p>
+                    </li>
+                    <li data-start="727" data-end="746">
+                        <p data-start="729" data-end="746">Nutritional Value</p>
+                    </li>
+                </ul>
+            </li>
+            <li data-start="747" data-end="853">
+                <p data-start="749" data-end="853">User wins if they build a <strong data-start="775"
+                        data-end="792">balanced tray</strong> (one from each category) under the calorie and budget
+                    limit.</p>
+            </li>
+        </ul>
+        <hr data-start="855" data-end="858" />
+        <h3 data-start="860" data-end="905">🖥️ <strong data-start="868" data-end="905">Simple Console Version Code
+                (C++)</strong></h3>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;iostream&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;vector&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;string&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;cstdlib&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;ctime&gt;</span> <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std; <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Item</span> { string name; string category; <span class="hljs-type">int</span> calories; <span class="hljs-type">float</span> price; }; vector&lt;Item&gt; buffet = { {<span class="hljs-string">"Salad"</span>, <span class="hljs-string">"Starter"</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2.5</span>}, {<span class="hljs-string">"Soup"</span>, <span class="hljs-string">"Starter"</span>, <span class="hljs-number">80</span>, <span class="hljs-number">2.0</span>}, {<span class="hljs-string">"Chicken Curry"</span>, <span class="hljs-string">"Main"</span>, <span class="hljs-number">400</span>, <span class="hljs-number">6.0</span>}, {<span class="hljs-string">"Pasta"</span>, <span class="hljs-string">"Main"</span>, <span class="hljs-number">350</span>, <span class="hljs-number">5.5</span>}, {<span class="hljs-string">"Ice Cream"</span>, <span class="hljs-string">"Dessert"</span>, <span class="hljs-number">200</span>, <span class="hljs-number">3.0</span>}, {<span class="hljs-string">"Fruit Bowl"</span>, <span class="hljs-string">"Dessert"</span>, <span class="hljs-number">120</span>, <span class="hljs-number">2.5</span>}, {<span class="hljs-string">"Soda"</span>, <span class="hljs-string">"Drink"</span>, <span class="hljs-number">150</span>, <span class="hljs-number">1.5</span>}, {<span class="hljs-string">"Water"</span>, <span class="hljs-string">"Drink"</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1.0</span>} }; <span class="hljs-type">float</span> totalCost = <span class="hljs-number">0.0</span>; <span class="hljs-type">int</span> totalCalories = <span class="hljs-number">0</span>; vector&lt;string&gt; categoriesChosen; <span class="hljs-function"><span class="hljs-type">bool</span></span> <span class="hljs-title">categoryAlreadyChosen</span><span class="hljs-params">(string category)</span> { <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span>&amp; cat : categoriesChosen) { <span class="hljs-keyword">if</span> (cat == category) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; } <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">displayBuffet</span><span class="hljs-params">()</span> { cout &lt;&lt; <span class="hljs-string">"🥗 Welcome to the Buffet! 🍝\n\n"</span>; cout &lt;&lt; <span class="hljs-string">"Items Available:\n"</span>; <span class="hljs-keyword">for</span> (<span class="hljs-type">size_t</span> i = <span class="hljs-number">0</span>; i &lt; buffet.<span class="hljs-built_in">size</span>(); ++i) { cout &lt;&lt; i + <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-string">". "</span> &lt;&lt; buffet[i].name &lt;&lt; <span class="hljs-string">" ("</span> &lt;&lt; buffet[i].category &lt;&lt; <span class="hljs-string">") - "</span>; cout &lt;&lt; buffet[i].calories &lt;&lt; <span class="hljs-string">" cal, $"</span> &lt;&lt; buffet[i].price &lt;&lt; endl; } cout &lt;&lt; <span class="hljs-string">"\nPick one from each category: Starter, Main, Dessert, Drink\n"</span>; } <span class="hljs-function"><span class="hljs-type">int</span></span> <span class="hljs-title">main</span><span class="hljs-params">()</span> { <span class="hljs-built_in">displayBuffet</span>(); <span class="hljs-type">int</span> choice, turns = <span class="hljs-number">0</span>; <span class="hljs-type">const</span> <span class="hljs-type">int</span> calorieLimit = <span class="hljs-number">900</span>; <span class="hljs-type">const</span> <span class="hljs-type">float</span> budget = <span class="hljs-number">12.0</span>; <span class="hljs-keyword">while</span> (categoriesChosen.<span class="hljs-built_in">size</span>() &lt; <span class="hljs-number">4</span>) { cout &lt;&lt; <span class="hljs-string">"\nChoose an item (1-"</span> &lt;&lt; buffet.<span class="hljs-built_in">size</span>() &lt;&lt; <span class="hljs-string">"): "</span>; cin &gt;&gt; choice; <span class="hljs-keyword">if</span> (choice &lt; <span class="hljs-number">1</span> || choice &gt; buffet.<span class="hljs-built_in">size</span>()) { cout &lt;&lt; <span class="hljs-string">"Invalid choice! Try again."</span>; <span class="hljs-keyword">continue</span>; } Item selected = buffet[choice - <span class="hljs-number">1</span>]; <span class="hljs-keyword">if</span> (<span class="hljs-built_in">categoryAlreadyChosen</span>(selected.category)) { cout &lt;&lt; <span class="hljs-string">"You've already picked a "</span> &lt;&lt; selected.category &lt;&lt; <span class="hljs-string">"!\n"</span>; <span class="hljs-keyword">continue</span>; } <span class="hljs-keyword">if</span> (totalCost + selected.price &gt; budget) { cout &lt;&lt; <span class="hljs-string">"💸 Over budget! Try a cheaper item.\n"</span>; <span class="hljs-keyword">continue</span>; } <span class="hljs-keyword">if</span> (totalCalories + selected.calories &gt; calorieLimit) { cout &lt;&lt; <span class="hljs-string">"🔥 Too many calories! Try something lighter.\n"</span>; <span class="hljs-keyword">continue</span>; } totalCost += selected.price; totalCalories += selected.calories; categoriesChosen.<span class="hljs-built_in">push_back</span>(selected.category); cout &lt;&lt; <span class="hljs-string">"✅ Added: "</span> &lt;&lt; selected.name &lt;&lt; <span class="hljs-string">" ("</span> &lt;&lt; selected.category &lt;&lt; <span class="hljs-string">")\n"</span>; } cout &lt;&lt; <span class="hljs-string">"\n🎉 Buffet Tray Completed! 🎉\n"</span>; cout &lt;&lt; <span class="hljs-string">"Total Calories: "</span> &lt;&lt; totalCalories &lt;&lt; <span class="hljs-string">" cal\n"</span>; cout &lt;&lt; <span class="hljs-string">"Total Cost: $"</span> &lt;&lt; totalCost &lt;&lt; <span class="hljs-string">"\n"</span>; <span class="hljs-keyword">if</span> (totalCalories &lt;= calorieLimit &amp;&amp; totalCost &lt;= budget) { cout &lt;&lt; <span class="hljs-string">"😋 You made a healthy and affordable choice!\n"</span>; } <span class="hljs-keyword">else</span> { cout &lt;&lt; <span class="hljs-string">"⚠️ You overshot your budget/calories. Try again!\n"</span>; } <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; } </code>
+            </div>
+        </div>
+        <hr data-start="3625" data-end="3628" />
+        <h3 data-start="3630" data-end="3656">🍽️ Real-Life Examples</h3>
+        <ul data-start="3658" data-end="3910">
+            <li data-start="3658" data-end="3738">
+                <p data-start="3660" data-end="3738">Buffets often present decision-making challenges&mdash;what to eat
+                    vs. what to skip.</p>
+            </li>
+            <li data-start="3739" data-end="3817">
+                <p data-start="3741" data-end="3817">People must <strong data-start="3753" data-end="3772">budget
+                        calories</strong> and <strong data-start="3777" data-end="3793">spend wisely</strong>, much like
+                    in the game.</p>
+            </li>
+            <li data-start="3818" data-end="3910">
+                <p data-start="3820" data-end="3910"><strong data-start="3820" data-end="3835">Restaurants</strong> use
+                    similar algorithms for <strong data-start="3863" data-end="3880">menu planning</strong> and <strong
+                        data-start="3885" data-end="3909">nutritional analysis</strong>.</p>
+            </li>
+        </ul>
+        <hr data-start="3912" data-end="3915" />
+        <h3 data-start="3917" data-end="3933">🤯 Fun Facts</h3>
+        <ul data-start="3935" data-end="4157">
+            <li data-start="3935" data-end="4011">
+                <p data-start="3937" data-end="4011">Las Vegas has more buffet restaurants per square mile than any
+                    other city.</p>
+            </li>
+            <li data-start="4012" data-end="4086">
+                <p data-start="4014" data-end="4086">The concept of buffets dates back to 16th-century Swedish
+                    "sm&ouml;rg&aring;sbord."</p>
+            </li>
+            <li data-start="4087" data-end="4157">
+                <p data-start="4089" data-end="4157">The average buffet-goer consumes over 2,000 calories in one
+                    sitting!</p>
+            </li>
+        </ul>
+        <hr data-start="4159" data-end="4162" />
+        <h3 data-start="4164" data-end="4203">🧠 Problem Solving Skills Practiced</h3>
+        <ul data-start="4205" data-end="4468">
+            <li data-start="4205" data-end="4261">
+                <p data-start="4207" data-end="4261"><strong data-start="4207" data-end="4225">Greedy Choices</strong>:
+                    Pick best items under constraints.</p>
+            </li>
+            <li data-start="4262" data-end="4316">
+                <p data-start="4264" data-end="4316"><strong data-start="4264" data-end="4282">Decision Trees</strong>:
+                    Evaluate what combinations work.</p>
+            </li>
+            <li data-start="4317" data-end="4392">
+                <p data-start="4319" data-end="4392"><strong data-start="4319" data-end="4335">Optimization</strong>:
+                    Maximize variety and value under budget/calorie limits.</p>
+            </li>
+            <li data-start="4393" data-end="4468">
+                <p data-start="4395" data-end="4468"><strong data-start="4395" data-end="4409">Validation</strong>:
+                    Prevent duplicate category choices and over-budget trays.</p>
+            </li>
+        </ul>
+        <hr data-start="4470" data-end="4473" />
+        <h3 data-start="4475" data-end="4502">💡 Further Enhancements</h3>
+        <h4 data-start="4504" data-end="4530">1. <strong data-start="4512" data-end="4528">SFML Version</strong></h4>
+        <p data-start="4531" data-end="4569">Upgrade to a graphical interface with:</p>
+        <ul data-start="4570" data-end="4674">
+            <li data-start="4570" data-end="4593">
+                <p data-start="4572" data-end="4593">Animated food trays</p>
+            </li>
+            <li data-start="4594" data-end="4624">
+                <p data-start="4596" data-end="4624">Mouse click item selection</p>
+            </li>
+            <li data-start="4625" data-end="4648">
+                <p data-start="4627" data-end="4648">Timed gameplay mode</p>
+            </li>
+            <li data-start="4649" data-end="4674">
+                <p data-start="4651" data-end="4674">Score and nutrition bar</p>
+            </li>
+        </ul>
+        <h4 data-start="4676" data-end="4704">2. <strong data-start="4684" data-end="4704">AI Opponent Mode</strong>
+        </h4>
+        <ul data-start="4705" data-end="4798">
+            <li data-start="4705" data-end="4766">
+                <p data-start="4707" data-end="4766">Compete with a bot selecting randomly or using AI strategy.</p>
+            </li>
+            <li data-start="4767" data-end="4798">
+                <p data-start="4769" data-end="4798">See who builds a better tray!</p>
+            </li>
+        </ul>
+        <h4 data-start="4800" data-end="4844">3. <strong data-start="4808" data-end="4844">Player Profiles + Scoring
+                System</strong></h4>
+        <ul data-start="4845" data-end="4919">
+            <li data-start="4845" data-end="4863">
+                <p data-start="4847" data-end="4863">Save best trays.</p>
+            </li>
+            <li data-start="4864" data-end="4919">
+                <p data-start="4866" data-end="4919">Earn points for healthy, cheap, and balanced choices.</p>
+            </li>
+        </ul>
+        <h4 data-start="4921" data-end="4952">4. <strong data-start="4929" data-end="4952">Dynamic Buffet Menu</strong>
+        </h4>
+        <ul data-start="4953" data-end="5008">
+            <li data-start="4953" data-end="4974">
+                <p data-start="4955" data-end="4974">Items rotate daily.</p>
+            </li>
+            <li data-start="4975" data-end="5008">
+                <p data-start="4977" data-end="5008">Seasonal or themed buffet days.</p>
+            </li>
+        </ul>
+        <h4 data-start="5010" data-end="5056">5. <strong data-start="5018" data-end="5056">Multiplayer Mode (Local or
+                Online)</strong></h4>
+        <ul data-start="5057" data-end="5106">
+            <li data-start="5057" data-end="5106">
+                <p data-start="5059" data-end="5106">Compete to create the best tray under pressure.</p>
+            </li>
+        </ul>
+        <hr data-start="5108" data-end="5111" />
+        <h3 data-start="5113" data-end="5141">📦 Educational Takeaways</h3>
+        <ul data-start="5143" data-end="5308">
+            <li data-start="5143" data-end="5190">
+                <p data-start="5145" data-end="5190">Teaches resource management (budget + health)</p>
+            </li>
+            <li data-start="5191" data-end="5227">
+                <p data-start="5193" data-end="5227">Applies real-world logic in coding</p>
+            </li>
+            <li data-start="5228" data-end="5308">
+                <p data-start="5230" data-end="5308">Great introduction to game loops, condition checks, and vector
+                    handling in C++</p>
+            </li>
+        </ul>
+        <p>&nbsp;</p>
+        <p data-start="0" data-end="108">Let's enhance the <strong data-start="25" data-end="40">Buffet Rush</strong>
+            C++ game using <strong data-start="56" data-end="64">SFML</strong> by adding a <strong data-start="77"
+                data-end="104">Score and Nutrition Bar</strong> 🧃.</p>
+        <hr data-start="110" data-end="113" />
+        <h2 data-start="115" data-end="166">🧾 <strong data-start="121" data-end="166">Feature Overview: Score and
+                Nutrition Bar</strong></h2>
+        <h3 data-start="168" data-end="180">🎯 Goal:</h3>
+        <ul data-start="181" data-end="331">
+            <li data-start="181" data-end="266">
+                <p data-start="183" data-end="209">Display <strong data-start="191" data-end="204">Score Bar</strong>
+                    for:</p>
+                <ul data-start="212" data-end="266">
+                    <li data-start="212" data-end="238">
+                        <p data-start="214" data-end="238">Balanced tray completion</p>
+                    </li>
+                    <li data-start="241" data-end="266">
+                        <p data-start="243" data-end="266">Bonus for healthy items</p>
+                    </li>
+                </ul>
+            </li>
+            <li data-start="267" data-end="331">
+                <p data-start="269" data-end="331">Display <strong data-start="277" data-end="294">Nutrition
+                        Bar</strong> to visualize calories used vs. limit</p>
+            </li>
+        </ul>
+        <hr data-start="333" data-end="336" />
+        <h2 data-start="338" data-end="361">💡 What You&rsquo;ll Need:</h2>
+        <ul data-start="362" data-end="479">
+            <li data-start="362" data-end="417">
+                <p data-start="364" data-end="417"><strong data-start="364" data-end="380">SFML library</strong>
+                    installed (<a class="cursor-pointer" target="_new" rel="noopener" data-start="392"
+                        data-end="416">https://www.sfml-dev.org</a>)</p>
+            </li>
+            <li data-start="418" data-end="448">
+                <p data-start="420" data-end="448">Basic SFML window and shapes</p>
+            </li>
+            <li data-start="449" data-end="479">
+                <p data-start="451" data-end="479">Some text and logic for bars</p>
+            </li>
+        </ul>
+        <hr data-start="481" data-end="484" />
+        <h2 data-start="486" data-end="510">🧪 <strong data-start="492" data-end="510">Design Details</strong></h2>
+        <div class="_tableContainer_80l1q_1">
+            <div class="_tableWrapper_80l1q_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="512" data-end="924">
+                    <thead data-start="512" data-end="595">
+                        <tr data-start="512" data-end="595">
+                            <th data-start="512" data-end="530" data-col-size="sm">Component</th>
+                            <th data-start="530" data-end="544" data-col-size="sm">Type</th>
+                            <th data-start="544" data-end="595" data-col-size="md">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="679" data-end="924">
+                        <tr data-start="679" data-end="760">
+                            <td data-start="679" data-end="696" data-col-size="sm">Nutrition Bar</td>
+                            <td data-start="696" data-end="710" data-col-size="sm">Rectangle</td>
+                            <td data-start="710" data-end="760" data-col-size="md">Fills based on % of calories used
+                                (max 900 cal)</td>
+                        </tr>
+                        <tr data-start="761" data-end="842">
+                            <td data-start="761" data-end="778" data-col-size="sm">Score Bar</td>
+                            <td data-start="778" data-end="792" data-col-size="sm">Rectangle</td>
+                            <td data-start="792" data-end="842" data-col-size="md">Increases with each good choice</td>
+                        </tr>
+                        <tr data-start="843" data-end="924">
+                            <td data-start="843" data-end="860" data-col-size="sm">Tray Display</td>
+                            <td data-start="860" data-end="874" data-col-size="sm">Text</td>
+                            <td data-start="874" data-end="924" data-col-size="md">Shows items picked</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="sticky end-(--thread-content-margin) h-0 self-end select-none">&nbsp;</div>
+            </div>
+        </div>
+        <hr data-start="926" data-end="929" />
+        <h2 data-start="931" data-end="974">🎮 <strong data-start="937" data-end="974">SFML Sample Snippet: Bars +
+                Logic</strong></h2>
+        <p data-start="976" data-end="1011">Here&rsquo;s a simplified implementation:</p>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;SFML/Graphics.hpp&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;iostream&gt;</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">&lt;vector&gt;</span> <span class="hljs-type">const</span> <span class="hljs-type">int</span> calorieLimit = <span class="hljs-number">900</span>; <span class="hljs-type">int</span> currentCalories = <span class="hljs-number">0</span>; <span class="hljs-type">int</span> score = <span class="hljs-number">0</span>; <span class="hljs-function">sf::RectangleShape <span class="hljs-title">createBar</span></span><span class="hljs-params">(sf::Vector2f position, sf::Color color, <span class="hljs-type">float</span></span> percentage) { <span class="hljs-function">sf::RectangleShape <span class="hljs-title">bar</span></span><span class="hljs-params">(sf::Vector2f(<span class="hljs-number">200</span></span> * percentage, <span class="hljs-number">20</span>)); bar.<span class="hljs-built_in">setPosition</span>(position); bar.<span class="hljs-built_in">setFillColor</span>(color); <span class="hljs-keyword">return</span> bar; } <span class="hljs-function"><span class="hljs-type">int</span></span> <span class="hljs-title">main</span><span class="hljs-params">()</span> { <span class="hljs-function">sf::RenderWindow <span class="hljs-title">window</span></span><span class="hljs-params">(sf::VideoMode(<span class="hljs-number">600</span></span>, <span class="hljs-number">400</span>), <span class="hljs-string">"Buffet Rush - Score &amp; Nutrition"</span>); sf::Font font; <span class="hljs-keyword">if</span> (!font.<span class="hljs-built_in">loadFromFile</span>(<span class="hljs-string">"arial.ttf"</span>)) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>; <span class="hljs-function">sf::Text <span class="hljs-title">title</span></span><span class="hljs-params">(<span class="hljs-string">"Buffet Rush!"</span></span>, font, <span class="hljs-number">30</span>); title.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">180</span>, <span class="hljs-number">10</span>); sf::Text caloriesText; caloriesText.<span class="hljs-built_in">setFont</span>(font); caloriesText.<span class="hljs-built_in">setCharacterSize</span>(<span class="hljs-number">16</span>); caloriesText.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">50</span>, <span class="hljs-number">70</span>); sf::Text scoreText; scoreText.<span class="hljs-built_in">setFont</span>(font); scoreText.<span class="hljs-built_in">setCharacterSize</span>(<span class="hljs-number">16</span>); scoreText.<span class="hljs-built_in">setPosition</span>(<span class="hljs-number">50</span>, <span class="hljs-number">140</span>); <span class="hljs-comment">// Simulated calorie increase</span> std::vector&lt;<span class="hljs-type">int</span>&gt; choices = {<span class="hljs-number">100</span>, <span class="hljs-number">250</span>, <span class="hljs-number">300</span>, <span class="hljs-number">180</span>}; <span class="hljs-comment">// Example selections</span> <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> cal : choices) { currentCalories += cal; score += (cal &lt; <span class="hljs-number">300</span> ? <span class="hljs-number">10</span> : <span class="hljs-number">5</span>); <span class="hljs-comment">// Healthy = more score</span> } <span class="hljs-keyword">while</span> (window.<span class="hljs-built_in">isOpen</span>()) { sf::Event event; <span class="hljs-keyword">while</span> (window.<span class="hljs-built_in">pollEvent</span>(event)) { <span class="hljs-keyword">if</span> (event.type == sf::Event::Closed) window.<span class="hljs-built_in">close</span>(); } <span class="hljs-type">float</span> caloriePercent = <span class="hljs-built_in">static_cast</span>&lt;<span class="hljs-type">float</span>&gt;(currentCalories) / calorieLimit; <span class="hljs-keyword">if</span> (caloriePercent &gt; <span class="hljs-number">1.0f</span>) caloriePercent = <span class="hljs-number">1.0f</span>; <span class="hljs-type">float</span> scorePercent = <span class="hljs-built_in">static_cast</span>&lt;<span class="hljs-type">float</span>&gt;(score) / <span class="hljs-number">50.0f</span>; <span class="hljs-comment">// Assume 50 is max</span> <span class="hljs-keyword">if</span> (scorePercent &gt; <span class="hljs-number">1.0f</span>) scorePercent = <span class="hljs-number">1.0f</span>; caloriesText.<span class="hljs-built_in">setString</span>(<span class="hljs-string">"Calories: "</span> + std::<span class="hljs-built_in">to_string</span>(currentCalories) + <span class="hljs-string">" / 900"</span>); scoreText.<span class="hljs-built_in">setString</span>(<span class="hljs-string">"Score: "</span> + std::<span class="hljs-built_in">to_string</span>(score)); window.<span class="hljs-built_in">clear</span>(sf::<span class="hljs-built_in">Color</span>(<span class="hljs-number">240</span>, <span class="hljs-number">240</span>, <span class="hljs-number">240</span>)); window.<span class="hljs-built_in">draw</span>(title); window.<span class="hljs-built_in">draw</span>(caloriesText); window.<span class="hljs-built_in">draw</span>(<span class="hljs-built_in">createBar</span>(sf::<span class="hljs-built_in">Vector2f</span>(<span class="hljs-number">50</span>, <span class="hljs-number">100</span>), sf::Color::Red, caloriePercent)); window.<span class="hljs-built_in">draw</span>(scoreText); window.<span class="hljs-built_in">draw</span>(<span class="hljs-built_in">createBar</span>(sf::<span class="hljs-built_in">Vector2f</span>(<span class="hljs-number">50</span>, <span class="hljs-number">170</span>), sf::Color::Green, scorePercent)); window.<span class="hljs-built_in">display</span>(); } <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; } </code>
+            </div>
+        </div>
+        <hr data-start="3137" data-end="3140" />
+        <h3 data-start="3142" data-end="3160">🧠 Explanation</h3>
+        <ul data-start="3162" data-end="3356">
+            <li data-start="3162" data-end="3223">
+                <p data-start="3164" data-end="3223">We simulate <strong data-start="3176" data-end="3192">item
+                        choices</strong> by adding calories and scores.</p>
+            </li>
+            <li data-start="3224" data-end="3278">
+                <p data-start="3226" data-end="3278">Bars grow in width proportionally using percentages.</p>
+            </li>
+            <li data-start="3279" data-end="3356">
+                <p data-start="3281" data-end="3356">The red bar shows <strong data-start="3299"
+                        data-end="3319">nutrition intake</strong>, green bar shows <strong data-start="3337"
+                        data-end="3355">score progress</strong>.</p>
+            </li>
+        </ul>
+        <hr data-start="3358" data-end="3361" />
+        <h2 data-start="3363" data-end="3386">🎨 You Can Also Add:</h2>
+        <div class="_tableContainer_80l1q_1">
+            <div class="_tableWrapper_80l1q_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="3387" data-end="3655">
+                    <thead data-start="3387" data-end="3424">
+                        <tr data-start="3387" data-end="3424">
+                            <th data-start="3387" data-end="3409" data-col-size="sm">Enhancement</th>
+                            <th data-start="3409" data-end="3424" data-col-size="sm">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="3463" data-end="3655">
+                        <tr data-start="3463" data-end="3527">
+                            <td data-start="3463" data-end="3485" data-col-size="sm">🍎 Nutrition icons</td>
+                            <td data-start="3485" data-end="3527" data-col-size="sm">Represent carbs/proteins/fat
+                                visually.</td>
+                        </tr>
+                        <tr data-start="3528" data-end="3590">
+                            <td data-start="3528" data-end="3550" data-col-size="sm">⏱️ Timer bar</td>
+                            <td data-start="3550" data-end="3590" data-col-size="sm">Add countdown to pressure
+                                decisions.</td>
+                        </tr>
+                        <tr data-start="3591" data-end="3655">
+                            <td data-start="3591" data-end="3613" data-col-size="sm">📊 Summary Screen</td>
+                            <td data-start="3613" data-end="3655" data-col-size="sm">After tray completion, show
+                                breakdown.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>

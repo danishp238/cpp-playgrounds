@@ -7,6 +7,8 @@ import HighwayDriverGui from "/src/assets/blogs/highway-driver-gui.html?raw"
 import CarparkingGame from "/src/assets/blogs/car-parking-game.html?raw"
 import FarmFrenzy from "/src/assets/blogs/farm-frenzy.html?raw"
 import FarmFrenzyGui from "/src/assets/blogs/farm-frenzy-gui.html?raw"
+import BuffetRush from "/src/assets/blogs/buffet-rush.html?raw"
+import BuffetRushGui from "/src/assets/blogs/buffet-rush-gui.html?raw"
 
 
 const projects = [
@@ -102,6 +104,23 @@ const projects = [
       }
     ]
   },
+
+  {
+    title: "🥗🎮 Buffet Rush – A C++ Game Based on a Buffet Experience",
+    slug: "buffet-rush",
+    excerpt:`"Buffet Rush" is a fun, text-based or SFML-powered graphical C++ game where the player acts as a customer in a buffet. The goal is to build the perfect meal tray under time and nutritional constraints—while also managing cost, calories, and customer satisfaction.`,
+    image: new URL('/images/buffet.jpeg', import.meta.url).href,
+    content: BuffetRush,
+    customReadMore: [
+      {
+        title: "🥗 Buffet Rush: A Tasty Game in C++ with GUI (SFML)",
+        slug: "buffet-rush-with-gui",
+        excerpt: "Have you ever imagined what a buffet would look like if it turned into a fast-paced game? Welcome to Buffet Rush, a light-hearted yet educational C++ game powered by SFML, where you dodge unhealthy snacks and rack up your nutrition score!",
+        image: new URL('/images/buffet-gui.jpeg', import.meta.url).href,
+        content: BuffetRushGui
+      }
+    ]
+  }
   // {
   //   id: 4,
   //   title: 'Basic FPS Engine',
