@@ -9,6 +9,7 @@ import FarmFrenzy from "/src/assets/blogs/farm-frenzy.html?raw"
 import FarmFrenzyGui from "/src/assets/blogs/farm-frenzy-gui.html?raw"
 import BuffetRush from "/src/assets/blogs/buffet-rush.html?raw"
 import BuffetRushGui from "/src/assets/blogs/buffet-rush-gui.html?raw"
+import Jeep from "/src/assets/blogs/jeep.html?raw"
 
 
 const projects = [
@@ -120,6 +121,14 @@ const projects = [
         content: BuffetRushGui
       }
     ]
+  },
+
+  {
+    title: "🚙 Jeep Adventure Game in C++ (with GUI + Weather Effects)",
+    slug: "jeep-adventure-game",
+    excerpt: "This is a graphical C++ game using SFML, where you control a Jeep driving on a rainy road. Your goal is to avoid falling obstacles, stay visible in the rain, and survive long enough to earn points.",
+    image: new URL('/images/jeep.jpeg', import.meta.url).href,
+    content: Jeep
   }
   // {
   //   id: 4,

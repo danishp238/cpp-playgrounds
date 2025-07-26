@@ -57,12 +57,17 @@ router.afterEach(() => {
 })
 
 router.afterEach((to) => {
-  gtag('event', 'page_view', {
-    page_title: document.title,
-    page_location: window.location.href,
-    page_path: to.fullPath,
-  });
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: to.fullPath,
+    });
+  } else {
+    console.warn('gtag not defined');
+  }
 });
+
 
 
 
