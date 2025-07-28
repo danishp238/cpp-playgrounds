@@ -10,6 +10,7 @@ import FarmFrenzyGui from "/src/assets/blogs/farm-frenzy-gui.html?raw"
 import BuffetRush from "/src/assets/blogs/buffet-rush.html?raw"
 import BuffetRushGui from "/src/assets/blogs/buffet-rush-gui.html?raw"
 import Jeep from "/src/assets/blogs/jeep.html?raw"
+import Echo from "/src/assets/blogs/echo.html?raw"
 
 
 const projects = [
@@ -129,11 +130,19 @@ const projects = [
     description: "This is a graphical C++ game using SFML, where you control a Jeep driving on a rainy road. Your goal is to avoid falling obstacles, stay visible in the rain, and survive long enough to earn points.",
     image: new URL('/images/jeep.jpeg', import.meta.url).href,
     content: Jeep
+  },
+
+  {
+    title: "Echoes of Gaia",
+    slug: "echoes-of-gaia",
+    description: "A next-gen C++ game demo using real-time ray tracing, AI NPCs, and physics simulation.",
+    image: new URL('/images/echo.jpeg', import.meta.url).href,
+    content: Echo
   }
   // {
   //   id: 4,
   //   title: 'Basic FPS Engine',
-  //   description: 'FPS engine with OpenGL and C++ fundamentals.',
+  //   description: sw'FPS engine with OpenGL and C++ fundamentals.',
   //   image: new URL('/images/fps-engine-game.jpeg', import.meta.url).href,
   //   date: 'Posted on June 18, 2025 – 5:00 PM',
   // },
