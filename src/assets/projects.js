@@ -11,6 +11,7 @@ import BuffetRush from "/src/assets/blogs/buffet-rush.html?raw"
 import BuffetRushGui from "/src/assets/blogs/buffet-rush-gui.html?raw"
 import Jeep from "/src/assets/blogs/jeep.html?raw"
 import Echo from "/src/assets/blogs/echo.html?raw"
+import RainfallReclaimer from "/src/assets/blogs/rainfall-reclaimer.html?raw"
 
 
 const projects = [
@@ -138,6 +139,14 @@ const projects = [
     description: "A next-gen C++ game demo using real-time ray tracing, AI NPCs, and physics simulation.",
     image: new URL('/images/echo.jpeg', import.meta.url).href,
     content: Echo
+  },
+
+  {
+    title: "🌧️ Rainfall Reclaimer: EcoFrontline",
+    slug: "rainfall-reclaimer",
+    description: "Set in a near-future world suffering from extreme rainfall, acid rain, and rising floods, you play as an AI-assisted meteorological operative using drones, robots, and water recycling stations to monitor, mitigate, and survive climate chaos.",
+    image: new URL('/images/rainfall-reclamation.jpeg', import.meta.url).href,
+    content: RainfallReclaimer
   }
   // {
   //   id: 4,
