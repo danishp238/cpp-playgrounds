@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h2 data-start="191" data-end="242">🌱 Feature: Vertical Garden &amp; Hydroponics System</h2>
+        <h3 data-start="244" data-end="258">🎯 Purpose</h3>
+        <p data-start="259" data-end="306">Allow players to use their stored rainwater to:</p>
+        <ul data-start="307" data-end="420">
+            <li data-start="307" data-end="363">
+                <p data-start="309" data-end="363">Grow crops in stacked garden towers (vertical gardens)</p>
+            </li>
+            <li data-start="364" data-end="420">
+                <p data-start="366" data-end="420">Feed hydroponic beds for fast, water-efficient farming</p>
+            </li>
+        </ul>
+        <hr data-start="422" data-end="425" />
+        <h2 data-start="427" data-end="450">🧱 System Components</h2>
+        <h3 data-start="452" data-end="506">1. <strong data-start="459" data-end="481">WaterTankComponent</strong>
+            (Tracks conserved water)</h3>
+        <h3 data-start="507" data-end="561">2. <strong data-start="514" data-end="532">HydroponicUnit</strong> (Consumes
+            water, grows food)</h3>
+        <h3 data-start="562" data-end="616">3. <strong data-start="569" data-end="592">VerticalGardenTower</strong>
+            (Stacks growable plots)</h3>
+        <h3 data-start="617" data-end="662">4. <strong data-start="624" data-end="640">GrowthSystem</strong> (Manages
+            crop stages)</h3>
+        <h3 data-start="663" data-end="720">5. <strong data-start="670" data-end="684">UI Monitor</strong> (Shows water
+            levels, growth status)</h3>
+        <hr data-start="722" data-end="725" />
+        <h2 data-start="727" data-end="765">🧑&zwj;💻 C++ Code Snippet (Core Logic)</h2>
+        <h3 data-start="767" data-end="793">✅ WaterTankComponent.h</h3>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-built_in">UCLASS</span>(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent)) <span class="hljs-keyword">class</span> <span class="hljs-title class_">UWaterTankComponent</span> : <span class="hljs-keyword">public</span> UActorComponent { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-built_in">UWaterTankComponent</span>(); <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Water"</span>) <span class="hljs-type">float</span> WaterStored; <span class="hljs-built_in">UFUNCTION</span>(BlueprintCallable, Category=<span class="hljs-string">"Water"</span>) <span class="hljs-function"><span class="hljs-type">bool</span></span> <span class="hljs-title">ConsumeWater</span><span class="hljs-params">(<span class="hljs-type">float</span></span> Amount); <span class="hljs-built_in">UFUNCTION</span>(BlueprintCallable, Category=<span class="hljs-string">"Water"</span>) <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AddWater</span><span class="hljs-params">(<span class="hljs-type">float</span></span> Amount); }; </code>
+            </div>
+        </div>
+        <h3 data-start="1247" data-end="1275">✅ WaterTankComponent.cpp</h3>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp">UWaterTankComponent::<span class="hljs-built_in">UWaterTankComponent</span>() { WaterStored = <span class="hljs-number">500.0f</span>; <span class="hljs-comment">// Starting water</span> } <span class="hljs-function"><span class="hljs-type">bool</span></span> <span class="hljs-title">UWaterTankComponent::ConsumeWater</span><span class="hljs-params">(<span class="hljs-type">float</span></span> Amount) { <span class="hljs-keyword">if</span> (WaterStored &gt;= Amount) { WaterStored -= Amount; <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; } <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UWaterTankComponent::AddWater</span><span class="hljs-params">(<span class="hljs-type">float</span></span> Amount) { WaterStored += Amount; } </code>
+            </div>
+        </div>
+        <hr data-start="1627" data-end="1630" />
+        <h3 data-start="1632" data-end="1690">✅ HydroponicUnit.cpp (tick-based consumption &amp; growth)</h3>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AHydroponicUnit::Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime) { Super::<span class="hljs-built_in">Tick</span>(DeltaTime); WaterTick += DeltaTime; <span class="hljs-keyword">if</span> (WaterTick &gt;= <span class="hljs-number">2.0f</span>) { <span class="hljs-keyword">if</span> (WaterTank-&gt;<span class="hljs-built_in">ConsumeWater</span>(<span class="hljs-number">5.0f</span>)) { <span class="hljs-built_in">GrowCrop</span>(); } WaterTick = <span class="hljs-number">0.0f</span>; } } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AHydroponicUnit::GrowCrop</span><span class="hljs-params">()</span> { GrowthStage++; <span class="hljs-keyword">if</span> (GrowthStage &gt;= MaxStage) { bIsReadyToHarvest = <span class="hljs-literal">true</span>; } } </code>
+            </div>
+        </div>
+        <hr data-start="2080" data-end="2083" />
+        <h2 data-start="2085" data-end="2131">🎮 Blueprint Visual (Can Be Made via Nodes)</h2>
+        <ul data-start="2132" data-end="2301">
+            <li data-start="2132" data-end="2173">
+                <p data-start="2134" data-end="2173">Use <strong data-start="2138" data-end="2150">Timeline</strong> or
+                    <strong data-start="2154" data-end="2162">Tick</strong> for growth</p>
+            </li>
+            <li data-start="2174" data-end="2210">
+                <p data-start="2176" data-end="2210">Connect to <strong data-start="2187"
+                        data-end="2210">UWaterTankComponent</strong></p>
+            </li>
+            <li data-start="2211" data-end="2263">
+                <p data-start="2213" data-end="2263">Add particle FX for growing (e.g., glowing leaves)</p>
+            </li>
+            <li data-start="2264" data-end="2301">
+                <p data-start="2266" data-end="2301">Bind water meter and growth % to UI</p>
+            </li>
+        </ul>
+        <hr data-start="2303" data-end="2306" />
+        <h2 data-start="2308" data-end="2327">📊 UI Monitoring</h2>
+        <p data-start="2328" data-end="2333">Show:</p>
+        <ul data-start="2334" data-end="2431">
+            <li data-start="2334" data-end="2355">
+                <p data-start="2336" data-end="2355"><strong data-start="2336" data-end="2355">Water Level Bar</strong>
+                </p>
+            </li>
+            <li data-start="2356" data-end="2375">
+                <p data-start="2358" data-end="2375"><strong data-start="2358" data-end="2375">Crop Growth %</strong>
+                </p>
+            </li>
+            <li data-start="2376" data-end="2408">
+                <p data-start="2378" data-end="2408"><strong data-start="2378" data-end="2408">Ready to Harvest
+                        indicator</strong></p>
+            </li>
+            <li data-start="2409" data-end="2431">
+                <p data-start="2411" data-end="2431"><strong data-start="2411" data-end="2431">"Harvest" Button</strong>
+                </p>
+            </li>
+        </ul>
+        <hr data-start="2433" data-end="2436" />
+        <h2 data-start="2438" data-end="2461">💡 Game Design Notes</h2>
+        <ul data-start="2462" data-end="2682">
+            <li data-start="2462" data-end="2549">
+                <p data-start="2464" data-end="2549">Some plants require <strong data-start="2484"
+                        data-end="2496">filtered</strong> rainwater &rarr; you must build a <strong data-start="2526"
+                        data-end="2549">Purification Module</strong></p>
+            </li>
+            <li data-start="2550" data-end="2625">
+                <p data-start="2552" data-end="2625">Rare seeds (e.g. algae, air plants) grow only in <strong
+                        data-start="2601" data-end="2625">low-acid rain cycles</strong></p>
+            </li>
+            <li data-start="2626" data-end="2682">
+                <p data-start="2628" data-end="2682">Option to <strong data-start="2638" data-end="2659">automate
+                        watering</strong> using AI helper drones</p>
+            </li>
+        </ul>
+        <hr data-start="2684" data-end="2687" />
+        <h2 data-start="2689" data-end="2714">🔮 Future Enhancements</h2>
+        <div class="_tableContainer_16hzy_1">
+            <div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="2715" data-end="3067">
+                    <thead data-start="2715" data-end="2733">
+                        <tr data-start="2715" data-end="2733">
+                            <th data-start="2715" data-end="2725" data-col-size="sm">Feature</th>
+                            <th data-start="2725" data-end="2733" data-col-size="md">Idea</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="2752" data-end="3067">
+                        <tr data-start="2752" data-end="2792">
+                            <td data-start="2752" data-end="2761" data-col-size="sm">AI Bot</td>
+                            <td data-start="2761" data-end="2792" data-col-size="md">Auto-manage plant hydration</td>
+                        </tr>
+                        <tr data-start="2793" data-end="2845">
+                            <td data-start="2793" data-end="2802" data-col-size="sm">Market</td>
+                            <td data-start="2802" data-end="2845" data-col-size="md">Trade harvested crops for tech
+                                upgrades</td>
+                        </tr>
+                        <tr data-start="2846" data-end="2899">
+                            <td data-start="2846" data-end="2863" data-col-size="sm">Climate Effect</td>
+                            <td data-start="2863" data-end="2899" data-col-size="md">Too much acid rain stunts growth
+                            </td>
+                        </tr>
+                        <tr data-start="2900" data-end="2968">
+                            <td data-start="2900" data-end="2919" data-col-size="sm">Lighting Control</td>
+                            <td data-start="2919" data-end="2968" data-col-size="md">Use solar panels to extend daylight
+                                for crops</td>
+                        </tr>
+                        <tr data-start="2969" data-end="3067">
+                            <td data-start="2969" data-end="3001" data-col-size="sm">Power + Water Interdependence</td>
+                            <td data-start="3001" data-end="3067" data-col-size="md">Garden depends on sustainable power
+                                from stored rain batteries</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>

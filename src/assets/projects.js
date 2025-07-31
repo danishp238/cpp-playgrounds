@@ -12,6 +12,8 @@ import BuffetRushGui from "/src/assets/blogs/buffet-rush-gui.html?raw"
 import Jeep from "/src/assets/blogs/jeep.html?raw"
 import Echo from "/src/assets/blogs/echo.html?raw"
 import RainfallReclaimer from "/src/assets/blogs/rainfall-reclaimer.html?raw"
+import RainRise from "/src/assets/blogs/rain-rise.html?raw"
+import VerticalGarden from "/src/assets/blogs/vertical-garden.html?raw"
 
 
 const projects = [
@@ -147,6 +149,23 @@ const projects = [
     description: "Set in a near-future world suffering from extreme rainfall, acid rain, and rising floods, you play as an AI-assisted meteorological operative using drones, robots, and water recycling stations to monitor, mitigate, and survive climate chaos.",
     image: new URL('/images/rainfall-reclamation.jpeg', import.meta.url).href,
     content: RainfallReclaimer
+  },
+
+  {
+    title: "RainRise: Waterkeepers of Tomorrow",
+    slug: "rain-rise",
+    description: `"RainRise" is a futuristic open-world environmental simulation game where players act as Rainwater Engineers using advanced drones, AI sensors, water-routing bots, and bio-tech filtration systems to conserve rainwater, purify it, and sustain eco-settlements.`,
+    image: new URL('/images/rain-rise.jpg', import.meta.url).href,
+    content: RainRise,
+    customReadMore: [
+      {
+        title: "🌱 Feature: Vertical Garden & Hydroponics System",
+        slug: "vertical-garden-and-hydroponics-system",
+        excerpt: "Let’s now build the Vertical Garden & Hydroponics System using Unreal Engine 5 logic and code structure (C++ + Blueprint style), tied to rainwater conservation gameplay.",
+        content: VerticalGarden,
+        image: new URL('/images/vertical-garden.jpg', import.meta.url).href
+      }
+    ]
   }
   // {
   //   id: 4,
