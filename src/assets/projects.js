@@ -14,6 +14,8 @@ import Echo from "/src/assets/blogs/echo.html?raw"
 import RainfallReclaimer from "/src/assets/blogs/rainfall-reclaimer.html?raw"
 import RainRise from "/src/assets/blogs/rain-rise.html?raw"
 import VerticalGarden from "/src/assets/blogs/vertical-garden.html?raw"
+import Picnic from "/src/assets/blogs/picnic.html?raw"
+import PicnicPart1 from "/src/assets/blogs/picnic-part1.html?raw"
 
 
 const projects = [
@@ -164,6 +166,25 @@ const projects = [
         excerpt: "Let’s now build the Vertical Garden & Hydroponics System using Unreal Engine 5 logic and code structure (C++ + Blueprint style), tied to rainwater conservation gameplay.",
         content: VerticalGarden,
         image: new URL('/images/vertical-garden.jpg', import.meta.url).href
+      }
+    ]
+  },
+
+  {
+    title:"Picnic Panic: Nature Adventure",
+    slug: "picnic-panic",
+    description: "A vibrant 2.5D or 3D picnic simulation-adventure game where players must set up and protect their picnic in a dynamic environment, facing challenges like weather changes, animals, time constraints, and item collection.",
+    image: new URL('/images/picnic-panic.jpeg', import.meta.url).href,
+    content: Picnic,
+    customReadMore: [
+      {
+        title: `🎮 Picnic Panic: Nature Adventure
+        A Modern Seasonal Picnic Game in Unreal Engine 5 using C++ Part 1`,
+        slug: "picnic-panic-part1",
+        excerpt: `Imagine setting up your picnic on a sunny spring day… until squirrels steal your food, bees buzz around, or snow suddenly starts falling in winter mode.
+        This guide includes full C++ classes, explanations, and modular game logic that you can expand on.`,
+        image: new URL('/images/picnic-panic-1.jpeg', import.meta.url).href,
+        content: PicnicPart1
       }
     ]
   }

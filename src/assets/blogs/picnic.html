@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h2 data-start="128" data-end="182">🎮 Game Title: <strong data-start="146" data-end="182">"Picnic Panic: Nature
+                Adventure"</strong></h2>
+        <h3 data-start="184" data-end="199">🌟 Concept:</h3>
+        <p data-start="200" data-end="418">A vibrant 2.5D or 3D picnic simulation-adventure game where players must set
+            up and protect their picnic in a dynamic environment, facing challenges like weather changes, animals, time
+            constraints, and item collection.</p>
+        <hr data-start="420" data-end="423" />
+        <h2 data-start="425" data-end="449">🧠 Core Technologies:</h2>
+        <div class="_tableContainer_16hzy_1">
+            <div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="450" data-end="1103">
+                    <thead data-start="450" data-end="504">
+                        <tr data-start="450" data-end="504">
+                            <th data-start="450" data-end="475" data-col-size="sm">Feature</th>
+                            <th data-start="475" data-end="504" data-col-size="md">Modern Tools &amp; Frameworks</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="561" data-end="1103">
+                        <tr data-start="561" data-end="646">
+                            <td data-start="561" data-end="586" data-col-size="sm">Graphics Engine</td>
+                            <td data-start="586" data-end="646" data-col-size="md"><strong data-start="588"
+                                    data-end="620">Unreal Engine 5 (C++ native)</strong> or <strong data-start="624"
+                                    data-end="637">SFML/SDL2</strong> for 2D</td>
+                        </tr>
+                        <tr data-start="647" data-end="712">
+                            <td data-start="647" data-end="672" data-col-size="sm">Physics Simulation</td>
+                            <td data-start="672" data-end="712" data-col-size="md"><strong data-start="674"
+                                    data-end="683">PhysX</strong> (via Unreal or standalone)</td>
+                        </tr>
+                        <tr data-start="713" data-end="774">
+                            <td data-start="713" data-end="738" data-col-size="sm">UI &amp; UX Design</td>
+                            <td data-start="738" data-end="774" data-col-size="md"><strong data-start="740"
+                                    data-end="754">Unreal UMG</strong> or <strong data-start="758" data-end="772">Dear
+                                    ImGui</strong></td>
+                        </tr>
+                        <tr data-start="775" data-end="826">
+                            <td data-start="775" data-end="800" data-col-size="sm">Sound &amp; Music</td>
+                            <td data-start="800" data-end="826" data-col-size="md"><strong data-start="802"
+                                    data-end="810">FMOD</strong> or <strong data-start="814"
+                                    data-end="824">OpenAL</strong></td>
+                        </tr>
+                        <tr data-start="827" data-end="878">
+                            <td data-start="827" data-end="852" data-col-size="sm">Input &amp; Devices</td>
+                            <td data-start="852" data-end="878" data-col-size="md"><strong data-start="854"
+                                    data-end="876">Gamepad + Keyboard</strong></td>
+                        </tr>
+                        <tr data-start="879" data-end="948">
+                            <td data-start="879" data-end="904" data-col-size="sm">AI &amp; Pathfinding</td>
+                            <td data-start="904" data-end="948" data-col-size="md"><strong data-start="906"
+                                    data-end="924">Behavior Trees</strong> (Unreal) or custom A*</td>
+                        </tr>
+                        <tr data-start="949" data-end="1036">
+                            <td data-start="949" data-end="976" data-col-size="sm">Robotic Sensor Emulation</td>
+                            <td data-start="976" data-end="1036" data-col-size="md">Simulated via game physics (e.g.,
+                                motion detection, GPS)</td>
+                        </tr>
+                        <tr data-start="1037" data-end="1103">
+                            <td data-start="1037" data-end="1062" data-col-size="sm">Multiplayer (Optional)</td>
+                            <td data-start="1062" data-end="1103" data-col-size="md"><strong data-start="1064"
+                                    data-end="1077">Steam SDK</strong> / <strong data-start="1080"
+                                    data-end="1101">Unreal Subsystems</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="sticky end-(--thread-content-margin) h-0 self-end select-none">&nbsp;</div>
+            </div>
+        </div>
+        <hr data-start="1105" data-end="1108" />
+        <h2 data-start="1110" data-end="1130">🧺 Game Features:</h2>
+        <h3 data-start="1131" data-end="1148">✅ Game Modes:</h3>
+        <ul data-start="1149" data-end="1346">
+            <li data-start="1149" data-end="1204">
+                <p data-start="1151" data-end="1204"><strong data-start="1151" data-end="1171">Solo Picnic
+                        Mode</strong>: Set up your picnic and explore.</p>
+            </li>
+            <li data-start="1205" data-end="1280">
+                <p data-start="1207" data-end="1280"><strong data-start="1207" data-end="1231">Survival Picnic
+                        Mode</strong>: Protect your food from ants, rain, and animals.</p>
+            </li>
+            <li data-start="1281" data-end="1346">
+                <p data-start="1283" data-end="1346"><strong data-start="1283" data-end="1298">Picnic Race</strong>:
+                    Compete to collect items before time runs out.</p>
+            </li>
+        </ul>
+        <h3 data-start="1348" data-end="1368">✅ Key Mechanics:</h3>
+        <ul data-start="1369" data-end="1661">
+            <li data-start="1369" data-end="1402">
+                <p data-start="1371" data-end="1402"><strong data-start="1371" data-end="1402">Drag-and-drop picnic
+                        layout</strong></p>
+            </li>
+            <li data-start="1403" data-end="1449">
+                <p data-start="1405" data-end="1449"><strong data-start="1405" data-end="1431">Dynamic Weather
+                        System</strong> (sun, rain, wind)</p>
+            </li>
+            <li data-start="1450" data-end="1491">
+                <p data-start="1452" data-end="1491"><strong data-start="1452" data-end="1466">AI Animals</strong>
+                    (squirrels, birds, ants)</p>
+            </li>
+            <li data-start="1492" data-end="1552">
+                <p data-start="1494" data-end="1552"><strong data-start="1494" data-end="1523">Inventory &amp; Recipe
+                        System</strong> (sandwiches, fruits, juices)</p>
+            </li>
+            <li data-start="1553" data-end="1610">
+                <p data-start="1555" data-end="1610"><strong data-start="1555" data-end="1573">Scoring System</strong>
+                    (cleanliness, food saved, fun level)</p>
+            </li>
+            <li data-start="1611" data-end="1661">
+                <p data-start="1613" data-end="1661"><strong data-start="1613" data-end="1627">Mini-games</strong>
+                    (Frisbee toss, kite flying, etc.)</p>
+            </li>
+        </ul>
+        <hr data-start="1663" data-end="1666" />
+        <h2 data-start="1668" data-end="1718">🧩 Sample System Architecture (for Unreal/C++):</h2>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">APicnicGameManager</span> : <span class="hljs-keyword">public</span> AActor { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">BeginPlay</span><span class="hljs-params">()</span> <span class="hljs-keyword">override</span>; <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime) <span class="hljs-keyword">override</span>; <span class="hljs-keyword">private</span>: <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">InitializePicnicArea</span><span class="hljs-params">()</span>; <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">SpawnAnimals</span><span class="hljs-params">()</span>; <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UpdateWeather</span><span class="hljs-params">()</span>; <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">HandleMiniGames</span><span class="hljs-params">()</span>; <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">CheckScore</span><span class="hljs-params">()</span>; }; </code>
+            </div>
+        </div>
+        <h3 data-start="2040" data-end="2072">🌦️ Dynamic Weather Example:</h3>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                cpp</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-cpp"><span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">APicnicGameManager::UpdateWeather</span><span class="hljs-params">()</span> { <span class="hljs-type">float</span> RandomVal = FMath::<span class="hljs-built_in">FRand</span>(); <span class="hljs-keyword">if</span> (RandomVal &lt; <span class="hljs-number">0.2f</span>) { CurrentWeather = EPicnicWeather::Rainy; <span class="hljs-built_in">ActivateRainEffect</span>(); <span class="hljs-built_in">PlayThunderSound</span>(); } <span class="hljs-keyword">else</span> { CurrentWeather = EPicnicWeather::Sunny; } } </code>
+            </div>
+        </div>
+        <hr data-start="2373" data-end="2376" />
+        <h2 data-start="2378" data-end="2393">🎨 UI &amp; Art:</h2>
+        <ul data-start="2394" data-end="2534">
+            <li data-start="2394" data-end="2436">
+                <p data-start="2396" data-end="2436">Cartoon-style 3D models for picnic items</p>
+            </li>
+            <li data-start="2437" data-end="2493">
+                <p data-start="2439" data-end="2493">Day-Night cycle with real-time lighting (Lumen if UE5)</p>
+            </li>
+            <li data-start="2494" data-end="2534">
+                <p data-start="2496" data-end="2534">UI Score bar, item inventory, mini-map</p>
+            </li>
+        </ul>
+        <hr data-start="2536" data-end="2539" />
+        <h2 data-start="2541" data-end="2556">🔊 Sound FX:</h2>
+        <ul data-start="2557" data-end="2660">
+            <li data-start="2557" data-end="2571">
+                <p data-start="2559" data-end="2571">Buzzing bees</p>
+            </li>
+            <li data-start="2572" data-end="2585">
+                <p data-start="2574" data-end="2585">Bird chirps</p>
+            </li>
+            <li data-start="2586" data-end="2601">
+                <p data-start="2588" data-end="2601">Food sizzling</p>
+            </li>
+            <li data-start="2602" data-end="2617">
+                <p data-start="2604" data-end="2617">Wind rustling</p>
+            </li>
+            <li data-start="2618" data-end="2660">
+                <p data-start="2620" data-end="2660">Picnic music (e.g., ukulele, light jazz)</p>
+            </li>
+        </ul>
+        <hr data-start="2662" data-end="2665" />
+        <h2 data-start="2667" data-end="2685">🧪 Fun Add-ons:</h2>
+        <ul data-start="2686" data-end="2823">
+            <li data-start="2686" data-end="2722">
+                <p data-start="2688" data-end="2722"><strong data-start="2688" data-end="2711">Picnic Drone
+                        Camera</strong> (FPV mode)</p>
+            </li>
+            <li data-start="2723" data-end="2770">
+                <p data-start="2725" data-end="2770"><strong data-start="2725" data-end="2739">Photo Mode</strong>
+                    (selfies with picnic, animals)</p>
+            </li>
+            <li data-start="2771" data-end="2823">
+                <p data-start="2773" data-end="2823"><strong data-start="2773" data-end="2787">Eco Points</strong> (if
+                    you clean up, compost, recycle)</p>
+            </li>
+        </ul>
+        <hr data-start="2825" data-end="2828" />
+        <h2 data-start="2830" data-end="2851">📈 Scoring System:</h2>
+        <div class="_tableContainer_16hzy_1">
+            <div class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse" tabindex="-1">
+                <table class="w-fit min-w-(--thread-content-width)" data-start="2852" data-end="3094">
+                    <thead data-start="2852" data-end="2885">
+                        <tr data-start="2852" data-end="2885">
+                            <th data-start="2852" data-end="2875" data-col-size="sm">Action</th>
+                            <th data-start="2875" data-end="2885" data-col-size="sm">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="2920" data-end="3094">
+                        <tr data-start="2920" data-end="2954">
+                            <td data-start="2920" data-end="2944" data-col-size="sm">Setting up picnic</td>
+                            <td data-start="2944" data-end="2954" data-col-size="sm">+50</td>
+                        </tr>
+                        <tr data-start="2955" data-end="2989">
+                            <td data-start="2955" data-end="2979" data-col-size="sm">Saving food from ants</td>
+                            <td data-start="2979" data-end="2989" data-col-size="sm">+25</td>
+                        </tr>
+                        <tr data-start="2990" data-end="3024">
+                            <td data-start="2990" data-end="3014" data-col-size="sm">Cleaning up properly</td>
+                            <td data-start="3014" data-end="3024" data-col-size="sm">+100</td>
+                        </tr>
+                        <tr data-start="3025" data-end="3059">
+                            <td data-start="3025" data-end="3049" data-col-size="sm">Wasting food</td>
+                            <td data-start="3049" data-end="3059" data-col-size="sm">-50</td>
+                        </tr>
+                        <tr data-start="3060" data-end="3094">
+                            <td data-start="3060" data-end="3084" data-col-size="sm">Getting wet</td>
+                            <td data-start="3084" data-end="3094" data-col-size="sm">-20</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="sticky end-(--thread-content-margin) h-0 self-end select-none">&nbsp;</div>
+            </div>
+        </div>
+        <hr data-start="3096" data-end="3099" />
+        <h2 data-start="3101" data-end="3130">🛠️ Tools for Development:</h2>
+        <ul data-start="3131" data-end="3302">
+            <li data-start="3131" data-end="3184">
+                <p data-start="3133" data-end="3184"><strong data-start="3133" data-end="3152">Unreal Engine 5</strong>
+                    with <strong data-start="3158" data-end="3184">Blueprint + C++ Hybrid</strong></p>
+            </li>
+            <li data-start="3185" data-end="3214">
+                <p data-start="3187" data-end="3214"><strong data-start="3187" data-end="3195">FMOD</strong> for
+                    adaptive sound</p>
+            </li>
+            <li data-start="3215" data-end="3263">
+                <p data-start="3217" data-end="3263"><strong data-start="3217" data-end="3228">Blender</strong> or
+                    <strong data-start="3232" data-end="3242">Mixamo</strong> for models/animation</p>
+            </li>
+            <li data-start="3264" data-end="3302">
+                <p data-start="3266" data-end="3302"><strong data-start="3266" data-end="3282">Perforce/Git</strong> for
+                    version control</p>
+            </li>
+        </ul>
+        <hr data-start="3304" data-end="3307" />
+        <h2 data-start="3309" data-end="3335">🎯 Future Enhancements:</h2>
+        <ul data-start="3336" data-end="3484">
+            <li data-start="3336" data-end="3362">
+                <p data-start="3338" data-end="3362">Multiplayer co-op picnic</p>
+            </li>
+            <li data-start="3363" data-end="3413">
+                <p data-start="3365" data-end="3413">Seasonal events (spring picnic, winter snow day)</p>
+            </li>
+            <li data-start="3414" data-end="3450">
+                <p data-start="3416" data-end="3450">Real-world GPS-linked picnic spots</p>
+            </li>
+            <li data-start="3451" data-end="3484">
+                <p data-start="3453" data-end="3484">VR support (Unreal VR template)</p>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>
