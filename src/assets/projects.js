@@ -16,6 +16,7 @@ import RainRise from "/src/assets/blogs/rain-rise.html?raw"
 import VerticalGarden from "/src/assets/blogs/vertical-garden.html?raw"
 import Picnic from "/src/assets/blogs/picnic.html?raw"
 import PicnicPart1 from "/src/assets/blogs/picnic-part1.html?raw"
+import RainfallRescue from "/src/assets/blogs/rainfall-rescue.html?raw"
 
 
 const projects = [
@@ -187,6 +188,14 @@ const projects = [
         content: PicnicPart1
       }
     ]
+  },
+
+  {
+    title: "Rainfall Rescue – Building a Fun SFML C++ Game",
+    slug: "rainfall-rescue",
+    description: `Have you ever wished you could control the rain? In this exciting C++ project, we’re doing just that – building Rainfall Rescue, a 2D arcade-style game where players catch pure rain and avoid acid drops.`,
+    image: new URL('/images/rainfall-rescue.jpeg', import.meta.url).href,
+    content: RainfallRescue
   }
   // {
   //   id: 4,

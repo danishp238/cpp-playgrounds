@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h1 data-start="430" data-end="478">Rainfall Rescue &ndash; Building a Fun SFML C++ Game</h1>
+        <h2 data-start="480" data-end="531">Introduction &ndash; Bringing the Rain to Life in Code</h2>
+        <p data-start="532" data-end="741">Have you ever wished you could control the rain? In this exciting C++
+            project, we&rsquo;re doing just that &ndash; building <strong data-start="644" data-end="663">Rainfall
+                Rescue</strong>, a 2D arcade-style game where players catch pure rain and avoid acid drops.</p>
+        <p data-start="743" data-end="764">This game combines:</p>
+        <ul data-start="765" data-end="882">
+            <li data-start="765" data-end="781">
+                <p data-start="767" data-end="781">Fun gameplay</p>
+            </li>
+            <li data-start="782" data-end="819">
+                <p data-start="784" data-end="819">Real-world environmental concepts</p>
+            </li>
+            <li data-start="820" data-end="882">
+                <p data-start="822" data-end="882">The power of <strong data-start="835" data-end="880">SFML (Simple and
+                        Fast Multimedia Library)</strong></p>
+            </li>
+        </ul>
+        <p data-start="884" data-end="1178">In <strong data-start="887" data-end="906">Rainfall Rescue</strong>,
+            you&rsquo;ll move a bucket left and right to collect clean rainwater. Every drop you catch boosts your score
+            and helps plants grow, while acid rain harms them. Add realistic rain sounds, splashes, and simple particle
+            effects, and you&rsquo;ve got a truly immersive coding project.</p>
+        <hr data-start="1180" data-end="1183" />
+        <h2 data-start="1185" data-end="1226">Section 1 &ndash; Setting Up SFML on Windows</h2>
+        <p data-start="1228" data-end="1246"><strong data-start="1228" data-end="1244">You&rsquo;ll need:</strong></p>
+        <ul data-start="1247" data-end="1533">
+            <li data-start="1247" data-end="1326">
+                <p data-start="1249" data-end="1326">Windows PC with a C++ compiler (<strong data-start="1281"
+                        data-end="1290">MinGW</strong> or <strong data-start="1294" data-end="1311">Visual
+                        Studio</strong> recommended)</p>
+            </li>
+            <li data-start="1327" data-end="1390">
+                <p data-start="1329" data-end="1390"><strong data-start="1329" data-end="1342">SFML 2.5+</strong> from
+                    <a class="cursor-pointer" target="_new" rel="noopener" data-start="1348"
+                        data-end="1388">sfml-dev.org</a></p>
+            </li>
+            <li data-start="1391" data-end="1533">
+                <p data-start="1393" data-end="1423">A project folder containing:</p>
+                <ul data-start="1426" data-end="1533">
+                    <li data-start="1426" data-end="1454">
+                        <p data-start="1428" data-end="1454"><code data-start="1428"
+                                data-end="1452">Rainfall_SFML_Game.cpp</code></p>
+                    </li>
+                    <li data-start="1457" data-end="1533">
+                        <p data-start="1459" data-end="1533">An <code data-start="1462" data-end="1470">assets</code>
+                            folder with your font (<code data-start="1494" data-end="1514">Roboto-Regular.ttf</code>)
+                            and sound files</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p data-start="1535" data-end="1558"><strong data-start="1535" data-end="1558">Compile with MinGW:</strong></p>
+        <div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+            <div
+                class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl">
+                bash</div>
+            <div class="sticky top-9">
+                <div class="absolute end-0 bottom-0 flex h-9 items-center pe-2">
+                    <div
+                        class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
+                        <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
+                            data-state="closed"><button
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                </div>
+            </div>
+            <div class="overflow-y-auto p-4" dir="ltr"><code
+                    class="whitespace-pre! language-bash">g++ -std=c++17 -O2 -I<span class="hljs-string">"C:\SFML\include"</span> Rainfall_SFML_Game.cpp -o Rainfall.exe -L<span class="hljs-string">"C:\SFML\lib"</span> -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio </code>
+            </div>
+        </div>
+        <hr data-start="1723" data-end="1726" />
+        <h2 data-start="1728" data-end="1756">Section 2 &ndash; Game Features</h2>
+        <ul data-start="1758" data-end="2091">
+            <li data-start="1758" data-end="1826">
+                <p data-start="1760" data-end="1826"><strong data-start="1760" data-end="1781">Dynamic
+                        raindrops</strong>: clean drops to catch, acid drops to avoid</p>
+            </li>
+            <li data-start="1827" data-end="1880">
+                <p data-start="1829" data-end="1880"><strong data-start="1829" data-end="1857">Player-controlled
+                        bucket</strong> with smooth movement</p>
+            </li>
+            <li data-start="1881" data-end="1938">
+                <p data-start="1883" data-end="1938"><strong data-start="1883" data-end="1904">Real-time
+                        scoring</strong> and <strong data-start="1909" data-end="1936">plant health indicators</strong>
+                </p>
+            </li>
+            <li data-start="1939" data-end="1997">
+                <p data-start="1941" data-end="1997"><strong data-start="1941" data-end="1958">Sound effects</strong>
+                    for rain, splashes, and acid hissing</p>
+            </li>
+            <li data-start="1998" data-end="2040">
+                <p data-start="2000" data-end="2040"><strong data-start="2000" data-end="2019">Particle bursts</strong>
+                    for water splashes</p>
+            </li>
+            <li data-start="2041" data-end="2091">
+                <p data-start="2043" data-end="2091">Simple, clean visuals without external sprites</p>
+            </li>
+        </ul>
+        <hr data-start="2093" data-end="2096" />
+        <h2 data-start="2098" data-end="2145">Section 3 &ndash; The Code, Explained Step-by-Step</h2>
+        <h3 data-start="2147" data-end="2173">1. Including Libraries</h3>
+        <p data-start="2174" data-end="2308">We include <strong data-start="2185" data-end="2201">SFML modules</strong>
+            for graphics, window control, and audio. This provides shapes, text rendering, sound playback, and more.</p>
+        <h3 data-start="2310" data-end="2338">2. Defining Game Objects</h3>
+        <ul data-start="2339" data-end="2471">
+            <li data-start="2339" data-end="2376">
+                <p data-start="2341" data-end="2376"><strong data-start="2341" data-end="2351">Bucket</strong> &rarr;
+                    <code data-start="2354" data-end="2374">sf::RectangleShape</code></p>
+            </li>
+            <li data-start="2377" data-end="2414">
+                <p data-start="2379" data-end="2414"><strong data-start="2379" data-end="2392">Raindrops</strong> &rarr;
+                    <code data-start="2395" data-end="2412">sf::CircleShape</code></p>
+            </li>
+            <li data-start="2415" data-end="2471">
+                <p data-start="2417" data-end="2471"><strong data-start="2417" data-end="2430">Particles</strong> &rarr;
+                    stored in <code data-start="2443" data-end="2456">std::vector</code> for splashes</p>
+            </li>
+        </ul>
+        <h3 data-start="2473" data-end="2494">3. Handling Input</h3>
+        <p data-start="2495" data-end="2623">We check for <strong data-start="2508" data-end="2527">keyboard
+                events</strong> to move the bucket left or right. Both arrow keys and <strong data-start="2582"
+                data-end="2594">A/D keys</strong> are supported for comfort.</p>
+        <h3 data-start="2625" data-end="2645">4. Spawning Rain</h3>
+        <ul data-start="2646" data-end="2769">
+            <li data-start="2646" data-end="2684">
+                <p data-start="2648" data-end="2684">Timer-controlled raindrop creation</p>
+            </li>
+            <li data-start="2685" data-end="2716">
+                <p data-start="2687" data-end="2716">Random positions and speeds</p>
+            </li>
+            <li data-start="2717" data-end="2769">
+                <p data-start="2719" data-end="2769">Probability to decide if a drop is clean or acid</p>
+            </li>
+        </ul>
+        <h3 data-start="2771" data-end="2797">5. Collision Detection</h3>
+        <p data-start="2798" data-end="2826">If a drop hits the bucket:</p>
+        <ul data-start="2827" data-end="2902">
+            <li data-start="2827" data-end="2862">
+                <p data-start="2829" data-end="2862"><strong data-start="2829" data-end="2843">Clean drop</strong>
+                    &rarr; increase score</p>
+            </li>
+            <li data-start="2863" data-end="2902">
+                <p data-start="2865" data-end="2902"><strong data-start="2865" data-end="2878">Acid drop</strong> &rarr;
+                    reduce plant health</p>
+            </li>
+        </ul>
+        <h3 data-start="2904" data-end="2923">6. Adding Sound</h3>
+        <p data-start="2924" data-end="3008">We load <code data-start="2932" data-end="2938">.ogg</code> or <code
+                data-start="2942" data-end="2948">.wav</code> into <code data-start="2954"
+                data-end="2971">sf::SoundBuffer</code> and attach to <code data-start="2986"
+                data-end="2997">sf::Sound</code> objects.</p>
+        <ul data-start="3009" data-end="3117">
+            <li data-start="3009" data-end="3038">
+                <p data-start="3011" data-end="3038"><strong data-start="3011" data-end="3030">Rain background</strong>
+                    loops</p>
+            </li>
+            <li data-start="3039" data-end="3078">
+                <p data-start="3041" data-end="3078"><strong data-start="3041" data-end="3057">Splash sound</strong> for
+                    catching drops</p>
+            </li>
+            <li data-start="3079" data-end="3117">
+                <p data-start="3081" data-end="3117"><strong data-start="3081" data-end="3094">Acid hiss</strong> for
+                    acid rain impact</p>
+            </li>
+        </ul>
+        <h3 data-start="3119" data-end="3142">7. Particle Effects</h3>
+        <p data-start="3143" data-end="3200">When drops hit, small fading circles simulate splashes.</p>
+        <h3 data-start="3202" data-end="3226">8. Drawing the Frame</h3>
+        <p data-start="3227" data-end="3241">Every frame:</p>
+        <ul data-start="3242" data-end="3305">
+            <li data-start="3242" data-end="3262">
+                <p data-start="3244" data-end="3262">Clear the window</p>
+            </li>
+            <li data-start="3263" data-end="3305">
+                <p data-start="3265" data-end="3305">Draw bucket, raindrops, particles, HUD</p>
+            </li>
+        </ul>
+        <hr data-start="3307" data-end="3310" />
+        <h2 data-start="3312" data-end="3335">Fun Facts About Rain</h2>
+        <ul data-start="3336" data-end="3534">
+            <li data-start="3336" data-end="3398">
+                <p data-start="3338" data-end="3398">The <strong data-start="3342" data-end="3363">heaviest
+                        raindrop</strong> recorded was 8.8 mm in diameter.</p>
+            </li>
+            <li data-start="3399" data-end="3457">
+                <p data-start="3401" data-end="3457">Acid rain can damage plants, fish, and even buildings.</p>
+            </li>
+            <li data-start="3458" data-end="3534">
+                <p data-start="3460" data-end="3534">Rainbows form when sunlight refracts through raindrops &ndash; not
+                    acid drops!</p>
+            </li>
+        </ul>
+        <hr data-start="3536" data-end="3539" />
+        <h2 data-start="3541" data-end="3563">Future Enhancements</h2>
+        <ul data-start="3564" data-end="3758">
+            <li data-start="3564" data-end="3619">
+                <p data-start="3566" data-end="3619"><strong data-start="3566" data-end="3596">Seasons &amp; weather
+                        patterns</strong> affecting drop speed</p>
+            </li>
+            <li data-start="3620" data-end="3663">
+                <p data-start="3622" data-end="3663"><strong data-start="3622" data-end="3647">Multiple bucket
+                        types</strong> with upgrades</p>
+            </li>
+            <li data-start="3664" data-end="3706">
+                <p data-start="3666" data-end="3706"><strong data-start="3666" data-end="3688">Online
+                        leaderboard</strong> for high scores</p>
+            </li>
+            <li data-start="3707" data-end="3758">
+                <p data-start="3709" data-end="3758"><strong data-start="3709" data-end="3736">Mobile-friendly
+                        version</strong> with touch controls</p>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>
