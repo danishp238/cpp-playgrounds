@@ -158,7 +158,8 @@
             <li data-start="1327" data-end="1390">
                 <p data-start="1329" data-end="1390"><strong data-start="1329" data-end="1342">SFML 2.5+</strong> from
                     <a class="cursor-pointer" target="_new" rel="noopener" data-start="1348"
-                        data-end="1388">sfml-dev.org</a></p>
+                        data-end="1388">sfml-dev.org</a>
+                </p>
             </li>
             <li data-start="1391" data-end="1533">
                 <p data-start="1393" data-end="1423">A project folder containing:</p>
@@ -186,7 +187,8 @@
                         class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs">
                         <button class="flex gap-1 items-center select-none py-1">Copy</button><span class=""
                             data-state="closed"><button
-                                class="flex items-center gap-1 py-1 select-none">Edit</button></span></div>
+                                class="flex items-center gap-1 py-1 select-none">Edit</button></span>
+                    </div>
                 </div>
             </div>
             <div class="overflow-y-auto p-4" dir="ltr"><code
@@ -223,6 +225,72 @@
         </ul>
         <hr data-start="2093" data-end="2096" />
         <h2 data-start="2098" data-end="2145">Section 3 &ndash; The Code, Explained Step-by-Step</h2>
+
+        <p>#include &lt;SFML/Graphics.hpp&gt;<br />#include &lt;vector&gt;<br />#include &lt;random&gt;<br />#include
+            &lt;string&gt;<br />#include &lt;sstream&gt;</p>
+        <p>struct Raindrop {<br /> sf::CircleShape shape;<br /> float speed;<br /> bool acid;<br />};</p>
+        <p>int main() {<br /> const unsigned int WINDOW_W = 1024;<br /> const unsigned int WINDOW_H = 720;<br />
+            sf::RenderWindow window(sf::VideoMode(WINDOW_W, WINDOW_H), "Rainfall Eco-Proto");<br />
+            window.setFramerateLimit(60);</p>
+        <p>std::random_device rd;<br /> std::mt19937 rng(rd());<br /> std::uniform_real_distribution&lt;float&gt;
+            xDist(20.f, WINDOW_W - 20.f);<br /> std::uniform_real_distribution&lt;float&gt; speedDist(140.f,
+            360.f);<br /> std::uniform_real_distribution&lt;float&gt; acidChance(0.f, 1.f);</p>
+        <p>sf::RectangleShape bucket(sf::Vector2f(120.f, 24.f));<br /> bucket.setOrigin(bucket.getSize().x/2.f,
+            bucket.getSize().y/2.f);<br /> bucket.setPosition(WINDOW_W/2.f, WINDOW_H - 60.f);<br />
+            bucket.setFillColor(sf::Color(100, 149, 237));</p>
+        <p>sf::RectangleShape ground(sf::Vector2f((float)WINDOW_W, 100.f));<br /> ground.setPosition(0.f, WINDOW_H -
+            50.f);<br /> ground.setFillColor(sf::Color(50, 160, 60));</p>
+        <p>float plantHealth = 0.6f;<br /> sf::CircleShape plant(28.f);<br /> plant.setOrigin(plant.getRadius(),
+            plant.getRadius());<br /> plant.setPosition(100.f, WINDOW_H - 90.f);</p>
+        <p>sf::Font font;<br /> bool fontLoaded = font.loadFromFile("assets/Roboto-Regular.ttf");</p>
+        <p>sf::Text hudText;<br /> if (fontLoaded) {<br /> hudText.setFont(font);<br />
+            hudText.setCharacterSize(18);<br /> hudText.setFillColor(sf::Color::White);<br /> hudText.setPosition(10.f,
+            10.f);<br /> }</p>
+        <p>std::vector&lt;Raindrop&gt; drops;<br /> float spawnTimer = 0.f;<br /> float spawnInterval = 0.15f;<br /> int
+            score = 0;<br /> float soilMoisture = 0.3f;<br /> float gameTime = 60.f;</p>
+        <p>sf::Clock clock;</p>
+        <p>auto spawnDrop = [&amp;](float overrideX = -1.f) {<br /> Raindrop d;<br /> d.shape =
+            sf::CircleShape(8.f);<br /> float x = (overrideX &lt; 0.f) ? xDist(rng) : overrideX;<br />
+            d.shape.setPosition(x, -10.f);<br /> d.speed = speedDist(rng);<br /> d.acid = (acidChance(rng) &lt;
+            0.12f);<br /> d.shape.setFillColor(d.acid ? sf::Color(170, 0, 255) : sf::Color(120, 180, 255));<br />
+            drops.push_back(std::move(d));<br /> };</p>
+        <p>for (int i=0;i&lt;6;i++) spawnDrop();</p>
+        <p>while (window.isOpen()) {<br /> float dt = clock.restart().asSeconds();<br /> gameTime -= dt;</p>
+        <p>sf::Event ev;<br /> while (window.pollEvent(ev)) {<br /> if (ev.type == sf::Event::Closed)
+            window.close();<br /> }</p>
+        <p>if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A))<br />
+            bucket.move(-420.f * dt, 0.f);<br /> if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) ||
+            sf::Keyboard::isKeyPressed(sf::Keyboard::D))<br /> bucket.move(420.f * dt, 0.f);</p>
+        <p>if (bucket.getPosition().x &lt; bucket.getSize().x/2.f) bucket.setPosition(bucket.getSize().x/2.f,
+            bucket.getPosition().y);<br /> if (bucket.getPosition().x &gt; WINDOW_W - bucket.getSize().x/2.f)
+            bucket.setPosition(WINDOW_W - bucket.getSize().x/2.f, bucket.getPosition().y);</p>
+        <p>spawnTimer += dt;<br /> if (spawnTimer &gt;= spawnInterval) {<br /> spawnTimer = 0.f;<br />
+            spawnDrop();<br /> if (acidChance(rng) &lt; 0.08f) {<br /> float clusterX = xDist(rng);<br /> for (int
+            i=0;i&lt;4;i++) spawnDrop(clusterX + (i-2)*12.f);<br /> }<br /> }</p>
+        <p>for (size_t i=0;i&lt;drops.size();) {<br /> drops[i].shape.move(0.f, drops[i].speed * dt);<br /> if
+            (drops[i].shape.getGlobalBounds().intersects(bucket.getGlobalBounds())) {<br /> if (drops[i].acid) {<br />
+            score -= 5;<br /> soilMoisture = std::max(0.f, soilMoisture - 0.06f);<br /> plantHealth = std::max(0.f,
+            plantHealth - 0.06f);<br /> } else {<br /> score += 10;<br /> soilMoisture = std::min(1.f, soilMoisture +
+            0.05f);<br /> plantHealth = std::min(1.f, plantHealth + 0.03f);<br /> }<br /> drops.erase(drops.begin() +
+            i);<br /> continue;<br /> }<br /> if (drops[i].shape.getPosition().y &gt; WINDOW_H - 40.f) {<br /> if
+            (drops[i].acid) {<br /> plantHealth = std::max(0.f, plantHealth - 0.03f);<br /> } else {<br /> soilMoisture
+            = std::min(1.f, soilMoisture + 0.02f);<br /> }<br /> drops.erase(drops.begin() + i);<br /> continue;<br />
+            }<br /> ++i;<br /> }</p>
+        <p>if (soilMoisture &lt; 0.4f) plantHealth = std::max(0.f, plantHealth - 0.01f * dt);<br /> else plantHealth =
+            std::min(1.f, plantHealth + 0.02f * dt);</p>
+        <p>soilMoisture = std::max(0.f, soilMoisture - 0.01f * dt);</p>
+        <p>float plantScale = 0.6f + plantHealth * 1.2f;<br /> plant.setRadius(28.f * plantScale);<br />
+            plant.setOrigin(plant.getRadius(), plant.getRadius());<br /> sf::Uint8 g = (sf::Uint8)(100 + plantHealth *
+            155);<br /> sf::Uint8 r = (sf::Uint8)(60 + (1.f-plantHealth) * 120);<br /> plant.setFillColor(sf::Color(r,
+            g, 40));</p>
+        <p>window.clear(sf::Color(20, 24, 40));<br /> for (auto &amp;d : drops) window.draw(d.shape);<br />
+            window.draw(ground);<br /> window.draw(plant);<br /> window.draw(bucket);</p>
+        <p>if (fontLoaded) {<br /> std::stringstream s;<br /> s &lt;&lt; "Score: " &lt;&lt; score &lt;&lt; " Time: "
+            &lt;&lt; (int)gameTime &lt;&lt; "s";<br /> s &lt;&lt; " Soil: " &lt;&lt; (int)(soilMoisture*100) &lt;&lt; "%
+            Plant: " &lt;&lt; (int)(plantHealth*100) &lt;&lt; "%";<br /> hudText.setString(s.str());<br />
+            window.draw(hudText);<br /> }</p>
+        <p>window.display();<br /> }<br />}</p>
+
         <h3 data-start="2147" data-end="2173">1. Including Libraries</h3>
         <p data-start="2174" data-end="2308">We include <strong data-start="2185" data-end="2201">SFML modules</strong>
             for graphics, window control, and audio. This provides shapes, text rendering, sound playback, and more.</p>
@@ -230,11 +298,13 @@
         <ul data-start="2339" data-end="2471">
             <li data-start="2339" data-end="2376">
                 <p data-start="2341" data-end="2376"><strong data-start="2341" data-end="2351">Bucket</strong> &rarr;
-                    <code data-start="2354" data-end="2374">sf::RectangleShape</code></p>
+                    <code data-start="2354" data-end="2374">sf::RectangleShape</code>
+                </p>
             </li>
             <li data-start="2377" data-end="2414">
                 <p data-start="2379" data-end="2414"><strong data-start="2379" data-end="2392">Raindrops</strong> &rarr;
-                    <code data-start="2395" data-end="2412">sf::CircleShape</code></p>
+                    <code data-start="2395" data-end="2412">sf::CircleShape</code>
+                </p>
             </li>
             <li data-start="2415" data-end="2471">
                 <p data-start="2417" data-end="2471"><strong data-start="2417" data-end="2430">Particles</strong> &rarr;
