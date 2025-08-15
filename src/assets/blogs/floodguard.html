@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+   <h1 data-start="390" data-end="443">FloodGuard (UE5 C++): Rescue Boat vs. Rising Waters</h1>
+<h2 data-start="445" data-end="460">What you get</h2>
+<ul data-start="461" data-end="870">
+<li data-start="461" data-end="535">
+<p data-start="463" data-end="535">Dynamic <strong data-start="471" data-end="486">flood level</strong> that rises over time (configurable curve/speed).</p>
+</li>
+<li data-start="536" data-end="636">
+<p data-start="538" data-end="636">A <strong data-start="540" data-end="570">physics-driven rescue boat</strong> with simplified, performant <strong data-start="599" data-end="611">buoyancy</strong> over a flat water plane.</p>
+</li>
+<li data-start="637" data-end="709">
+<p data-start="639" data-end="709"><strong data-start="639" data-end="662">Pickups (survivors)</strong> scattered on rooftops; collect them for score.</p>
+</li>
+<li data-start="710" data-end="784">
+<p data-start="712" data-end="784"><strong data-start="712" data-end="725">Basic HUD</strong> via on-screen debug messages (easy to swap for UMG later).</p>
+</li>
+<li data-start="785" data-end="870">
+<p data-start="787" data-end="870">Clean, modular <strong data-start="802" data-end="817">C++ classes</strong>: <code data-start="819" data-end="835">RescueBoatPawn</code>, <code data-start="837" data-end="851">FloodManager</code>, <code data-start="853" data-end="869">SurvivorPickup</code>.</p>
+</li>
+</ul>
+<h2 data-start="872" data-end="887">Tested setup</h2>
+<ul data-start="888" data-end="1055">
+<li data-start="888" data-end="918">
+<p data-start="890" data-end="918">Unreal Engine 5.x (5.2&ndash;5.4+)</p>
+</li>
+<li data-start="919" data-end="972">
+<p data-start="921" data-end="972">New &ldquo;C++ &rarr; Blank&rdquo; project (Desktop/Maximum Quality)</p>
+</li>
+<li data-start="973" data-end="990">
+<p data-start="975" data-end="990">Target: Windows</p>
+</li>
+<li data-start="991" data-end="1055">
+<p data-start="993" data-end="1055">No plugins required (optional: Water plugin later for visuals)</p>
+</li>
+</ul>
+<hr data-start="1057" data-end="1060" />
+<h2 data-start="1062" data-end="1091">Quick install steps (once)</h2>
+<ol data-start="1092" data-end="1929">
+<li data-start="1092" data-end="1155">
+<p data-start="1095" data-end="1155">Create UE5 C++ project (Blank &rarr; No Starter Content is fine).</p>
+</li>
+<li data-start="1156" data-end="1257">
+<p data-start="1159" data-end="1257">In Content, add a <strong data-start="1177" data-end="1191">plane mesh</strong> (or use a basic cube scaled flat) named &ldquo;WaterPlane&rdquo; for visuals.</p>
+</li>
+<li data-start="1258" data-end="1366">
+<p data-start="1261" data-end="1366">Add a simple <strong data-start="1274" data-end="1286">Material</strong> for water (blue BaseColor + slight metallic/roughness; optional panner normal).</p>
+</li>
+<li data-start="1367" data-end="1468">
+<p data-start="1370" data-end="1468">Add a small <strong data-start="1382" data-end="1397">static mesh</strong> for the boat (e.g., a cube/capsule). We&rsquo;ll assign it to the boat pawn.</p>
+</li>
+<li data-start="1469" data-end="1595">
+<p data-start="1472" data-end="1595">Create the C++ classes below (Editor &rarr; Tools &rarr; New C++ Class &rarr; Actor/Pawn) and <strong data-start="1551" data-end="1562">replace</strong> contents with the code provided.</p>
+</li>
+<li data-start="1596" data-end="1642">
+<p data-start="1599" data-end="1642">Compile from the Editor (or Visual Studio).</p>
+</li>
+<li data-start="1643" data-end="1914">
+<p data-start="1646" data-end="1664">In your <strong data-start="1654" data-end="1663">World</strong>:</p>
+<ul data-start="1668" data-end="1914">
+<li data-start="1668" data-end="1744">
+<p data-start="1670" data-end="1744">Place a <code data-start="1678" data-end="1695">BP_FloodManager</code> (or the raw <code data-start="1708" data-end="1723">AFloodManager</code> actor) in the level.</p>
+</li>
+<li data-start="1748" data-end="1808">
+<p data-start="1750" data-end="1808">Set its WaterMesh reference to the plane you use as water.</p>
+</li>
+<li data-start="1812" data-end="1914">
+<p data-start="1814" data-end="1914">Set Boat pawn as default in Project Settings &rarr; Maps &amp; Modes &rarr; Default Pawn Class: <code data-start="1896" data-end="1913">ARescueBoatPawn</code>.</p>
+</li>
+</ul>
+</li>
+<li data-start="1915" data-end="1929">
+<p data-start="1918" data-end="1929">Press Play.</p>
+</li>
+</ol>
+<hr data-start="1931" data-end="1934" />
+<h2 data-start="1936" data-end="1947">Controls</h2>
+<ul data-start="1948" data-end="2080">
+<li data-start="1948" data-end="1978">
+<p data-start="1950" data-end="1978">W / S: throttle forward/back</p>
+</li>
+<li data-start="1979" data-end="2003">
+<p data-start="1981" data-end="2003">A / D: turn left/right</p>
+</li>
+<li data-start="2004" data-end="2032">
+<p data-start="2006" data-end="2032">Space: boost (short burst)</p>
+</li>
+<li data-start="2033" data-end="2080">
+<p data-start="2035" data-end="2080">Collect survivor pickups by overlapping them.</p>
+</li>
+</ul>
+<hr data-start="2082" data-end="2085" />
+<h2 data-start="2087" data-end="2098">C++ Code</h2>
+<h3 data-start="2100" data-end="2123">1) RescueBoatPawn.h</h3>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="sticky top-9">&nbsp;</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-cpp"><span class="hljs-comment">// RescueBoatPawn.h</span> <span class="hljs-meta">#<span class="hljs-keyword">pragma</span></span> once <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"CoreMinimal.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"GameFramework/Pawn.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"RescueBoatPawn.generated.h"</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">UStaticMeshComponent</span>; <span class="hljs-keyword">class</span> <span class="hljs-title class_">UFloatingPawnMovement</span>; <span class="hljs-built_in">UCLASS</span>() <span class="hljs-keyword">class</span> <span class="hljs-title class_">ARescueBoatPawn</span> : <span class="hljs-keyword">public</span> APawn { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-built_in">ARescueBoatPawn</span>(); <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime) <span class="hljs-keyword">override</span>; <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">SetupPlayerInputComponent</span><span class="hljs-params">(<span class="hljs-keyword">class</span></span> UInputComponent* PlayerInputComponent) <span class="hljs-keyword">override</span>; <span class="hljs-comment">// Called by FloodManager to get current XY for water sampling</span> <span class="hljs-function">FVector2D <span class="hljs-title">GetBoatXY</span></span><span class="hljs-params">()</span> <span class="hljs-type">const</span>; <span class="hljs-comment">// Physics root for buoyancy &amp; forces</span> <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere, BlueprintReadOnly) UStaticMeshComponent* BoatMesh; <span class="hljs-keyword">protected</span>: <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">BeginPlay</span><span class="hljs-params">()</span> <span class="hljs-keyword">override</span>; <span class="hljs-keyword">private</span>: <span class="hljs-comment">// Movement input</span> <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">Throttle</span><span class="hljs-params">(<span class="hljs-type">float</span></span> Value); <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">Turn</span><span class="hljs-params">(<span class="hljs-type">float</span></span> Value); <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">Boost</span><span class="hljs-params">()</span>; <span class="hljs-comment">// Buoyancy parameters</span> <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ApplyBuoyancy</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime); <span class="hljs-comment">// Movement state</span> <span class="hljs-type">float</span> ThrottleInput = <span class="hljs-number">0.f</span>; <span class="hljs-type">float</span> TurnInput = <span class="hljs-number">0.f</span>; <span class="hljs-type">bool</span> bBoosting = <span class="hljs-literal">false</span>; <span class="hljs-type">float</span> BoostTimer = <span class="hljs-number">0.f</span>; <span class="hljs-comment">// Tunables</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category = <span class="hljs-string">"Boat|Tuning"</span>) <span class="hljs-type">float</span> EngineForce = <span class="hljs-number">300000.f</span>; <span class="hljs-comment">// Forward push</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category = <span class="hljs-string">"Boat|Tuning"</span>) <span class="hljs-type">float</span> TurnTorque = <span class="hljs-number">45000000.f</span>; <span class="hljs-comment">// Yaw torque</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category = <span class="hljs-string">"Boat|Tuning"</span>) <span class="hljs-type">float</span> BoostImpulse = <span class="hljs-number">500000.f</span>; <span class="hljs-comment">// Short impulse</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category = <span class="hljs-string">"Boat|Tuning"</span>) <span class="hljs-type">float</span> BoostDuration = <span class="hljs-number">0.25f</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category = <span class="hljs-string">"Boat|Buoyancy"</span>) <span class="hljs-type">float</span> WaterDensity = <span class="hljs-number">1.0f</span>; <span class="hljs-comment">// Scales lift</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category = <span class="hljs-string">"Boat|Buoyancy"</span>) <span class="hljs-type">float</span> BuoyancyStrength = <span class="hljs-number">400000.f</span>; <span class="hljs-comment">// Upward force</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category = <span class="hljs-string">"Boat|Buoyancy"</span>) <span class="hljs-type">float</span> LinearDampingInWater = <span class="hljs-number">1.6f</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category = <span class="hljs-string">"Boat|Buoyancy"</span>) <span class="hljs-type">float</span> AngularDampingInWater = <span class="hljs-number">2.0f</span>; }; </code></div>
+</div>
+<h3 data-start="3924" data-end="3949">2) RescueBoatPawn.cpp</h3>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="sticky top-9">&nbsp;</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-cpp"><span class="hljs-comment">// RescueBoatPawn.cpp</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"RescueBoatPawn.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Components/StaticMeshComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"GameFramework/FloatingPawnMovement.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Kismet/GameplayStatics.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Engine/World.h"</span> <span class="hljs-comment">// Forward declare to query water height</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AFloodManager</span>; ARescueBoatPawn::<span class="hljs-built_in">ARescueBoatPawn</span>() { PrimaryActorTick.bCanEverTick = <span class="hljs-literal">true</span>; BoatMesh = <span class="hljs-built_in">CreateDefaultSubobject</span>&lt;UStaticMeshComponent&gt;(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"BoatMesh"</span>)); <span class="hljs-built_in">SetRootComponent</span>(BoatMesh); BoatMesh-&gt;<span class="hljs-built_in">SetSimulatePhysics</span>(<span class="hljs-literal">true</span>); BoatMesh-&gt;<span class="hljs-built_in">SetMassOverrideInKg</span>(NAME_None, <span class="hljs-number">200.f</span>, <span class="hljs-literal">true</span>); BoatMesh-&gt;<span class="hljs-built_in">SetLinearDamping</span>(<span class="hljs-number">0.2f</span>); BoatMesh-&gt;<span class="hljs-built_in">SetAngularDamping</span>(<span class="hljs-number">0.2f</span>); BoatMesh-&gt;BodyInstance.bEnableGravity = <span class="hljs-literal">true</span>; BoatMesh-&gt;<span class="hljs-built_in">SetCollisionProfileName</span>(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"PhysicsActor"</span>)); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ARescueBoatPawn::BeginPlay</span><span class="hljs-params">()</span> { Super::<span class="hljs-built_in">BeginPlay</span>(); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ARescueBoatPawn::Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime) { Super::<span class="hljs-built_in">Tick</span>(DeltaTime); <span class="hljs-comment">// Forward/back engine force</span> <span class="hljs-keyword">if</span> (FMath::<span class="hljs-built_in">Abs</span>(ThrottleInput) &gt; KINDA_SMALL_NUMBER) { <span class="hljs-type">const</span> FVector Forward = <span class="hljs-built_in">GetActorForwardVector</span>(); BoatMesh-&gt;<span class="hljs-built_in">AddForce</span>(Forward * EngineForce * ThrottleInput); } <span class="hljs-comment">// Yaw torque for turning</span> <span class="hljs-keyword">if</span> (FMath::<span class="hljs-built_in">Abs</span>(TurnInput) &gt; KINDA_SMALL_NUMBER) { <span class="hljs-type">const</span> FVector Torque = <span class="hljs-built_in">FVector</span>(<span class="hljs-number">0.f</span>, <span class="hljs-number">0.f</span>, TurnTorque * TurnInput); BoatMesh-&gt;<span class="hljs-built_in">AddTorqueInRadians</span>(Torque); } <span class="hljs-comment">// Boost (short impulse)</span> <span class="hljs-keyword">if</span> (bBoosting &amp;&amp; BoostTimer &gt; <span class="hljs-number">0.f</span>) { <span class="hljs-type">const</span> FVector Forward = <span class="hljs-built_in">GetActorForwardVector</span>(); BoatMesh-&gt;<span class="hljs-built_in">AddImpulse</span>(Forward * BoostImpulse); BoostTimer -= DeltaTime; <span class="hljs-keyword">if</span> (BoostTimer &lt;= <span class="hljs-number">0.f</span>) bBoosting = <span class="hljs-literal">false</span>; } <span class="hljs-built_in">ApplyBuoyancy</span>(DeltaTime); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ARescueBoatPawn::ApplyBuoyancy</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime) { <span class="hljs-comment">// Find FloodManager in level</span> AFloodManager* Manager = <span class="hljs-literal">nullptr</span>; <span class="hljs-keyword">for</span> (TActorIterator&lt;AFloodManager&gt; <span class="hljs-built_in">It</span>(<span class="hljs-built_in">GetWorld</span>()); It; ++It) { Manager = *It; <span class="hljs-keyword">break</span>; } <span class="hljs-keyword">if</span> (!Manager) <span class="hljs-keyword">return</span>; <span class="hljs-comment">// Query current water Z at this XY (flat plane for now)</span> <span class="hljs-type">const</span> FVector Loc = <span class="hljs-built_in">GetActorLocation</span>(); <span class="hljs-type">const</span> <span class="hljs-type">float</span> WaterZ = Manager-&gt;<span class="hljs-built_in">GetWaterHeightAt</span>(<span class="hljs-built_in">FVector2D</span>(Loc.X, Loc.Y)); <span class="hljs-comment">// If the boat is below water surface &rarr; apply upward force proportional to submergence</span> <span class="hljs-type">const</span> <span class="hljs-type">float</span> Depth = (WaterZ - Loc.Z); <span class="hljs-keyword">if</span> (Depth &gt; <span class="hljs-number">0.f</span>) { <span class="hljs-type">const</span> <span class="hljs-type">float</span> Submergence = FMath::<span class="hljs-built_in">Clamp</span>(Depth / <span class="hljs-number">100.f</span>, <span class="hljs-number">0.f</span>, <span class="hljs-number">1.f</span>); <span class="hljs-type">const</span> <span class="hljs-type">float</span> Lift = BuoyancyStrength * Submergence * WaterDensity; BoatMesh-&gt;<span class="hljs-built_in">AddForce</span>(<span class="hljs-built_in">FVector</span>(<span class="hljs-number">0.f</span>, <span class="hljs-number">0.f</span>, Lift)); <span class="hljs-comment">// Extra drag/damping while submerged</span> BoatMesh-&gt;<span class="hljs-built_in">SetLinearDamping</span>(LinearDampingInWater); BoatMesh-&gt;<span class="hljs-built_in">SetAngularDamping</span>(AngularDampingInWater); } <span class="hljs-keyword">else</span> { <span class="hljs-comment">// In air (or above surface)</span> BoatMesh-&gt;<span class="hljs-built_in">SetLinearDamping</span>(<span class="hljs-number">0.2f</span>); BoatMesh-&gt;<span class="hljs-built_in">SetAngularDamping</span>(<span class="hljs-number">0.2f</span>); } } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ARescueBoatPawn::SetupPlayerInputComponent</span><span class="hljs-params">(UInputComponent* PlayerInputComponent)</span> { Super::<span class="hljs-built_in">SetupPlayerInputComponent</span>(PlayerInputComponent); PlayerInputComponent-&gt;<span class="hljs-built_in">BindAxis</span>(<span class="hljs-string">"MoveForward"</span>, <span class="hljs-keyword">this</span>, &amp;ARescueBoatPawn::Throttle); PlayerInputComponent-&gt;<span class="hljs-built_in">BindAxis</span>(<span class="hljs-string">"Turn"</span>, <span class="hljs-keyword">this</span>, &amp;ARescueBoatPawn::Turn); PlayerInputComponent-&gt;<span class="hljs-built_in">BindAction</span>(<span class="hljs-string">"Boost"</span>, IE_Pressed, <span class="hljs-keyword">this</span>, &amp;ARescueBoatPawn::Boost); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ARescueBoatPawn::Throttle</span><span class="hljs-params">(<span class="hljs-type">float</span></span> Value) { ThrottleInput = Value; } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ARescueBoatPawn::Turn</span><span class="hljs-params">(<span class="hljs-type">float</span></span> Value) { TurnInput = Value; } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ARescueBoatPawn::Boost</span><span class="hljs-params">()</span> { <span class="hljs-keyword">if</span> (!bBoosting) { bBoosting = <span class="hljs-literal">true</span>; BoostTimer = BoostDuration; } } <span class="hljs-function">FVector2D <span class="hljs-title">ARescueBoatPawn::GetBoatXY</span></span><span class="hljs-params">()</span> <span class="hljs-type">const</span> { <span class="hljs-type">const</span> FVector L = <span class="hljs-built_in">GetActorLocation</span>(); <span class="hljs-keyword">return</span> <span class="hljs-built_in">FVector2D</span>(L.X, L.Y); } </code></div>
+</div>
+<p data-start="7235" data-end="7281"><strong data-start="7235" data-end="7281">Project Settings &rarr; Input (legacy bindings)</strong></p>
+<ul data-start="7282" data-end="7386">
+<li data-start="7282" data-end="7324">
+<p data-start="7284" data-end="7324">Axis: <code data-start="7290" data-end="7303">MoveForward</code> &rarr; W = +1.0, S = -1.0</p>
+</li>
+<li data-start="7325" data-end="7360">
+<p data-start="7327" data-end="7360">Axis: <code data-start="7333" data-end="7339">Turn</code> &rarr; A = -1.0, D = +1.0</p>
+</li>
+<li data-start="7361" data-end="7386">
+<p data-start="7363" data-end="7386">Action: <code data-start="7371" data-end="7378">Boost</code> &rarr; Space</p>
+</li>
+</ul>
+<blockquote data-start="7388" data-end="7472">
+<p data-start="7390" data-end="7472">If you prefer Enhanced Input, you can swap later; legacy keeps the sample minimal.</p>
+</blockquote>
+<hr data-start="7474" data-end="7477" />
+<h3 data-start="7479" data-end="7500">2) FloodManager.h</h3>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="sticky top-9">&nbsp;</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-cpp"><span class="hljs-comment">// FloodManager.h</span> <span class="hljs-meta">#<span class="hljs-keyword">pragma</span></span> once <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"CoreMinimal.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"GameFramework/Actor.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"FloodManager.generated.h"</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">UStaticMeshComponent</span>; <span class="hljs-built_in">UCLASS</span>() <span class="hljs-keyword">class</span> <span class="hljs-title class_">AFloodManager</span> : <span class="hljs-keyword">public</span> AActor { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-built_in">AFloodManager</span>(); <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime) <span class="hljs-keyword">override</span>; <span class="hljs-comment">// Returns water surface Z at XY (flat plane base; swap with Water plugin later)</span> <span class="hljs-built_in">UFUNCTION</span>(BlueprintCallable, Category=<span class="hljs-string">"Flood"</span>) <span class="hljs-function"><span class="hljs-type">float</span></span> <span class="hljs-title">GetWaterHeightAt</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FVector2D&amp; XY) <span class="hljs-type">const</span>; <span class="hljs-keyword">protected</span>: <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">BeginPlay</span><span class="hljs-params">()</span> <span class="hljs-keyword">override</span>; <span class="hljs-keyword">public</span>: <span class="hljs-comment">// Visual water mesh (assign your plane)</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Flood|Refs"</span>) UStaticMeshComponent* WaterMesh; <span class="hljs-comment">// Rising water settings</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Flood|Rising"</span>) <span class="hljs-type">float</span> BaseWaterZ = <span class="hljs-number">0.f</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Flood|Rising"</span>) <span class="hljs-type">float</span> RiseSpeed = <span class="hljs-number">20.f</span>; <span class="hljs-comment">// cm/s</span> <span class="hljs-comment">// Optional: sinusoidal waves (visual/feel)</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Flood|Waves"</span>) <span class="hljs-type">float</span> WaveAmplitude = <span class="hljs-number">12.f</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Flood|Waves"</span>) <span class="hljs-type">float</span> WaveFrequency = <span class="hljs-number">0.25f</span>; <span class="hljs-comment">// Gameplay</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Flood|Gameplay"</span>) int32 TargetSurvivors = <span class="hljs-number">5</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Flood|Gameplay"</span>) <span class="hljs-type">float</span> TimeLimit = <span class="hljs-number">120.f</span>; <span class="hljs-comment">// seconds</span> <span class="hljs-comment">// Runtime</span> <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere, BlueprintReadOnly) <span class="hljs-type">float</span> Elapsed = <span class="hljs-number">0.f</span>; <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere, BlueprintReadOnly) int32 Rescued = <span class="hljs-number">0</span>; <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">NotifyRescue</span><span class="hljs-params">()</span>; <span class="hljs-comment">// called by SurvivorPickup</span> <span class="hljs-keyword">private</span>: <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UpdateWaterTransform</span><span class="hljs-params">()</span> <span class="hljs-type">const</span>; }; </code></div>
+</div>
+<h3 data-start="9136" data-end="9159">2) FloodManager.cpp</h3>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="sticky top-9">&nbsp;</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-cpp"><span class="hljs-comment">// FloodManager.cpp</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"FloodManager.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Components/StaticMeshComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Kismet/GameplayStatics.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Engine/World.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Engine/Engine.h"</span> AFloodManager::<span class="hljs-built_in">AFloodManager</span>() { PrimaryActorTick.bCanEverTick = <span class="hljs-literal">true</span>; WaterMesh = <span class="hljs-built_in">CreateDefaultSubobject</span>&lt;UStaticMeshComponent&gt;(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"WaterMesh"</span>)); <span class="hljs-built_in">SetRootComponent</span>(WaterMesh); WaterMesh-&gt;<span class="hljs-built_in">SetCollisionProfileName</span>(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"OverlapAllDynamic"</span>)); <span class="hljs-comment">// visual plane</span> WaterMesh-&gt;<span class="hljs-built_in">SetGenerateOverlapEvents</span>(<span class="hljs-literal">false</span>); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AFloodManager::BeginPlay</span><span class="hljs-params">()</span> { Super::<span class="hljs-built_in">BeginPlay</span>(); <span class="hljs-comment">// Place the water plane at BaseWaterZ initially</span> FTransform T = WaterMesh-&gt;<span class="hljs-built_in">GetComponentTransform</span>(); FVector P = T.<span class="hljs-built_in">GetLocation</span>(); P.Z = BaseWaterZ; T.<span class="hljs-built_in">SetLocation</span>(P); WaterMesh-&gt;<span class="hljs-built_in">SetWorldTransform</span>(T); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AFloodManager::Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime) { Super::<span class="hljs-built_in">Tick</span>(DeltaTime); Elapsed += DeltaTime; <span class="hljs-comment">// Game over conditions</span> <span class="hljs-type">const</span> <span class="hljs-type">float</span> TimeLeft = FMath::<span class="hljs-built_in">Max</span>(<span class="hljs-number">0.f</span>, TimeLimit - Elapsed); <span class="hljs-keyword">if</span> (TimeLeft &lt;= <span class="hljs-number">0.f</span>) { GEngine-&gt;<span class="hljs-built_in">AddOnScreenDebugMessage</span>(<span class="hljs-number">-1</span>, <span class="hljs-number">2.f</span>, FColor::Yellow, FString::<span class="hljs-built_in">Printf</span>(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"Time! Rescued: %d / %d"</span>), Rescued, TargetSurvivors)); <span class="hljs-comment">// Reset simple loop (or travel to Menu map)</span> Elapsed = <span class="hljs-number">0.f</span>; Rescued = <span class="hljs-number">0</span>; } <span class="hljs-built_in">UpdateWaterTransform</span>(); <span class="hljs-comment">// Win check</span> <span class="hljs-keyword">if</span> (Rescued &gt;= TargetSurvivors) { GEngine-&gt;<span class="hljs-built_in">AddOnScreenDebugMessage</span>(<span class="hljs-number">-1</span>, <span class="hljs-number">2.f</span>, FColor::Green, <span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"All survivors rescued!"</span>)); <span class="hljs-comment">// simple reset</span> Rescued = <span class="hljs-number">0</span>; Elapsed = <span class="hljs-number">0.f</span>; } } <span class="hljs-function"><span class="hljs-type">float</span></span> <span class="hljs-title">AFloodManager::GetWaterHeightAt</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FVector2D&amp; XY) <span class="hljs-type">const</span> { <span class="hljs-comment">// Flat plane + tiny wave</span> <span class="hljs-type">const</span> <span class="hljs-type">float</span> Time = Elapsed; <span class="hljs-type">const</span> <span class="hljs-type">float</span> Wave = WaveAmplitude * FMath::<span class="hljs-built_in">Sin</span>(WaveFrequency * Time + <span class="hljs-number">0.0009f</span> * XY.X + <span class="hljs-number">0.0007f</span> * XY.Y); <span class="hljs-keyword">return</span> BaseWaterZ + RiseSpeed * Time + Wave; } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AFloodManager::UpdateWaterTransform</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> { FTransform T = WaterMesh-&gt;<span class="hljs-built_in">GetComponentTransform</span>(); FVector P = T.<span class="hljs-built_in">GetLocation</span>(); P.Z = BaseWaterZ + RiseSpeed * Elapsed; T.<span class="hljs-built_in">SetLocation</span>(P); WaterMesh-&gt;<span class="hljs-built_in">SetWorldTransform</span>(T); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AFloodManager::NotifyRescue</span><span class="hljs-params">()</span> { Rescued++; GEngine-&gt;<span class="hljs-built_in">AddOnScreenDebugMessage</span>(<span class="hljs-number">-1</span>, <span class="hljs-number">1.5f</span>, FColor::Cyan, FString::<span class="hljs-built_in">Printf</span>(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"Rescued: %d"</span>), Rescued)); } </code></div>
+</div>
+<hr data-start="11241" data-end="11244" />
+<h3 data-start="11246" data-end="11269">3) SurvivorPickup.h</h3>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="sticky top-9">&nbsp;</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-cpp"><span class="hljs-comment">// SurvivorPickup.h</span> <span class="hljs-meta">#<span class="hljs-keyword">pragma</span></span> once <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"CoreMinimal.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"GameFramework/Actor.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"SurvivorPickup.generated.h"</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">USphereComponent</span>; <span class="hljs-keyword">class</span> <span class="hljs-title class_">UStaticMeshComponent</span>; <span class="hljs-built_in">UCLASS</span>() <span class="hljs-keyword">class</span> <span class="hljs-title class_">ASurvivorPickup</span> : <span class="hljs-keyword">public</span> AActor { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-built_in">ASurvivorPickup</span>(); <span class="hljs-keyword">protected</span>: <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">BeginPlay</span><span class="hljs-params">()</span> <span class="hljs-keyword">override</span>; <span class="hljs-built_in">UFUNCTION</span>() <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">OnOverlap</span><span class="hljs-params">(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, </span><span class="hljs-type">bool</span> bFromSweep, <span class="hljs-type">const</span> FHitResult&amp; SweepResult); <span class="hljs-keyword">public</span>: <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere) USphereComponent* Trigger; <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere) UStaticMeshComponent* VisualMesh; <span class="hljs-comment">// Optional bobbing</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"FX"</span>) <span class="hljs-type">float</span> BobAmplitude = <span class="hljs-number">15.f</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"FX"</span>) <span class="hljs-type">float</span> BobSpeed = <span class="hljs-number">2.f</span>; <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaSeconds) <span class="hljs-keyword">override</span>; }; </code></div>
+</div>
+<h3 data-start="12163" data-end="12188">3) SurvivorPickup.cpp</h3>
+<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+<div class="sticky top-9">&nbsp;</div>
+<div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-cpp"><span class="hljs-comment">// SurvivorPickup.cpp</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"SurvivorPickup.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Components/SphereComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Components/StaticMeshComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Engine/World.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Kismet/GameplayStatics.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"FloodManager.h"</span> ASurvivorPickup::<span class="hljs-built_in">ASurvivorPickup</span>() { PrimaryActorTick.bCanEverTick = <span class="hljs-literal">true</span>; Trigger = <span class="hljs-built_in">CreateDefaultSubobject</span>&lt;USphereComponent&gt;(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"Trigger"</span>)); <span class="hljs-built_in">SetRootComponent</span>(Trigger); Trigger-&gt;<span class="hljs-built_in">InitSphereRadius</span>(<span class="hljs-number">80.f</span>); Trigger-&gt;<span class="hljs-built_in">SetCollisionProfileName</span>(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"OverlapAllDynamic"</span>)); VisualMesh = <span class="hljs-built_in">CreateDefaultSubobject</span>&lt;UStaticMeshComponent&gt;(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"VisualMesh"</span>)); VisualMesh-&gt;<span class="hljs-built_in">SetupAttachment</span>(Trigger); VisualMesh-&gt;<span class="hljs-built_in">SetCollisionEnabled</span>(ECollisionEnabled::NoCollision); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ASurvivorPickup::BeginPlay</span><span class="hljs-params">()</span> { Super::<span class="hljs-built_in">BeginPlay</span>(); Trigger-&gt;OnComponentBeginOverlap.<span class="hljs-built_in">AddDynamic</span>(<span class="hljs-keyword">this</span>, &amp;ASurvivorPickup::OnOverlap); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ASurvivorPickup::OnOverlap</span><span class="hljs-params">(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, </span><span class="hljs-type">bool</span> bFromSweep, <span class="hljs-type">const</span> FHitResult&amp; SweepResult) { <span class="hljs-comment">// Accept rescue if overlapped by boat pawn</span> <span class="hljs-keyword">if</span> (Other &amp;&amp; Other-&gt;<span class="hljs-built_in">IsA</span>(ARescueBoatPawn::<span class="hljs-built_in">StaticClass</span>())) { <span class="hljs-comment">// Find manager and notify</span> <span class="hljs-keyword">for</span> (TActorIterator&lt;AFloodManager&gt; <span class="hljs-built_in">It</span>(<span class="hljs-built_in">GetWorld</span>()); It; ++It) { It-&gt;<span class="hljs-built_in">NotifyRescue</span>(); <span class="hljs-keyword">break</span>; } <span class="hljs-built_in">Destroy</span>(); <span class="hljs-comment">// pickup consumed</span> } } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ASurvivorPickup::Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaSeconds) { Super::<span class="hljs-built_in">Tick</span>(DeltaSeconds); <span class="hljs-comment">// Simple bobbing for visibility</span> <span class="hljs-type">const</span> <span class="hljs-type">float</span> Time = <span class="hljs-built_in">GetWorld</span>()-&gt;<span class="hljs-built_in">GetTimeSeconds</span>(); FVector P = <span class="hljs-built_in">GetActorLocation</span>(); P.Z += FMath::<span class="hljs-built_in">Sin</span>(Time * BobSpeed) * BobAmplitude * DeltaSeconds; <span class="hljs-built_in">SetActorLocation</span>(P); } </code></div>
+</div>
+<blockquote data-start="13841" data-end="13964">
+<p data-start="13843" data-end="13964">Place several <code data-start="13857" data-end="13873">SurvivorPickup</code> actors on higher ground or rooftops. When you drive the boat into them, they&rsquo;re &ldquo;rescued&rdquo;.</p>
+</blockquote>
+<hr data-start="13966" data-end="13969" />
+<h2 data-start="13971" data-end="14002">Simple World Setup (minimal)</h2>
+<ul data-start="14003" data-end="14261">
+<li data-start="14003" data-end="14045">
+<p data-start="14005" data-end="14045">Flat ground (land) meshes at Z = 0 &hellip; 200</p>
+</li>
+<li data-start="14046" data-end="14107">
+<p data-start="14048" data-end="14107">Buildings/rooftops as static meshes (place survivors there)</p>
+</li>
+<li data-start="14108" data-end="14199">
+<p data-start="14110" data-end="14199">Water plane at Z = BaseWaterZ (e.g., -100) so it will rise and eventually flood low areas</p>
+</li>
+<li data-start="14200" data-end="14261">
+<p data-start="14202" data-end="14261">Player Start is optional since the default pawn is the boat</p>
+</li>
+</ul>
+<hr data-start="14263" data-end="14266" />
+<h2 data-start="14268" data-end="14282">Tuning tips</h2>
+<ul data-start="14283" data-end="14609">
+<li data-start="14283" data-end="14352">
+<p data-start="14285" data-end="14352">Make flood tense: set <code data-start="14307" data-end="14331">RiseSpeed = 40&ndash;80 cm/s</code>, <code data-start="14333" data-end="14351">TimeLimit = 90 s</code>.</p>
+</li>
+<li data-start="14353" data-end="14439">
+<p data-start="14355" data-end="14439">Add wave feel without plugins via <code data-start="14389" data-end="14411">WaveAmplitude = 8&ndash;20</code>, <code data-start="14413" data-end="14438">WaveFrequency = 0.2&ndash;0.5</code>.</p>
+</li>
+<li data-start="14440" data-end="14539">
+<p data-start="14442" data-end="14539">Boat handling: increase <code data-start="14466" data-end="14479">EngineForce</code> for punchy acceleration; <code data-start="14505" data-end="14517">TurnTorque</code> for tighter steering.</p>
+</li>
+<li data-start="14540" data-end="14609">
+<p data-start="14542" data-end="14609">Make pickups obvious: bright emissive material or a billboard icon.</p>
+</li>
+</ul>
+<hr data-start="14611" data-end="14614" />
+<h2 data-start="14616" data-end="14648">Where to go next (quick wins)</h2>
+<ul data-start="14649" data-end="15068">
+<li data-start="14649" data-end="14759">
+<p data-start="14651" data-end="14759">Visuals: swap flat water for <strong data-start="14680" data-end="14699">UE Water plugin</strong> (WaterBodyOcean/Lake) and sample surface from spline waves.</p>
+</li>
+<li data-start="14760" data-end="14851">
+<p data-start="14762" data-end="14851">Particles &amp; Audio: splashes (Niagara) + water/engine sounds (looped) on speed thresholds.</p>
+</li>
+<li data-start="14852" data-end="14913">
+<p data-start="14854" data-end="14913">UMG HUD: time left, rescued count, a mini-map of survivors.</p>
+</li>
+<li data-start="14914" data-end="14986">
+<p data-start="14916" data-end="14986">AI events: drifting debris, stranded NPCs that wave and call for help.</p>
+</li>
+<li data-start="14987" data-end="15068">
+<p data-start="14989" data-end="15068">Missions &amp; savegame: multiple levels, persistent high score, difficulty curves.</p>
+</li>
+</ul>
+<hr data-start="15070" data-end="15073" />
+<h2 data-start="15075" data-end="15106">Having trouble wiring Input?</h2>
+<p data-start="15107" data-end="15185">If actions/axes don&rsquo;t respond, add these in Project Settings &rarr; Input (legacy):</p>
+<ul data-start="15186" data-end="15286">
+<li data-start="15186" data-end="15222">
+<p data-start="15188" data-end="15222">Axis <code data-start="15193" data-end="15206">MoveForward</code>: W=+1.0, S=-1.0</p>
+</li>
+<li data-start="15223" data-end="15252">
+<p data-start="15225" data-end="15252">Axis <code data-start="15230" data-end="15236">Turn</code>: A=-1.0, D=+1.0</p>
+</li>
+<li data-start="15253" data-end="15286">
+<p data-start="15255" data-end="15286">Action <code data-start="15262" data-end="15269">Boost</code>: Space (Pressed)</p>
+</li>
+</ul>
+</article>
+</body>
+
+</html>

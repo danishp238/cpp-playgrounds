@@ -17,6 +17,7 @@ import VerticalGarden from "/src/assets/blogs/vertical-garden.html?raw"
 import Picnic from "/src/assets/blogs/picnic.html?raw"
 import PicnicPart1 from "/src/assets/blogs/picnic-part1.html?raw"
 import RainfallRescue from "/src/assets/blogs/rainfall-rescue.html?raw"
+import FloodGuard from "/src/assets/blogs/floodguard.html?raw"
 
 
 const projects = [
@@ -196,21 +197,22 @@ const projects = [
     description: `Have you ever wished you could control the rain? In this exciting C++ project, we’re doing just that – building Rainfall Rescue, a 2D arcade-style game where players catch pure rain and avoid acid drops.`,
     image: new URL('/images/rainfall-rescue.jpeg', import.meta.url).href,
     content: RainfallRescue
+  },
+  {
+    title: "FloodGuard (UE5 C++): Rescue Boat vs. Rising Waters",
+    slug: "floodguard",
+    description: `Dynamic flood level that rises over time (configurable curve/speed).
+
+A physics-driven rescue boat with simplified, performant buoyancy over a flat water plane.
+
+Pickups (survivors) scattered on rooftops; collect them for score.
+
+Basic HUD via on-screen debug messages (easy to swap for UMG later).
+
+Clean, modular C++ classes: RescueBoatPawn, FloodManager, SurvivorPickup.`,
+    image: new URL('/images/flood.jpeg', import.meta.url).href,
+    content: FloodGuard
   }
-  // {
-  //   id: 4,
-  //   title: 'Basic FPS Engine',
-  //   description: sw'FPS engine with OpenGL and C++ fundamentals.',
-  //   image: new URL('/images/fps-engine-game.jpeg', import.meta.url).href,
-  //   date: 'Posted on June 18, 2025 – 5:00 PM',
-  // },
-  // {
-  //   id: 5,
-  //   title: 'C++ Puzzle Game',
-  //   description: 'Addictive puzzle game with scoring and levels.',
-  //   image: new URL('/images/puzzle-game.jpg', import.meta.url).href,
-  //   date: 'Posted on June 19, 2025 – 2:45 PM',
-  // },
 ]
 
 export default projects
