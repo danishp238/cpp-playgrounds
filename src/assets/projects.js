@@ -18,6 +18,7 @@ import Picnic from "/src/assets/blogs/picnic.html?raw"
 import PicnicPart1 from "/src/assets/blogs/picnic-part1.html?raw"
 import RainfallRescue from "/src/assets/blogs/rainfall-rescue.html?raw"
 import FloodGuard from "/src/assets/blogs/floodguard.html?raw"
+import MuggyRush from "/src/assets/blogs/muggy-rush.html?raw"
 
 
 const projects = [
@@ -212,6 +213,14 @@ Basic HUD via on-screen debug messages (easy to swap for UMG later).
 Clean, modular C++ classes: RescueBoatPawn, FloodManager, SurvivorPickup.`,
     image: new URL('/images/flood.jpeg', import.meta.url).href,
     content: FloodGuard
+  },
+
+  {
+    title: "“Muggy Rush”",
+    slug: "muggy-rush",
+    description: "you’re a field technician sprinting through a monsoon-season city. the catch: heat + humidity make you tire quickly. you must manage stamina and body temperature by ducking into cool zones (AC vents, mist stations, shaded alleys) while collecting parts to restart dehumidifier towers before the city fogs out.",
+    image: new URL('/images/muggyrush.jpeg', import.meta.url).href,
+    content:MuggyRush
   }
 ]
 

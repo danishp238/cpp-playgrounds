@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            overflow: auto;
+        }
+
+        /* Gradient text styles for headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 1.5rem 0 1rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            /* color: transparent; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            background-image: linear-gradient(to right, #805ad5, #4fd1c5);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            background-image: linear-gradient(to right, #9f7aea, #68d391);
+        }
+
+        /* List styles */
+        ul,
+        ol {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        /* Link styles */
+        a {
+            color: #6b46c1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #38b2ac;
+            text-decoration: underline;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #6b46c1, #38b2ac);
+            color: white;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, #805ad5, #4fd1c5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <div
+            class="relative flex basis-auto flex-col -mb-(--composer-overlap-px) [--composer-overlap-px:28px] grow overflow-hidden">
+            <div class="relative h-full">
+                <div
+                    class="flex h-full flex-col overflow-y-auto [scrollbar-gutter:stable_both-edges] @[84rem]/thread:pt-(--header-height)">
+                    <div class="@thread-xl/thread:pt-header-height flex flex-col text-sm pb-25">
+                        <article
+                            class="text-token-text-primary w-full focus:outline-none scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]"
+                            dir="auto" tabindex="-1" data-turn-id="5af25053-1042-4ac4-b55b-f5395ca08f3c"
+                            data-testid="conversation-turn-6" data-scroll-anchor="true" data-turn="assistant">
+                            <div
+                                class="text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)">
+                                <div class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn"
+                                    tabindex="-1">
+                                    <div class="flex max-w-full flex-col grow">
+                                        <div class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5"
+                                            dir="auto" data-message-author-role="assistant"
+                                            data-message-id="bbbf5d9b-98b3-4da7-905d-ada322dda2d8"
+                                            data-message-model-slug="gpt-5-thinking">
+                                            <div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+                                                <div
+                                                    class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling">
+                                                    <h1 data-start="240" data-end="269">game concept &mdash;
+                                                        &ldquo;Muggy Rush&rdquo;</h1>
+                                                    <p data-start="271" data-end="588">you&rsquo;re a field technician
+                                                        sprinting through a <strong data-start="317"
+                                                            data-end="340">monsoon-season city</strong>. the catch:
+                                                        <strong data-start="353" data-end="372">heat + humidity</strong>
+                                                        make you tire quickly. you must manage stamina and body
+                                                        temperature by ducking into cool zones (AC vents, mist stations,
+                                                        shaded alleys) while collecting parts to restart dehumidifier
+                                                        towers before the city fogs out.</p>
+                                                    <p data-start="590" data-end="603"><strong data-start="590"
+                                                            data-end="603">core loop</strong></p>
+                                                    <ul data-start="604" data-end="982">
+                                                        <li data-start="604" data-end="631">
+                                                            <p data-start="606" data-end="631">move, sprint, jump, slide
+                                                            </p>
+                                                        </li>
+                                                        <li data-start="632" data-end="748">
+                                                            <p data-start="634" data-end="748">humidity/heat index
+                                                                dynamically rises/falls &rarr; affects <strong
+                                                                    data-start="688" data-end="705">stamina
+                                                                    drain</strong>, <strong data-start="707"
+                                                                    data-end="721">screen fog</strong>, <strong
+                                                                    data-start="723" data-end="748">footing on wet
+                                                                    ground</strong></p>
+                                                        </li>
+                                                        <li data-start="749" data-end="849">
+                                                            <p data-start="751" data-end="849">find <strong
+                                                                    data-start="756" data-end="770">cool spots</strong>
+                                                                (reduce heat index), <strong data-start="792"
+                                                                    data-end="810">hydration kits</strong> (restore
+                                                                stamina), <strong data-start="830"
+                                                                    data-end="841">filters</strong> (score)</p>
+                                                        </li>
+                                                        <li data-start="850" data-end="930">
+                                                            <p data-start="852" data-end="930">avoid <strong
+                                                                    data-start="858" data-end="880">hot, muggy
+                                                                    pockets</strong> (steam leaks, closed rooms) that
+                                                                spike heat index</p>
+                                                        </li>
+                                                        <li data-start="931" data-end="982">
+                                                            <p data-start="933" data-end="982">finish level before the
+                                                                <strong data-start="957" data-end="970">mug
+                                                                    gauge</strong> reaches max</p>
+                                                        </li>
+                                                    </ul>
+                                                    <hr data-start="984" data-end="987" />
+                                                    <h1 data-start="989" data-end="1020">systems we&rsquo;ll implement
+                                                        (C++)</h1>
+                                                    <ol data-start="1022" data-end="1674">
+                                                        <li data-start="1022" data-end="1185">
+                                                            <p data-start="1025" data-end="1185"><strong
+                                                                    data-start="1025"
+                                                                    data-end="1047">UHumiditySubsystem</strong>
+                                                                (GameInstanceSubsystem)<br data-start="1071"
+                                                                    data-end="1074" /> global muggy weather brain:
+                                                                tracks temperature, RH, computes <strong
+                                                                    data-start="1138" data-end="1164">Heat Index &amp;
+                                                                    Dew Point</strong>, broadcasts changes.</p>
+                                                        </li>
+                                                        <li data-start="1186" data-end="1309">
+                                                            <p data-start="1189" data-end="1309"><strong
+                                                                    data-start="1189"
+                                                                    data-end="1207">AWeatherVolume</strong> (Actor with
+                                                                Box/Sphere component)<br data-start="1241"
+                                                                    data-end="1244" /> localizes humidity/temperature
+                                                                (e.g., mist tunnels, AC zones).</p>
+                                                        </li>
+                                                        <li data-start="1310" data-end="1444">
+                                                            <p data-start="1313" data-end="1444"><strong
+                                                                    data-start="1313"
+                                                                    data-end="1332">AMuggyCharacter</strong>
+                                                                (ACharacter)<br data-start="1345" data-end="1348" />
+                                                                movement + <strong data-start="1362"
+                                                                    data-end="1382">stamina/overheat</strong> logic
+                                                                driven by heat index; applies camera effects and input.
+                                                            </p>
+                                                        </li>
+                                                        <li data-start="1445" data-end="1585">
+                                                            <p data-start="1448" data-end="1585"><strong
+                                                                    data-start="1448"
+                                                                    data-end="1478">UMuggyPostProcessComponent</strong>
+                                                                (ActorComponent)<br data-start="1495" data-end="1498" />
+                                                                simple link to a PostProcessVolume or material parameter
+                                                                collection for fog/wetness.</p>
+                                                        </li>
+                                                        <li data-start="1586" data-end="1640">
+                                                            <p data-start="1589" data-end="1640"><strong
+                                                                    data-start="1589" data-end="1606">pickup
+                                                                    actors</strong>: hydration kit, filter cartridge.
+                                                            </p>
+                                                        </li>
+                                                        <li data-start="1641" data-end="1674">
+                                                            <p data-start="1644" data-end="1674"><strong
+                                                                    data-start="1644" data-end="1653">input</strong>:
+                                                                UE5 Enhanced Input.</p>
+                                                        </li>
+                                                    </ol>
+                                                    <blockquote data-start="1676" data-end="1766">
+                                                        <p data-start="1678" data-end="1766">note: you can keep all
+                                                            blueprint UIs (HUD widgets) in UMG for speed; C++ exposes
+                                                            values.</p>
+                                                    </blockquote>
+                                                    <hr data-start="1768" data-end="1771" />
+                                                    <h2 data-start="1773" data-end="1797">project setup (quick)</h2>
+                                                    <ol data-start="1799" data-end="2312">
+                                                        <li data-start="1799" data-end="1879">
+                                                            <p data-start="1802" data-end="1879">create a new UE5
+                                                                project &rarr; <strong data-start="1829"
+                                                                    data-end="1853">Games &rarr; First Person</strong>
+                                                                or <strong data-start="1857" data-end="1873">Third
+                                                                    Person</strong>, C++.</p>
+                                                        </li>
+                                                        <li data-start="1880" data-end="1989">
+                                                            <p data-start="1883" data-end="1915">enable plugins (Edit
+                                                                &rarr; Plugins):</p>
+                                                            <ul data-start="1919" data-end="1989">
+                                                                <li data-start="1919" data-end="1972">
+                                                                    <p data-start="1921" data-end="1972"><strong
+                                                                            data-start="1921" data-end="1939">Enhanced
+                                                                            Input</strong> (on by default in new
+                                                                        templates)</p>
+                                                                </li>
+                                                                <li data-start="1976" data-end="1989">
+                                                                    <p data-start="1978" data-end="1989"><strong
+                                                                            data-start="1978"
+                                                                            data-end="1989">Niagara</strong></p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li data-start="1990" data-end="2052">
+                                                            <p data-start="1993" data-end="2052">create folders: <code
+                                                                    data-start="2009"
+                                                                    data-end="2027">Source/MuggyRush</code> and <code
+                                                                    data-start="2032"
+                                                                    data-end="2051">Content/MuggyRush</code>.</p>
+                                                        </li>
+                                                        <li data-start="2053" data-end="2172">
+                                                            <p data-start="2056" data-end="2172">add a <strong
+                                                                    data-start="2062" data-end="2095">Material Parameter
+                                                                    Collection</strong> <code data-start="2096"
+                                                                    data-end="2107">MPC_Muggy</code> with scalar params:
+                                                                <code data-start="2128"
+                                                                    data-end="2142">FogIntensity</code>, <code
+                                                                    data-start="2144"
+                                                                    data-end="2159">ScreenWetness</code>, <code
+                                                                    data-start="2161" data-end="2171">HeatTint</code>.
+                                                            </p>
+                                                        </li>
+                                                        <li data-start="2173" data-end="2312">
+                                                            <p data-start="2176" data-end="2312">add a global <strong
+                                                                    data-start="2189"
+                                                                    data-end="2210">PostProcessVolume</strong> (Unbound)
+                                                                that reads MPC values in a post-process material (can be
+                                                                done later; code controls params).</p>
+                                                        </li>
+                                                    </ol>
+                                                    <hr data-start="2314" data-end="2317" />
+                                                    <h2 data-start="2319" data-end="2364">1) Humidity subsystem (global
+                                                        muggy model)</h2>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// HumiditySubsystem.h</span> <span class="hljs-meta">#<span class="hljs-keyword">pragma</span></span> once <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"CoreMinimal.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Subsystems/GameInstanceSubsystem.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"HumiditySubsystem.generated.h"</span> <span class="hljs-built_in">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams</span>(FOnMuggyChanged, <span class="hljs-type">float</span>, HeatIndexC, <span class="hljs-type">float</span>, DewPointC); <span class="hljs-built_in">UCLASS</span>() <span class="hljs-keyword">class</span> <span class="hljs-title class_">MUGGYRUSH_API</span> UHumiditySubsystem : <span class="hljs-keyword">public</span> UGameInstanceSubsystem { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-built_in">UPROPERTY</span>(BlueprintAssignable, Category=<span class="hljs-string">"Muggy"</span>) FOnMuggyChanged OnMuggyChanged; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> AmbientTempC = <span class="hljs-number">31.f</span>; <span class="hljs-comment">// base temperature</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> AmbientRH = <span class="hljs-number">78.f</span>; <span class="hljs-comment">// relative humidity %</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> TimeScale = <span class="hljs-number">1.f</span>; <span class="hljs-comment">// speed of day cycle</span> <span class="hljs-built_in">UFUNCTION</span>(BlueprintCallable, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">SetAmbient</span><span class="hljs-params">(<span class="hljs-type">float</span></span> InTempC, <span class="hljs-type">float</span> InRH); <span class="hljs-built_in">UFUNCTION</span>(BlueprintCallable, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">ApplyLocalDelta</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTempC, <span class="hljs-type">float</span> DeltaRH, <span class="hljs-type">float</span> Duration); <span class="hljs-built_in">UFUNCTION</span>(BlueprintPure, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-function"><span class="hljs-type">float</span></span> <span class="hljs-title">GetHeatIndexC</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> { <span class="hljs-keyword">return</span> CachedHeatIndexC; } <span class="hljs-built_in">UFUNCTION</span>(BlueprintPure, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-function"><span class="hljs-type">float</span></span> <span class="hljs-title">GetDewPointC</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> { <span class="hljs-keyword">return</span> CachedDewPointC; } <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">Initialize</span><span class="hljs-params">(FSubsystemCollectionBase&amp; Collection)</span> <span class="hljs-keyword">override</span>; <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">Deinitialize</span><span class="hljs-params">()</span> <span class="hljs-keyword">override</span>; <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime); <span class="hljs-function"><span class="hljs-type">bool</span></span> <span class="hljs-title">IsTickable</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> { <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; } <span class="hljs-keyword">private</span>: <span class="hljs-type">float</span> CachedHeatIndexC = <span class="hljs-number">0.f</span>; <span class="hljs-type">float</span> CachedDewPointC = <span class="hljs-number">0.f</span>; <span class="hljs-type">float</span> TempOffsetTimer = <span class="hljs-number">0.f</span>; <span class="hljs-type">float</span> TempOffsetC = <span class="hljs-number">0.f</span>; <span class="hljs-type">float</span> RHOffset = <span class="hljs-number">0.f</span>; <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">Recompute</span><span class="hljs-params">()</span>; <span class="hljs-function"><span class="hljs-type">static</span></span> <span class="hljs-type">float</span> <span class="hljs-title">DewPointC</span><span class="hljs-params">(<span class="hljs-type">float</span></span> T, <span class="hljs-type">float</span> RH); <span class="hljs-function"><span class="hljs-type">static</span></span> <span class="hljs-type">float</span> <span class="hljs-title">HeatIndexC</span><span class="hljs-params">(<span class="hljs-type">float</span></span> T, <span class="hljs-type">float</span> RH); }; </code>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// HumiditySubsystem.cpp</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"HumiditySubsystem.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Engine/World.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"TimerManager.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Math/UnrealMathUtility.h"</span> <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UHumiditySubsystem::Initialize</span><span class="hljs-params">(FSubsystemCollectionBase&amp;)</span>{ <span class="hljs-built_in">Recompute</span>(); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UHumiditySubsystem::Deinitialize</span><span class="hljs-params">()</span>{} <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UHumiditySubsystem::SetAmbient</span><span class="hljs-params">(<span class="hljs-type">float</span></span> InTempC, <span class="hljs-type">float</span> InRH){ AmbientTempC = InTempC; AmbientRH = InRH; <span class="hljs-built_in">Recompute</span>(); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UHumiditySubsystem::ApplyLocalDelta</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTempC, <span class="hljs-type">float</span> DeltaRH, <span class="hljs-type">float</span> Duration){ TempOffsetC = DeltaTempC; RHOffset = DeltaRH; TempOffsetTimer = Duration; } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UHumiditySubsystem::Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaTime){ <span class="hljs-comment">// simple slow daily swing</span> <span class="hljs-type">const</span> <span class="hljs-type">float</span> Time = <span class="hljs-built_in">GetWorld</span>() ? <span class="hljs-built_in">GetWorld</span>()-&gt;<span class="hljs-built_in">GetTimeSeconds</span>() * TimeScale : <span class="hljs-number">0.f</span>; <span class="hljs-type">const</span> <span class="hljs-type">float</span> DaySine = FMath::<span class="hljs-built_in">Sin</span>(Time * <span class="hljs-number">2.f</span> * PI / <span class="hljs-number">120.f</span>); <span class="hljs-comment">// 2min loop demo</span> <span class="hljs-type">const</span> <span class="hljs-type">float</span> TempDaily = AmbientTempC + <span class="hljs-number">2.5f</span> * DaySine; <span class="hljs-type">const</span> <span class="hljs-type">float</span> RHDaily = AmbientRH + <span class="hljs-number">5.f</span> * FMath::<span class="hljs-built_in">Max</span>(<span class="hljs-number">0.f</span>, DaySine); <span class="hljs-keyword">if</span> (TempOffsetTimer &gt; <span class="hljs-number">0.f</span>){ TempOffsetTimer -= DeltaTime; <span class="hljs-keyword">if</span> (TempOffsetTimer &lt;= <span class="hljs-number">0.f</span>){ TempOffsetC = <span class="hljs-number">0.f</span>; RHOffset = <span class="hljs-number">0.f</span>; } } <span class="hljs-type">const</span> <span class="hljs-type">float</span> T = TempDaily + TempOffsetC; <span class="hljs-type">const</span> <span class="hljs-type">float</span> RH = FMath::<span class="hljs-built_in">Clamp</span>(RHDaily + RHOffset, <span class="hljs-number">0.f</span>, <span class="hljs-number">100.f</span>); <span class="hljs-type">const</span> <span class="hljs-type">float</span> NewDP = <span class="hljs-built_in">DewPointC</span>(T, RH); <span class="hljs-type">const</span> <span class="hljs-type">float</span> NewHI = <span class="hljs-built_in">HeatIndexC</span>(T, RH); <span class="hljs-keyword">if</span> (!FMath::<span class="hljs-built_in">IsNearlyEqual</span>(NewDP, CachedDewPointC, <span class="hljs-number">0.01f</span>) || !FMath::<span class="hljs-built_in">IsNearlyEqual</span>(NewHI, CachedHeatIndexC, <span class="hljs-number">0.01f</span>)) { CachedDewPointC = NewDP; CachedHeatIndexC = NewHI; OnMuggyChanged.<span class="hljs-built_in">Broadcast</span>(CachedHeatIndexC, CachedDewPointC); } } <span class="hljs-function"><span class="hljs-type">float</span></span> <span class="hljs-title">UHumiditySubsystem::DewPointC</span><span class="hljs-params">(<span class="hljs-type">float</span></span> T, <span class="hljs-type">float</span> RH){ <span class="hljs-type">const</span> <span class="hljs-type">float</span> a=<span class="hljs-number">17.62f</span>, b=<span class="hljs-number">243.12f</span>; <span class="hljs-type">const</span> <span class="hljs-type">float</span> gamma = (a*T)/(b+T) + FMath::<span class="hljs-built_in">Loge</span>(RH/<span class="hljs-number">100.f</span>); <span class="hljs-keyword">return</span> (b*gamma)/(a-gamma); } <span class="hljs-function"><span class="hljs-type">float</span></span> <span class="hljs-title">UHumiditySubsystem::HeatIndexC</span><span class="hljs-params">(<span class="hljs-type">float</span></span> T, <span class="hljs-type">float</span> RH){ <span class="hljs-type">const</span> <span class="hljs-type">float</span> TF = T*<span class="hljs-number">9.f</span>/<span class="hljs-number">5.f</span> + <span class="hljs-number">32.f</span>; <span class="hljs-type">const</span> <span class="hljs-type">float</span> R = RH; <span class="hljs-type">float</span> HI = <span class="hljs-number">-42.379f</span> + <span class="hljs-number">2.04901523f</span>*TF + <span class="hljs-number">10.14333127f</span>*R - <span class="hljs-number">0.22475541f</span>*TF*R - <span class="hljs-number">0.00683783f</span>*TF*TF - <span class="hljs-number">0.05481717f</span>*R*R + <span class="hljs-number">0.00122874f</span>*TF*TF*R + <span class="hljs-number">0.00085282f</span>*TF*R*R - <span class="hljs-number">0.00000199f</span>*TF*TF*R*R; <span class="hljs-keyword">if</span> (TF &lt; <span class="hljs-number">80.f</span>){ <span class="hljs-type">const</span> <span class="hljs-type">float</span> w = FMath::<span class="hljs-built_in">Clamp</span>((TF<span class="hljs-number">-70.f</span>)/<span class="hljs-number">10.f</span>, <span class="hljs-number">0.f</span>, <span class="hljs-number">1.f</span>); HI = (<span class="hljs-number">1.f</span>-w)*TF + w*HI; } <span class="hljs-keyword">return</span> (HI<span class="hljs-number">-32.f</span>)*<span class="hljs-number">5.f</span>/<span class="hljs-number">9.f</span>; } </code>
+                                                        </div>
+                                                    </div>
+                                                    <blockquote data-start="6387" data-end="6492">
+                                                        <p data-start="6389" data-end="6492">this gives you a <strong
+                                                                data-start="6406" data-end="6418">tickable</strong>,
+                                                            global humidity model with a broadcast you can hook to VFX
+                                                            and gameplay.</p>
+                                                    </blockquote>
+                                                    <hr data-start="6494" data-end="6497" />
+                                                    <h2 data-start="6499" data-end="6555">2) local weather volumes (cool
+                                                        spots / steam pockets)</h2>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// WeatherVolume.h</span> <span class="hljs-meta">#<span class="hljs-keyword">pragma</span></span> once <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"CoreMinimal.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"GameFramework/Actor.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"WeatherVolume.generated.h"</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">UBoxComponent</span>; <span class="hljs-built_in">UCLASS</span>() <span class="hljs-keyword">class</span> <span class="hljs-title class_">MUGGYRUSH_API</span> AWeatherVolume : <span class="hljs-keyword">public</span> AActor { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-built_in">AWeatherVolume</span>(); <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> DeltaTempC = <span class="hljs-number">-3.f</span>; <span class="hljs-comment">// negative = cooler zone</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> DeltaRH = <span class="hljs-number">-10.f</span>; <span class="hljs-comment">// negative = drier</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> EffectDuration = <span class="hljs-number">2.f</span>; <span class="hljs-comment">// seconds after exit</span> <span class="hljs-keyword">protected</span>: <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere) UBoxComponent* Box; <span class="hljs-built_in">UFUNCTION</span>() <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">OnBeginOverlap</span><span class="hljs-params">(AActor* Overlapped, AActor* Other)</span>; <span class="hljs-built_in">UFUNCTION</span>() <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">OnEndOverlap</span><span class="hljs-params">(AActor* Overlapped, AActor* Other)</span>; }; </code>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// WeatherVolume.cpp</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"WeatherVolume.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Components/BoxComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"HumiditySubsystem.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Kismet/GameplayStatics.h"</span> AWeatherVolume::<span class="hljs-built_in">AWeatherVolume</span>(){ Box = <span class="hljs-built_in">CreateDefaultSubobject</span>&lt;UBoxComponent&gt;(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"Box"</span>)); RootComponent = Box; Box-&gt;<span class="hljs-built_in">SetCollisionProfileName</span>(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"OverlapAll"</span>)); Box-&gt;OnComponentBeginOverlap.<span class="hljs-built_in">AddDynamic</span>(<span class="hljs-keyword">this</span>, &amp;AWeatherVolume::OnBeginOverlap); Box-&gt;OnComponentEndOverlap.<span class="hljs-built_in">AddDynamic</span>(<span class="hljs-keyword">this</span>, &amp;AWeatherVolume::OnEndOverlap); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AWeatherVolume::OnBeginOverlap</span><span class="hljs-params">(AActor*, AActor* Other)</span>{ <span class="hljs-keyword">if</span> (!Other) <span class="hljs-keyword">return</span>; <span class="hljs-keyword">if</span> (UWorld* W = <span class="hljs-built_in">GetWorld</span>()){ <span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span>* HS = W-&gt;<span class="hljs-built_in">GetGameInstance</span>()-&gt;<span class="hljs-built_in">GetSubsystem</span>&lt;UHumiditySubsystem&gt;()){ HS-&gt;<span class="hljs-built_in">ApplyLocalDelta</span>(DeltaTempC, DeltaRH, EffectDuration); } } } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AWeatherVolume::OnEndOverlap</span><span class="hljs-params">(AActor*, AActor* Other)</span>{ <span class="hljs-keyword">if</span> (!Other) <span class="hljs-keyword">return</span>; <span class="hljs-keyword">if</span> (UWorld* W = <span class="hljs-built_in">GetWorld</span>()){ <span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span>* HS = W-&gt;<span class="hljs-built_in">GetGameInstance</span>()-&gt;<span class="hljs-built_in">GetSubsystem</span>&lt;UHumiditySubsystem&gt;()){ HS-&gt;<span class="hljs-built_in">ApplyLocalDelta</span>(<span class="hljs-number">0.f</span>, <span class="hljs-number">0.f</span>, <span class="hljs-number">0.1f</span>); } } } </code>
+                                                        </div>
+                                                    </div>
+                                                    <p data-start="8418" data-end="8518">drop these in the level to make
+                                                        <strong data-start="8450" data-end="8462">AC zones</strong>
+                                                        (negative deltas) or <strong data-start="8484"
+                                                            data-end="8499">steam leaks</strong> (positive deltas).</p>
+                                                    <hr data-start="8520" data-end="8523" />
+                                                    <h2 data-start="8525" data-end="8573">3) post-process driver
+                                                        (fog/wetness feedback)</h2>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// MuggyPostProcessComponent.h</span> <span class="hljs-meta">#<span class="hljs-keyword">pragma</span></span> once <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"CoreMinimal.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Components/ActorComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"MuggyPostProcessComponent.generated.h"</span> <span class="hljs-built_in">UCLASS</span>(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent)) <span class="hljs-keyword">class</span> <span class="hljs-title class_">MUGGYRUSH_API</span> UMuggyPostProcessComponent : <span class="hljs-keyword">public</span> UActorComponent { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">BeginPlay</span><span class="hljs-params">()</span> <span class="hljs-keyword">override</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Muggy"</span>) FName FogParam = <span class="hljs-string">"FogIntensity"</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Muggy"</span>) FName WetParam = <span class="hljs-string">"ScreenWetness"</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Muggy"</span>) FName HeatParam = <span class="hljs-string">"HeatTint"</span>; <span class="hljs-keyword">private</span>: <span class="hljs-keyword">class</span> <span class="hljs-title class_">UMaterialParameterCollection</span>* MPC; <span class="hljs-keyword">class</span> <span class="hljs-title class_">UMaterialParameterCollectionInstance</span>* MPCI; <span class="hljs-built_in">UFUNCTION</span>() <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">OnMuggyChanged</span><span class="hljs-params">(<span class="hljs-type">float</span></span> HeatIndexC, <span class="hljs-type">float</span> DewPointC); }; </code>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// MuggyPostProcessComponent.cpp</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"MuggyPostProcessComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"HumiditySubsystem.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Materials/MaterialParameterCollection.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Materials/MaterialParameterCollectionInstance.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Kismet/GameplayStatics.h"</span> <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UMuggyPostProcessComponent::BeginPlay</span><span class="hljs-params">()</span>{ Super::<span class="hljs-built_in">BeginPlay</span>(); MPC = <span class="hljs-built_in">LoadObject</span>&lt;UMaterialParameterCollection&gt;(<span class="hljs-literal">nullptr</span>, <span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"/Game/MuggyRush/MPC_Muggy.MPC_Muggy"</span>)); <span class="hljs-keyword">if</span> (MPC){ MPCI = <span class="hljs-built_in">GetWorld</span>()-&gt;<span class="hljs-built_in">GetParameterCollectionInstance</span>(MPC); } <span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span>* HS = <span class="hljs-built_in">GetWorld</span>()-&gt;<span class="hljs-built_in">GetGameInstance</span>()-&gt;<span class="hljs-built_in">GetSubsystem</span>&lt;UHumiditySubsystem&gt;()){ HS-&gt;OnMuggyChanged.<span class="hljs-built_in">AddDynamic</span>(<span class="hljs-keyword">this</span>, &amp;UMuggyPostProcessComponent::OnMuggyChanged); } } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">UMuggyPostProcessComponent::OnMuggyChanged</span><span class="hljs-params">(<span class="hljs-type">float</span></span> HeatIndexC, <span class="hljs-type">float</span> DewPointC){ <span class="hljs-keyword">if</span> (!MPCI) <span class="hljs-keyword">return</span>; <span class="hljs-type">const</span> <span class="hljs-type">float</span> Fog = FMath::<span class="hljs-built_in">GetMappedRangeValueClamped</span>(<span class="hljs-built_in">FVector2D</span>(<span class="hljs-number">30.f</span>, <span class="hljs-number">45.f</span>), <span class="hljs-built_in">FVector2D</span>(<span class="hljs-number">0.1f</span>, <span class="hljs-number">1.0f</span>), HeatIndexC); <span class="hljs-type">const</span> <span class="hljs-type">float</span> Wet = FMath::<span class="hljs-built_in">GetMappedRangeValueClamped</span>(<span class="hljs-built_in">FVector2D</span>(<span class="hljs-number">22.f</span>, <span class="hljs-number">27.f</span>), <span class="hljs-built_in">FVector2D</span>(<span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>), DewPointC); <span class="hljs-type">const</span> <span class="hljs-type">float</span> HeatTint = FMath::<span class="hljs-built_in">GetMappedRangeValueClamped</span>(<span class="hljs-built_in">FVector2D</span>(<span class="hljs-number">32.f</span>, <span class="hljs-number">44.f</span>), <span class="hljs-built_in">FVector2D</span>(<span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>), HeatIndexC); MPCI-&gt;<span class="hljs-built_in">SetScalarParameterValue</span>(FogParam, Fog); MPCI-&gt;<span class="hljs-built_in">SetScalarParameterValue</span>(WetParam, Wet); MPCI-&gt;<span class="hljs-built_in">SetScalarParameterValue</span>(HeatParam, HeatTint); } </code>
+                                                        </div>
+                                                    </div>
+                                                    <p data-start="10697" data-end="10792">attach this component to the
+                                                        player (or a manager actor) to drive fog/wetness <strong
+                                                            data-start="10775" data-end="10791">in real time</strong>.
+                                                    </p>
+                                                    <hr data-start="10794" data-end="10797" />
+                                                    <h2 data-start="10799" data-end="10848">4) player character with
+                                                        stamina &amp; overheating</h2>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// MuggyCharacter.h</span> <span class="hljs-meta">#<span class="hljs-keyword">pragma</span></span> once <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"CoreMinimal.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"GameFramework/Character.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"InputActionValue.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"MuggyCharacter.generated.h"</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">UCameraComponent</span>; <span class="hljs-keyword">class</span> <span class="hljs-title class_">USpringArmComponent</span>; <span class="hljs-keyword">class</span> <span class="hljs-title class_">UEnhancedInputLocalPlayerSubsystem</span>; <span class="hljs-keyword">class</span> <span class="hljs-title class_">UInputMappingContext</span>; <span class="hljs-keyword">class</span> <span class="hljs-title class_">UInputAction</span>; <span class="hljs-keyword">class</span> <span class="hljs-title class_">UMuggyPostProcessComponent</span>; <span class="hljs-built_in">UCLASS</span>() <span class="hljs-keyword">class</span> <span class="hljs-title class_">MUGGYRUSH_API</span> AMuggyCharacter : <span class="hljs-keyword">public</span> ACharacter { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-built_in">AMuggyCharacter</span>(); <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">SetupPlayerInputComponent</span><span class="hljs-params">(UInputComponent* PlayerInputComponent)</span> <span class="hljs-keyword">override</span>; <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">BeginPlay</span><span class="hljs-params">()</span> <span class="hljs-keyword">override</span>; <span class="hljs-function"><span class="hljs-keyword">virtual</span></span> <span class="hljs-type">void</span> <span class="hljs-title">Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaSeconds) <span class="hljs-keyword">override</span>; <span class="hljs-keyword">protected</span>: <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere, BlueprintReadOnly) USpringArmComponent* SpringArm; <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere, BlueprintReadOnly) UCameraComponent* Camera; <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere) UMuggyPostProcessComponent* MuggyFX; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Input"</span>) UInputMappingContext* IMC; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Input"</span>) UInputAction* IA_Move; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Input"</span>) UInputAction* IA_Look; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Input"</span>) UInputAction* IA_Sprint; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Input"</span>) UInputAction* IA_Jump; FVector2D MoveInput; <span class="hljs-type">bool</span> bSprinting = <span class="hljs-literal">false</span>; <span class="hljs-comment">// stamina &amp; heat</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> MaxStamina = <span class="hljs-number">100.f</span>; <span class="hljs-built_in">UPROPERTY</span>(BlueprintReadOnly, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> Stamina = <span class="hljs-number">100.f</span>; <span class="hljs-built_in">UPROPERTY</span>(BlueprintReadOnly, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> BodyHeat = <span class="hljs-number">0.f</span>; <span class="hljs-comment">// 0..100</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> BaseStaminaDrain = <span class="hljs-number">8.f</span>; <span class="hljs-comment">// per sec while sprinting</span> <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> HeatSensitivity = <span class="hljs-number">0.5f</span>; <span class="hljs-comment">// scales with HeatIndex</span> <span class="hljs-keyword">private</span>: <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">Move</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FInputActionValue&amp; Value); <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">Look</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FInputActionValue&amp; Value); <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">SprintPressed</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FInputActionValue&amp;); <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">SprintReleased</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FInputActionValue&amp;); <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">RefreshMovementSpeed</span><span class="hljs-params">()</span>; }; </code>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// MuggyCharacter.cpp</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"MuggyCharacter.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Camera/CameraComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"GameFramework/SpringArmComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"EnhancedInputSubsystems.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"EnhancedInputComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"HumiditySubsystem.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"MuggyPostProcessComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"GameFramework/CharacterMovementComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Kismet/GameplayStatics.h"</span> AMuggyCharacter::<span class="hljs-built_in">AMuggyCharacter</span>(){ PrimaryActorTick.bCanEverTick = <span class="hljs-literal">true</span>; SpringArm = <span class="hljs-built_in">CreateDefaultSubobject</span>&lt;USpringArmComponent&gt;(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"SpringArm"</span>)); SpringArm-&gt;<span class="hljs-built_in">SetupAttachment</span>(RootComponent); SpringArm-&gt;TargetArmLength = <span class="hljs-number">0.f</span>; <span class="hljs-comment">// first person? set 0 or small for third person set 300</span> Camera = <span class="hljs-built_in">CreateDefaultSubobject</span>&lt;UCameraComponent&gt;(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"Camera"</span>)); Camera-&gt;<span class="hljs-built_in">SetupAttachment</span>(SpringArm); MuggyFX = <span class="hljs-built_in">CreateDefaultSubobject</span>&lt;UMuggyPostProcessComponent&gt;(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"MuggyFX"</span>)); <span class="hljs-built_in">GetCharacterMovement</span>()-&gt;MaxWalkSpeed = <span class="hljs-number">450.f</span>; } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AMuggyCharacter::BeginPlay</span><span class="hljs-params">()</span>{ Super::<span class="hljs-built_in">BeginPlay</span>(); <span class="hljs-keyword">if</span> (APlayerController* PC = <span class="hljs-built_in">Cast</span>&lt;APlayerController&gt;(<span class="hljs-built_in">GetController</span>())){ <span class="hljs-keyword">if</span> (ULocalPlayer* LP = PC-&gt;<span class="hljs-built_in">GetLocalPlayer</span>()){ <span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span>* Sub = LP-&gt;<span class="hljs-built_in">GetSubsystem</span>&lt;UEnhancedInputLocalPlayerSubsystem&gt;()){ Sub-&gt;<span class="hljs-built_in">AddMappingContext</span>(IMC, <span class="hljs-number">0</span>); } } } } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AMuggyCharacter::SetupPlayerInputComponent</span><span class="hljs-params">(UInputComponent* PlayerInputComponent)</span>{ <span class="hljs-keyword">if</span> (UEnhancedInputComponent* EIC = <span class="hljs-built_in">Cast</span>&lt;UEnhancedInputComponent&gt;(PlayerInputComponent)){ EIC-&gt;<span class="hljs-built_in">BindAction</span>(IA_Move, ETriggerEvent::Triggered, <span class="hljs-keyword">this</span>, &amp;AMuggyCharacter::Move); EIC-&gt;<span class="hljs-built_in">BindAction</span>(IA_Look, ETriggerEvent::Triggered, <span class="hljs-keyword">this</span>, &amp;AMuggyCharacter::Look); EIC-&gt;<span class="hljs-built_in">BindAction</span>(IA_Sprint, ETriggerEvent::Started, <span class="hljs-keyword">this</span>, &amp;AMuggyCharacter::SprintPressed); EIC-&gt;<span class="hljs-built_in">BindAction</span>(IA_Sprint, ETriggerEvent::Completed, <span class="hljs-keyword">this</span>, &amp;AMuggyCharacter::SprintReleased); EIC-&gt;<span class="hljs-built_in">BindAction</span>(IA_Jump, ETriggerEvent::Started, <span class="hljs-keyword">this</span>, &amp;ACharacter::Jump); } } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AMuggyCharacter::Move</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FInputActionValue&amp; Value){ FVector2D Axis = Value.<span class="hljs-built_in">Get</span>&lt;FVector2D&gt;(); MoveInput = Axis; <span class="hljs-keyword">if</span> (Controller){ <span class="hljs-built_in">AddMovementInput</span>(<span class="hljs-built_in">GetActorForwardVector</span>(), Axis.Y); <span class="hljs-built_in">AddMovementInput</span>(<span class="hljs-built_in">GetActorRightVector</span>(), Axis.X); } } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AMuggyCharacter::Look</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FInputActionValue&amp; Value){ FVector2D Axis = Value.<span class="hljs-built_in">Get</span>&lt;FVector2D&gt;(); <span class="hljs-built_in">AddControllerYawInput</span>(Axis.X); <span class="hljs-built_in">AddControllerPitchInput</span>(Axis.Y); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AMuggyCharacter::SprintPressed</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FInputActionValue&amp;){ bSprinting = <span class="hljs-literal">true</span>; <span class="hljs-built_in">RefreshMovementSpeed</span>(); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AMuggyCharacter::SprintReleased</span><span class="hljs-params">(<span class="hljs-type">const</span></span> FInputActionValue&amp;){ bSprinting = <span class="hljs-literal">false</span>; <span class="hljs-built_in">RefreshMovementSpeed</span>(); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AMuggyCharacter::RefreshMovementSpeed</span><span class="hljs-params">()</span>{ <span class="hljs-type">float</span> Base = <span class="hljs-number">450.f</span>; <span class="hljs-type">float</span> Speed = bSprinting ? <span class="hljs-number">700.f</span> : Base; <span class="hljs-comment">// heat penalty</span> <span class="hljs-keyword">if</span> (UWorld* W = <span class="hljs-built_in">GetWorld</span>()){ <span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span>* HS = W-&gt;<span class="hljs-built_in">GetGameInstance</span>()-&gt;<span class="hljs-built_in">GetSubsystem</span>&lt;UHumiditySubsystem&gt;()){ <span class="hljs-type">const</span> <span class="hljs-type">float</span> HI = HS-&gt;<span class="hljs-built_in">GetHeatIndexC</span>(); <span class="hljs-comment">// 30..45 typical</span> <span class="hljs-type">const</span> <span class="hljs-type">float</span> Penalty = FMath::<span class="hljs-built_in">GetMappedRangeValueClamped</span>(<span class="hljs-built_in">FVector2D</span>(<span class="hljs-number">30.f</span>, <span class="hljs-number">45.f</span>), <span class="hljs-built_in">FVector2D</span>(<span class="hljs-number">0.f</span>, <span class="hljs-number">200.f</span>), HI); Speed = FMath::<span class="hljs-built_in">Max</span>(<span class="hljs-number">250.f</span>, Speed - Penalty*<span class="hljs-number">0.5f</span>); } } <span class="hljs-built_in">GetCharacterMovement</span>()-&gt;MaxWalkSpeed = Speed; } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AMuggyCharacter::Tick</span><span class="hljs-params">(<span class="hljs-type">float</span></span> DeltaSeconds){ Super::<span class="hljs-built_in">Tick</span>(DeltaSeconds); <span class="hljs-type">float</span> HI = <span class="hljs-number">32.f</span>; <span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span>* HS = <span class="hljs-built_in">GetWorld</span>()-&gt;<span class="hljs-built_in">GetGameInstance</span>()-&gt;<span class="hljs-built_in">GetSubsystem</span>&lt;UHumiditySubsystem&gt;()){ HI = HS-&gt;<span class="hljs-built_in">GetHeatIndexC</span>(); } <span class="hljs-comment">// stamina dynamics</span> <span class="hljs-type">const</span> <span class="hljs-type">bool</span> bIsMovingFast = bSprinting &amp;&amp; (MoveInput.<span class="hljs-built_in">SizeSquared</span>() &gt; <span class="hljs-number">0.1f</span>); <span class="hljs-type">const</span> <span class="hljs-type">float</span> Drain = bIsMovingFast ? (BaseStaminaDrain + HeatSensitivity * FMath::<span class="hljs-built_in">Max</span>(<span class="hljs-number">0.f</span>, HI<span class="hljs-number">-30.f</span>)) : <span class="hljs-number">0.f</span>; <span class="hljs-type">const</span> <span class="hljs-type">float</span> Regen = (!bIsMovingFast &amp;&amp; HI &lt; <span class="hljs-number">35.f</span>) ? <span class="hljs-number">10.f</span> : <span class="hljs-number">4.f</span>; Stamina = FMath::<span class="hljs-built_in">Clamp</span>(Stamina + ( -Drain + Regen) * DeltaSeconds, <span class="hljs-number">0.f</span>, MaxStamina); BodyHeat = FMath::<span class="hljs-built_in">Clamp</span>(BodyHeat + (bIsMovingFast ? (<span class="hljs-number">0.6f</span> + <span class="hljs-number">0.05f</span>*(HI<span class="hljs-number">-30.f</span>)) : <span class="hljs-number">-0.8f</span>) * DeltaSeconds, <span class="hljs-number">0.f</span>, <span class="hljs-number">100.f</span>); <span class="hljs-keyword">if</span> (Stamina &lt;= <span class="hljs-number">1.f</span> || BodyHeat &gt;= <span class="hljs-number">95.f</span>){ bSprinting = <span class="hljs-literal">false</span>; <span class="hljs-comment">// auto cancel sprint</span> } <span class="hljs-built_in">RefreshMovementSpeed</span>(); } </code>
+                                                        </div>
+                                                    </div>
+                                                    <p data-start="16946" data-end="16972"><strong data-start="16946"
+                                                            data-end="16972">hook up Enhanced Input</strong></p>
+                                                    <ul data-start="16973" data-end="17174">
+                                                        <li data-start="16973" data-end="17133">
+                                                            <p data-start="16975" data-end="16999">create IMC with
+                                                                actions:</p>
+                                                            <ul data-start="17002" data-end="17133">
+                                                                <li data-start="17002" data-end="17034">
+                                                                    <p data-start="17004" data-end="17034"><code
+                                                                            data-start="17004"
+                                                                            data-end="17013">IA_Move</code> (Value2D,
+                                                                        WASD/Axes)</p>
+                                                                </li>
+                                                                <li data-start="17037" data-end="17065">
+                                                                    <p data-start="17039" data-end="17065"><code
+                                                                            data-start="17039"
+                                                                            data-end="17048">IA_Look</code> (Value2D,
+                                                                        mouse)</p>
+                                                                </li>
+                                                                <li data-start="17068" data-end="17102">
+                                                                    <p data-start="17070" data-end="17102"><code
+                                                                            data-start="17070"
+                                                                            data-end="17081">IA_Sprint</code> (Digital,
+                                                                        LeftShift)</p>
+                                                                </li>
+                                                                <li data-start="17105" data-end="17133">
+                                                                    <p data-start="17107" data-end="17133"><code
+                                                                            data-start="17107"
+                                                                            data-end="17116">IA_Jump</code> (Digital,
+                                                                        Space)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li data-start="17134" data-end="17174">
+                                                            <p data-start="17136" data-end="17174">assign them in the
+                                                                character defaults.</p>
+                                                        </li>
+                                                    </ul>
+                                                    <hr data-start="17176" data-end="17179" />
+                                                    <h2 data-start="17181" data-end="17216">5) pickups (hydration +
+                                                        filters)</h2>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// HydrationPickup.h</span> <span class="hljs-meta">#<span class="hljs-keyword">pragma</span></span> once <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"CoreMinimal.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"GameFramework/Actor.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"HydrationPickup.generated.h"</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">USphereComponent</span>; <span class="hljs-keyword">class</span> <span class="hljs-title class_">UNiagaraSystem</span>; <span class="hljs-built_in">UCLASS</span>() <span class="hljs-keyword">class</span> <span class="hljs-title class_">MUGGYRUSH_API</span> AHydrationPickup : <span class="hljs-keyword">public</span> AActor { <span class="hljs-built_in">GENERATED_BODY</span>() <span class="hljs-keyword">public</span>: <span class="hljs-built_in">AHydrationPickup</span>(); <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"Muggy"</span>) <span class="hljs-type">float</span> StaminaBoost = <span class="hljs-number">35.f</span>; <span class="hljs-built_in">UPROPERTY</span>(EditAnywhere, Category=<span class="hljs-string">"FX"</span>) UNiagaraSystem* PickupFX; <span class="hljs-keyword">protected</span>: <span class="hljs-built_in">UPROPERTY</span>(VisibleAnywhere) USphereComponent* Sphere; <span class="hljs-built_in">UFUNCTION</span>() <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">OnOverlap</span><span class="hljs-params">(AActor* Overlapped, AActor* Other)</span>; }; </code>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-cpp"><span class="hljs-comment">// HydrationPickup.cpp</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"HydrationPickup.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"Components/SphereComponent.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"NiagaraFunctionLibrary.h"</span> <span class="hljs-meta">#<span class="hljs-keyword">include</span></span> <span class="hljs-string">"MuggyCharacter.h"</span> AHydrationPickup::<span class="hljs-built_in">AHydrationPickup</span>(){ Sphere = <span class="hljs-built_in">CreateDefaultSubobject</span>&lt;USphereComponent&gt;(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"Sphere"</span>)); RootComponent = Sphere; Sphere-&gt;<span class="hljs-built_in">InitSphereRadius</span>(<span class="hljs-number">50.f</span>); Sphere-&gt;<span class="hljs-built_in">SetCollisionProfileName</span>(<span class="hljs-built_in">TEXT</span>(<span class="hljs-string">"OverlapAll"</span>)); Sphere-&gt;OnComponentBeginOverlap.<span class="hljs-built_in">AddDynamic</span>(<span class="hljs-keyword">this</span>, &amp;AHydrationPickup::OnOverlap); } <span class="hljs-function"><span class="hljs-type">void</span></span> <span class="hljs-title">AHydrationPickup::OnOverlap</span><span class="hljs-params">(AActor*, AActor* Other)</span>{ <span class="hljs-keyword">if</span> (AMuggyCharacter* MC = <span class="hljs-built_in">Cast</span>&lt;AMuggyCharacter&gt;(Other)){ MC-&gt;Stamina = FMath::<span class="hljs-built_in">Min</span>(MC-&gt;Stamina + StaminaBoost, MC-&gt;MaxStamina); <span class="hljs-keyword">if</span> (PickupFX) UNiagaraFunctionLibrary::<span class="hljs-built_in">SpawnSystemAtLocation</span>(<span class="hljs-built_in">GetWorld</span>(), PickupFX, <span class="hljs-built_in">GetActorLocation</span>()); <span class="hljs-built_in">Destroy</span>(); } } </code>
+                                                        </div>
+                                                    </div>
+                                                    <p data-start="18639" data-end="18721">add a <strong
+                                                            data-start="18645" data-end="18661">FilterPickup</strong>
+                                                        for scoring the dehumidifier objective in the same pattern.</p>
+                                                    <hr data-start="18723" data-end="18726" />
+                                                    <h2 data-start="18728" data-end="18765">6) win/lose conditions (mug
+                                                        gauge)</h2>
+                                                    <ul data-start="18767" data-end="18910">
+                                                        <li data-start="18767" data-end="18825">
+                                                            <p data-start="18769" data-end="18825">win: collect N
+                                                                filters and reach the dehumidifier tower.</p>
+                                                        </li>
+                                                        <li data-start="18826" data-end="18910">
+                                                            <p data-start="18828" data-end="18910">lose: <strong
+                                                                    data-start="18834" data-end="18847">Mug
+                                                                    Gauge</strong> hits max (e.g., HI averaged over 20s
+                                                                &gt; 42&deg;C) or timer expires.</p>
+                                                        </li>
+                                                    </ul>
+                                                    <p data-start="18912" data-end="18953">Add a simple GameMode or
+                                                        Level Blueprint:</p>
+                                                    <ul data-start="18954" data-end="19104">
+                                                        <li data-start="18954" data-end="19000">
+                                                            <p data-start="18956" data-end="19000">listen to <code
+                                                                    data-start="18966"
+                                                                    data-end="19000">HumiditySubsystem.OnMuggyChanged</code>
+                                                            </p>
+                                                        </li>
+                                                        <li data-start="19001" data-end="19043">
+                                                            <p data-start="19003" data-end="19043">maintain a rolling
+                                                                average of heat index</p>
+                                                        </li>
+                                                        <li data-start="19044" data-end="19104">
+                                                            <p data-start="19046" data-end="19104">if threshold exceeded
+                                                                &rarr; trigger fog burst + fade to black.</p>
+                                                        </li>
+                                                    </ul>
+                                                    <hr data-start="19106" data-end="19109" />
+                                                    <h2 data-start="19111" data-end="19150">7) visuals &amp;
+                                                        &ldquo;latest tech&rdquo; sprinkles</h2>
+                                                    <ul data-start="19152" data-end="19706">
+                                                        <li data-start="19152" data-end="19262">
+                                                            <p data-start="19154" data-end="19262"><strong
+                                                                    data-start="19154" data-end="19163">Lumen</strong>:
+                                                                default global illumination&mdash;use wet asphalt and
+                                                                metallic props; looks great under overcast HDRIs.</p>
+                                                        </li>
+                                                        <li data-start="19263" data-end="19319">
+                                                            <p data-start="19265" data-end="19319"><strong
+                                                                    data-start="19265" data-end="19275">Nanite</strong>:
+                                                                enable on dense meshes; helps performance.</p>
+                                                        </li>
+                                                        <li data-start="19320" data-end="19451">
+                                                            <p data-start="19322" data-end="19336"><strong
+                                                                    data-start="19322"
+                                                                    data-end="19333">Niagara</strong>:</p>
+                                                            <ul data-start="19339" data-end="19451">
+                                                                <li data-start="19339" data-end="19381">
+                                                                    <p data-start="19341" data-end="19381">soft <strong
+                                                                            data-start="19346" data-end="19363">mist
+                                                                            emitters</strong> in cool tunnels</p>
+                                                                </li>
+                                                                <li data-start="19384" data-end="19451">
+                                                                    <p data-start="19386" data-end="19451">subtle
+                                                                        <strong data-start="19393" data-end="19409">heat
+                                                                            shimmer</strong> in hot alleys
+                                                                        (screen-aligned distortion)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li data-start="19452" data-end="19567">
+                                                            <p data-start="19454" data-end="19567"><strong
+                                                                    data-start="19454" data-end="19476">Material
+                                                                    functions</strong>: <code data-start="19478"
+                                                                    data-end="19499">WorldAlignedWetness</code> driven
+                                                                by <code data-start="19510"
+                                                                    data-end="19525">ScreenWetness</code> MPC param for
+                                                                a universal &ldquo;wetness&rdquo; mask.</p>
+                                                        </li>
+                                                        <li data-start="19568" data-end="19706">
+                                                            <p data-start="19570" data-end="19706"><strong
+                                                                    data-start="19570" data-end="19579">Chaos</strong>:
+                                                                slippery physics&mdash;reduce friction on wet floor
+                                                                Physics Materials (character will slide a bit when
+                                                                sprinting with low stamina).</p>
+                                                        </li>
+                                                    </ul>
+                                                    <hr data-start="19708" data-end="19711" />
+                                                    <h2 data-start="19713" data-end="19737">quick playtest recipe</h2>
+                                                    <ol data-start="19739" data-end="20137">
+                                                        <li data-start="19739" data-end="19889">
+                                                            <p data-start="19742" data-end="19780">place a few <strong
+                                                                    data-start="19754"
+                                                                    data-end="19772">AWeatherVolume</strong> actors:</p>
+                                                            <ul data-start="19784" data-end="19889">
+                                                                <li data-start="19784" data-end="19835">
+                                                                    <p data-start="19786" data-end="19835">&ldquo;Mist
+                                                                        Tunnel&rdquo;: <code data-start="19801"
+                                                                            data-end="19818">DeltaTempC = -5</code>,
+                                                                        <code data-start="19820"
+                                                                            data-end="19835">DeltaRH = -20</code></p>
+                                                                </li>
+                                                                <li data-start="19839" data-end="19889">
+                                                                    <p data-start="19841" data-end="19889">&ldquo;Steam
+                                                                        Leak&rdquo;: <code data-start="19855"
+                                                                            data-end="19872">DeltaTempC = +3</code>,
+                                                                        <code data-start="19874"
+                                                                            data-end="19889">DeltaRH = +15</code></p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li data-start="19890" data-end="19948">
+                                                            <p data-start="19893" data-end="19948">drop several <strong
+                                                                    data-start="19906"
+                                                                    data-end="19925">HydrationPickup</strong> items
+                                                                along the route.</p>
+                                                        </li>
+                                                        <li data-start="19949" data-end="20012">
+                                                            <p data-start="19952" data-end="20012">set <code
+                                                                    data-start="19956"
+                                                                    data-end="19993">HumiditySubsystem.AmbientTempC = 32</code>,
+                                                                <code data-start="19995"
+                                                                    data-end="20011">AmbientRH = 80</code>.</p>
+                                                        </li>
+                                                        <li data-start="20013" data-end="20137">
+                                                            <p data-start="20016" data-end="20137">run PIE: watch
+                                                                <strong data-start="20031" data-end="20048">stamina
+                                                                    drain</strong> faster in hot/humid spaces; recover
+                                                                in cool zones; fog intensifies at higher heat index.</p>
+                                                        </li>
+                                                    </ol>
+                                                    <hr data-start="20139" data-end="20142" />
+                                                    <h2 data-start="20144" data-end="20176">optional: blueprint HUD
+                                                        (UMG)</h2>
+                                                    <ul data-start="20178" data-end="20410">
+                                                        <li data-start="20178" data-end="20296">
+                                                            <p data-start="20180" data-end="20205">create a UMG widget
+                                                                with:</p>
+                                                            <ul data-start="20208" data-end="20296">
+                                                                <li data-start="20208" data-end="20225">
+                                                                    <p data-start="20210" data-end="20225"><strong
+                                                                            data-start="20210" data-end="20225">Stamina
+                                                                            bar</strong></p>
+                                                                </li>
+                                                                <li data-start="20228" data-end="20252">
+                                                                    <p data-start="20230" data-end="20252"><strong
+                                                                            data-start="20230" data-end="20252">Heat
+                                                                            Index readout</strong></p>
+                                                                </li>
+                                                                <li data-start="20255" data-end="20278">
+                                                                    <p data-start="20257" data-end="20278"><strong
+                                                                            data-start="20257" data-end="20278">Dew
+                                                                            Point readout</strong></p>
+                                                                </li>
+                                                                <li data-start="20281" data-end="20296">
+                                                                    <p data-start="20283" data-end="20296"><strong
+                                                                            data-start="20283" data-end="20296">Mug
+                                                                            Gauge</strong></p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li data-start="20297" data-end="20410">
+                                                            <p data-start="20299" data-end="20410">bind values from the
+                                                                character and the subsystem (via <code
+                                                                    data-start="20353"
+                                                                    data-end="20408">GetGameInstance()-&gt;GetSubsystem&lt;UHumiditySubsystem&gt;()</code>).
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <hr data-start="20412" data-end="20415" />
+                                                    <h2 data-start="20417" data-end="20457">polishing ideas / future
+                                                        enhancements</h2>
+                                                    <ul data-start="20459" data-end="21047">
+                                                        <li data-start="20459" data-end="20579">
+                                                            <p data-start="20461" data-end="20579"><strong
+                                                                    data-start="20461" data-end="20482">outside vs
+                                                                    inside</strong>: add an &ldquo;outdoor probe&rdquo;
+                                                                volume; open/close gates only if outside <strong
+                                                                    data-start="20548" data-end="20569">absolute
+                                                                    humidity</strong> is lower.</p>
+                                                        </li>
+                                                        <li data-start="20580" data-end="20661">
+                                                            <p data-start="20582" data-end="20661"><strong
+                                                                    data-start="20582" data-end="20601">dynamic
+                                                                    puddles</strong>: runtime virtual textures + mesh
+                                                                decals as humidity spikes.</p>
+                                                        </li>
+                                                        <li data-start="20662" data-end="20780">
+                                                            <p data-start="20664" data-end="20780"><strong
+                                                                    data-start="20664" data-end="20697">GAS (Gameplay
+                                                                    Ability System)</strong>: model sprint as an ability
+                                                                with tags (&ldquo;Overheated&rdquo;), cooldown when
+                                                                BodyHeat high.</p>
+                                                        </li>
+                                                        <li data-start="20781" data-end="20860">
+                                                            <p data-start="20783" data-end="20860"><strong
+                                                                    data-start="20783" data-end="20797">AI
+                                                                    workers</strong>: NPCs with overheating meters;
+                                                                escort them through cool paths.</p>
+                                                        </li>
+                                                        <li data-start="20861" data-end="20965">
+                                                            <p data-start="20863" data-end="20965"><strong
+                                                                    data-start="20863" data-end="20885">procedural
+                                                                    weather</strong>: drive clouds, rain bursts; tie
+                                                                rain to temporary RH drop then post-rain spike.</p>
+                                                        </li>
+                                                        <li data-start="20966" data-end="21047">
+                                                            <p data-start="20968" data-end="21047"><strong
+                                                                    data-start="20968" data-end="20982">photo
+                                                                    mode</strong>: capture steamy vistas with
+                                                                post-process vignette and heat tint.</p>
+                                                        </li>
+                                                    </ul>
+                                                    <hr data-start="21049" data-end="21052" />
+                                                    <h2 data-start="21054" data-end="21076">minimal build notes</h2>
+                                                    <ul data-start="21078" data-end="21168">
+                                                        <li data-start="21078" data-end="21125">
+                                                            <p data-start="21080" data-end="21125">target <strong
+                                                                    data-start="21087" data-end="21096">C++20</strong>
+                                                                or <strong data-start="21100"
+                                                                    data-end="21109">C++17</strong> (UE5 supports).</p>
+                                                        </li>
+                                                        <li data-start="21126" data-end="21168">
+                                                            <p data-start="21128" data-end="21168">include module
+                                                                references (<code data-start="21155"
+                                                                    data-end="21166">.Build.cs</code>):</p>
+                                                        </li>
+                                                    </ul>
+                                                    <div
+                                                        class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+                                                        <div class="sticky top-9">&nbsp;</div>
+                                                        <div class="overflow-y-auto p-4" dir="ltr"><code
+                                                                class="whitespace-pre! language-csharp"><span class="hljs-comment">// MuggyRush.Build.cs</span> <span class="hljs-keyword">using</span> UnrealBuildTool; <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MuggyRush</span> : <span class="hljs-title">ModuleRules</span> { <span class="hljs-function"><span class="hljs-keyword">public</span></span> <span class="hljs-title">MuggyRush</span>(<span class="hljs-params">ReadOnlyTargetRules Target</span>) : <span class="hljs-title">base</span>(<span class="hljs-params">Target</span>) { PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs; PublicDependencyModuleNames.AddRange(<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>[] { <span class="hljs-string">"Core"</span>,<span class="hljs-string">"CoreUObject"</span>,<span class="hljs-string">"Engine"</span>,<span class="hljs-string">"InputCore"</span>, <span class="hljs-string">"EnhancedInput"</span>,<span class="hljs-string">"Niagara"</span>,<span class="hljs-string">"UMG"</span> }); } } </code>
+                                                        </div>
+                                                    </div>
+                                                    <hr data-start="21588" data-end="21591" />
+                                                    <h2 data-start="21593" data-end="21620">level design tips (fast)
+                                                    </h2>
+                                                    <ul data-start="21622" data-end="21848">
+                                                        <li data-start="21622" data-end="21676">
+                                                            <p data-start="21624" data-end="21676">use a <strong
+                                                                    data-start="21630" data-end="21644">foggy
+                                                                    HDRI</strong> sky + slightly desaturated LUT.</p>
+                                                        </li>
+                                                        <li data-start="21677" data-end="21729">
+                                                            <p data-start="21679" data-end="21729">put <strong
+                                                                    data-start="21683" data-end="21699">cool
+                                                                    refuges</strong> every ~15&ndash;25s of sprint time.
+                                                            </p>
+                                                        </li>
+                                                        <li data-start="21730" data-end="21782">
+                                                            <p data-start="21732" data-end="21782">path choices:
+                                                                short/hot alley vs long/cool arcade.</p>
+                                                        </li>
+                                                        <li data-start="21783" data-end="21848">
+                                                            <p data-start="21785" data-end="21848">readable VFX:
+                                                                blue-white mist for cool, orange shimmer for hot.</p>
+                                                        </li>
+                                                    </ul>
+                                                    <hr data-start="21850" data-end="21853" />
+                                                    <h2 data-start="21855" data-end="21873">quick checklist</h2>
+                                                    <ul class="contains-task-list" data-start="21875" data-end="22177">
+                                                        <li class="task-list-item" data-start="21875" data-end="21938">
+                                                            <p data-start="21881" data-end="21938"><input
+                                                                    checked="checked" disabled="disabled"
+                                                                    type="checkbox" /> global humidity model with
+                                                                <strong data-start="21908" data-end="21922">Heat
+                                                                    Index</strong> &amp; <strong data-start="21925"
+                                                                    data-end="21938">Dew Point</strong></p>
+                                                        </li>
+                                                        <li class="task-list-item" data-start="21939" data-end="21989">
+                                                            <p data-start="21945" data-end="21989"><input
+                                                                    checked="checked" disabled="disabled"
+                                                                    type="checkbox" /> local volumes to modify
+                                                                humidity/temperature</p>
+                                                        </li>
+                                                        <li class="task-list-item" data-start="21990" data-end="22047">
+                                                            <p data-start="21996" data-end="22047"><input
+                                                                    checked="checked" disabled="disabled"
+                                                                    type="checkbox" /> character stamina/overheat tied
+                                                                to muggy conditions</p>
+                                                        </li>
+                                                        <li class="task-list-item" data-start="22048" data-end="22113">
+                                                            <p data-start="22054" data-end="22113"><input
+                                                                    checked="checked" disabled="disabled"
+                                                                    type="checkbox" /> post-process feedback via <strong
+                                                                    data-start="22080" data-end="22113">Material
+                                                                    Parameter Collection</strong></p>
+                                                        </li>
+                                                        <li class="task-list-item" data-start="22114" data-end="22149">
+                                                            <p data-start="22120" data-end="22149"><input
+                                                                    checked="checked" disabled="disabled"
+                                                                    type="checkbox" /> pickups and simple objectives</p>
+                                                        </li>
+                                                        <li class="task-list-item" data-start="22150" data-end="22177">
+                                                            <p data-start="22156" data-end="22177"><input
+                                                                    checked="checked" disabled="disabled"
+                                                                    type="checkbox" /> Enhanced Input wiring</p>
+                                                        </li>
+                                                    </ul>
+                                                    
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>
