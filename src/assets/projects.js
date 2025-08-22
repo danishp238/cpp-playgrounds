@@ -19,6 +19,9 @@ import PicnicPart1 from "/src/assets/blogs/picnic-part1.html?raw"
 import RainfallRescue from "/src/assets/blogs/rainfall-rescue.html?raw"
 import FloodGuard from "/src/assets/blogs/floodguard.html?raw"
 import MuggyRush from "/src/assets/blogs/muggy-rush.html?raw"
+import RainCatcher from '@/components/RainCatcher.vue'
+import JeepGame from '@/components/JeepGame.vue'
+import BeachCatch from '@/components/BeachCatch.vue'
 
 
 const projects = [
@@ -80,15 +83,24 @@ const projects = [
       }
     ]
   },
+
   {
-    id: 3,
-    title: 'Car Parking Master',
-    slug: 'car-parking-master',
-    description: 'you control a car in a crowded parking lot. Your goal is to navigate through obstacles and park in the designated spot without collisions.',
+    id:3,
+    title: "Car Parking Master",
+    slug: "car-parking-master",
+    description: "you control a car in a crowded parking lot. Your goal is to navigate through obstacles and park in the designated spot without collisions.",
     image: new URL('/images/car-parking.jpeg', import.meta.url).href,
-    date: 'Posted on June 17, 2025 – 8:00 AM',
     content: CarparkingGame
   },
+  // {
+  //   id: 3,
+  //   title: 'Car Parking Master',
+  //   slug: 'car-parking-master',
+  //   description: 'you control a car in a crowded parking lot. Your goal is to navigate through obstacles and park in the designated spot without collisions.',
+  //   image: new URL('/images/car-parking.jpeg', import.meta.url).href,
+  //   date: 'Posted on June 17, 2025 – 8:00 AM',
+  //   content: CarparkingGame
+  // },
   {
     id: 4,
     title: 'Farm Frenzy: Harvest Grow',
@@ -137,7 +149,8 @@ const projects = [
     slug: "jeep-adventure-game",
     description: "This is a graphical C++ game using SFML, where you control a Jeep driving on a rainy road. Your goal is to avoid falling obstacles, stay visible in the rain, and survive long enough to earn points.",
     image: new URL('/images/jeep.jpeg', import.meta.url).href,
-    content: Jeep
+    content: Jeep,
+    component: JeepGame
   },
 
   {
@@ -153,7 +166,8 @@ const projects = [
     slug: "rainfall-reclaimer",
     description: "Set in a near-future world suffering from extreme rainfall, acid rain, and rising floods, you play as an AI-assisted meteorological operative using drones, robots, and water recycling stations to monitor, mitigate, and survive climate chaos.",
     image: new URL('/images/rainfall-reclamation.jpeg', import.meta.url).href,
-    content: RainfallReclaimer
+    content: RainfallReclaimer,
+    component: RainCatcher
   },
 
   {
@@ -179,6 +193,7 @@ const projects = [
     description: "A vibrant 2.5D or 3D picnic simulation-adventure game where players must set up and protect their picnic in a dynamic environment, facing challenges like weather changes, animals, time constraints, and item collection.",
     image: new URL('/images/picnic-panic.jpeg', import.meta.url).href,
     content: Picnic,
+    component: BeachCatch,
     customReadMore: [
       {
         title: `🎮 Picnic Panic: Nature Adventure

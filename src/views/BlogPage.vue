@@ -73,6 +73,8 @@ const moreBlogs = computed(() =>
     Blog not found.
   </div>
 
+  <component v-if="blog.component" :is="blog.component" />
+
   <!-- Custom Read More if available -->
 <div v-if="blog?.customReadMore?.length" class="mt-20 border-t border-white/20 pt-10">
   <h2 class="text-2xl font-semibold text-white text-center mb-6">You Might Also Like</h2>
