@@ -91,12 +91,26 @@ const updatePerPage = () => {
 const position = ref(0)
 
 const updateSlider = () => {
+  if (!slider.value) return
+  const slideWidth = slider.value.children[0]?.offsetWidth || 0
+  const gap = 24 // space-x-6
+
+  // Animate the whole track
   gsap.to(slider.value, {
-    x: -position.value * (slider.value.children[0].offsetWidth + 24), // 24 ≈ space-x-6
-    duration: 0.5,
-    ease: 'power2.out'
+    x: -position.value * (slideWidth + gap),
+    duration: 0.6,
+    ease: 'power3.inOut'
   })
+
+  // Animate visible cards (fade + scale-up effect)
+  const visibleCards = [...slider.value.children].slice(position.value, position.value + perPage.value)
+  gsap.fromTo(
+  visibleCards,
+  { opacity: 0, rotationY: 45, y: 50 },
+  { opacity: 1, rotationY: 0, y: 0, duration: 0.7, stagger: 0.1, ease: 'back.out(1.7)' }
+)
 }
+
 
 const next = () => {
   if (position.value + perPage.value >= projects.value.length) {
