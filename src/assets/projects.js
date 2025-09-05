@@ -22,6 +22,8 @@ import MuggyRush from "/src/assets/blogs/muggy-rush.html?raw"
 import RainCatcher from '@/components/RainCatcher.vue'
 import JeepGame from '@/components/JeepGame.vue'
 import BeachCatch from '@/components/BeachCatch.vue'
+import SwimmingGame from '@/components/SwimmingGame.vue'
+import SeaAdventure from '@/components/SeaAdventure.vue'
 
 
 const projects = [
@@ -176,6 +178,7 @@ const projects = [
     description: `"RainRise" is a futuristic open-world environmental simulation game where players act as Rainwater Engineers using advanced drones, AI sensors, water-routing bots, and bio-tech filtration systems to conserve rainwater, purify it, and sustain eco-settlements.`,
     image: new URL('/images/rain-rise.jpg', import.meta.url).href,
     content: RainRise,
+    component: SwimmingGame,
     customReadMore: [
       {
         title: "🌱 Feature: Vertical Garden & Hydroponics System",
@@ -212,7 +215,8 @@ const projects = [
     slug: "rainfall-rescue",
     description: `Have you ever wished you could control the rain? In this exciting C++ project, we’re doing just that – building Rainfall Rescue, a 2D arcade-style game where players catch pure rain and avoid acid drops.`,
     image: new URL('/images/rainfall-rescue.jpeg', import.meta.url).href,
-    content: RainfallRescue
+    content: RainfallRescue,
+    component: SeaAdventure
   },
   {
     title: "FloodGuard (UE5 C++): Rescue Boat vs. Rising Waters",

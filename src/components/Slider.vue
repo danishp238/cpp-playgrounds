@@ -6,8 +6,8 @@
       </h2>
 
       <div class="relative overflow-hidden">
-        <div ref="slider" class="flex transition-all duration-500 space-x-6 w-full">
-          <div v-for="(project, index) in visibleProjects" :key="project.id"
+        <div ref="slider" class="flex space-x-6 w-full">
+          <div v-for="(project, index) in projects" :key="project.id"
             class="min-w-[300px] md:min-w-[350px] bg-gray-800 rounded-2xl shadow-xl overflow-hidden group relative"
             data-aos="fade-up" :data-aos-delay="100 * index">
             <!-- Image with overlay -->
@@ -74,6 +74,7 @@ function getPerPage() {
 
 const currentIndex = ref(0)
 const perPage = ref(getPerPage())
+const slider = ref(null)
 
 const updatePerPage = () => {
   perPage.value = getPerPage()
@@ -82,41 +83,37 @@ const updatePerPage = () => {
 
 
 
-const visibleProjects = computed(() =>
-  projects.value.slice(currentIndex.value, currentIndex.value + perPage.value)
-)
+// const visibleProjects = computed(() =>
+//   projects.value.slice(currentIndex.value, currentIndex.value + perPage.value)
+// )
 
 
-const slider = ref(null)
+const position = ref(0)
 
-const animateSlider = (direction) => {
-  gsap.fromTo(
-    slider.value,
-    { x: direction === 'next' ? 300 : -300, opacity: 0 },
-    { x: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }
-  )
+const updateSlider = () => {
+  gsap.to(slider.value, {
+    x: -position.value * (slider.value.children[0].offsetWidth + 24), // 24 ≈ space-x-6
+    duration: 0.5,
+    ease: 'power2.out'
+  })
 }
 
 const next = () => {
-  if (currentIndex.value + perPage.value >= projects.value.length) {
-    currentIndex.value = 0
+  if (position.value + perPage.value >= projects.value.length) {
+    position.value = 0
   } else {
-    currentIndex.value += perPage.value
+    position.value += perPage.value
   }
-  animateSlider('next')
+  updateSlider()
 }
 
 const prev = () => {
-  if (currentIndex.value - perPage.value < 0) {
-    // Prevent negative index and jump to last full set
-    currentIndex.value = Math.max(
-      projects.value.length - perPage.value,
-      0
-    )
+  if (position.value - perPage.value < 0) {
+    position.value = Math.max(projects.value.length - perPage.value, 0)
   } else {
-    currentIndex.value -= perPage.value
+    position.value -= perPage.value
   }
-  animateSlider('prev')
+  updateSlider()
 }
 
 onMounted(() => {
@@ -128,4 +125,27 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', updatePerPage)
 })
+
+
+/*
+UCC Grocery List
+
+mangoes 250
+peaches 70
+lemons 60
+arvi 100
+garlic 30
+ginger 30
+onions 50
+capsicum 30
+sugar 175
+porridge 210
+breads 220
+eggs 302
+milks 170
+rio biscuits 60
+juice 50
+
+*/
+
 </script>
